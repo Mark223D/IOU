@@ -1,0 +1,1165 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C92D3F47C69AC611BED738C /* Pods_IOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3670834E97A92248E58D908C /* Pods_IOU.framework */; };
+		2A448EE7D63F7FCE12F08345 /* Pods_IOUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6A14B4AD707F2AA70A8EB2 /* Pods_IOUUITests.framework */; };
+		4D1C7DA72380574A006273DC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C7DA62380574A006273DC /* MainVC.swift */; };
+		4D204F3D22D33A760070124D /* IOUHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D204F3B22D33A760070124D /* IOUHomeCell.swift */; };
+		4D204F3E22D33A760070124D /* IOUHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D204F3C22D33A760070124D /* IOUHomeCell.xib */; };
+		4D37B1FB237DDEF90044CCC2 /* IOUTransCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B1F9237DDEF90044CCC2 /* IOUTransCell.swift */; };
+		4D37B1FC237DDEF90044CCC2 /* IOUTransCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37B1FA237DDEF90044CCC2 /* IOUTransCell.xib */; };
+		4D37B1FE237DE19A0044CCC2 /* UserCashFlowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B1FD237DE19A0044CCC2 /* UserCashFlowVC.swift */; };
+		4D37B200237DE4890044CCC2 /* DetailedCashflowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B1FF237DE4890044CCC2 /* DetailedCashflowVC.swift */; };
+		4D37B204237DE5320044CCC2 /* IOUExpandedTransCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B202237DE5320044CCC2 /* IOUExpandedTransCell.swift */; };
+		4D37B205237DE5320044CCC2 /* IOUExpandedTransCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37B203237DE5320044CCC2 /* IOUExpandedTransCell.xib */; };
+		4D37B209237DED720044CCC2 /* AddFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B208237DED720044CCC2 /* AddFriendsVC.swift */; };
+		4D54338A2371DE3600BD7396 /* IOUHomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5433892371DE3600BD7396 /* IOUHomeCard.swift */; };
+		4D5AE1F723730878001644F5 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AE1F523730878001644F5 /* FriendsCell.swift */; };
+		4D5AE1F823730878001644F5 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5AE1F623730878001644F5 /* FriendsCell.xib */; };
+		4D5AE1FA23730A40001644F5 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AE1F923730A40001644F5 /* FriendsVC.swift */; };
+		4D5AE1FC237339B2001644F5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AE1FB237339B2001644F5 /* SettingsVC.swift */; };
+		4D65EBC2239400870089BD3F /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65EBC1239400870089BD3F /* BadgeButton.swift */; };
+		4D79DE312382C18600349232 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79DE302382C18600349232 /* NavigationBar.swift */; };
+		4D79DE3323843DB600349232 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79DE3223843DB600349232 /* Transaction.swift */; };
+		4D91C8B62386C108007A62E0 /* CashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C8B52386C108007A62E0 /* CashFlow.swift */; };
+		4D91C8B82389AE11007A62E0 /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */; };
+		4D91C8BC2389AFCD007A62E0 /* CashFlows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */; };
+		4D91C8BE2389B050007A62E0 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91C8BD2389B050007A62E0 /* Friends.storyboard */; };
+		4D9D40B422CF3CBE00AD0A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */; };
+		4D9D40B622CF3CBE00AD0A0D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40B522CF3CBE00AD0A0D /* LoginVC.swift */; };
+		4D9D40B922CF3CBE00AD0A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D40B722CF3CBE00AD0A0D /* Main.storyboard */; };
+		4D9D40BC22CF3CBE00AD0A0D /* IOU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40BA22CF3CBE00AD0A0D /* IOU.xcdatamodeld */; };
+		4D9D40BE22CF3CC000AD0A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D40BD22CF3CC000AD0A0D /* Assets.xcassets */; };
+		4D9D40C122CF3CC000AD0A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D40BF22CF3CC000AD0A0D /* LaunchScreen.storyboard */; };
+		4D9D40CC22CF3CC000AD0A0D /* IOUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40CB22CF3CC000AD0A0D /* IOUTests.swift */; };
+		4D9D40D722CF3CC000AD0A0D /* IOUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40D622CF3CC000AD0A0D /* IOUUITests.swift */; };
+		4D9D40E522CF41E100AD0A0D /* IOUColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40E422CF41E100AD0A0D /* IOUColors.swift */; };
+		4D9D40E922CF589F00AD0A0D /* IOUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40E822CF589F00AD0A0D /* IOUTextField.swift */; };
+		4D9D40EB22CF663900AD0A0D /* IOUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40EA22CF663900AD0A0D /* IOUButton.swift */; };
+		4D9D40EE22CF71B700AD0A0D /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40ED22CF71B700AD0A0D /* AnimationEngine.swift */; };
+		4D9D40F022CF7FE700AD0A0D /* ViewController_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40EF22CF7FE700AD0A0D /* ViewController_Extensions.swift */; };
+		4DC7CEC0238BC5FF00699EE3 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEBE238BC5FF00699EE3 /* FriendsCollectionViewCell.swift */; };
+		4DC7CEC1238BC5FF00699EE3 /* FriendsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7CEBF238BC5FF00699EE3 /* FriendsCollectionViewCell.xib */; };
+		4DC7CEC3238D372B00699EE3 /* FriendRequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEC2238D372B00699EE3 /* FriendRequestsVC.swift */; };
+		4DC7CEC9238D383600699EE3 /* FriendRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEC7238D383600699EE3 /* FriendRequestCell.swift */; };
+		4DC7CECA238D383600699EE3 /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7CEC8238D383600699EE3 /* FriendRequestCell.xib */; };
+		4DC7CECD238D7B3800699EE3 /* WormTabStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CECC238D7B3800699EE3 /* WormTabStrip.swift */; };
+		4DC7CECF238D7B5400699EE3 /* WormTabStripButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CECE238D7B5400699EE3 /* WormTabStripButton.swift */; };
+		4DC7CED1238D7BA700699EE3 /* PendingTransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CED0238D7BA700699EE3 /* PendingTransactionsVC.swift */; };
+		4DC7CED9238D7DA600699EE3 /* PendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CED7238D7DA600699EE3 /* PendingCell.swift */; };
+		4DC7CEDA238D7DA600699EE3 /* PendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7CED8238D7DA600699EE3 /* PendingCell.xib */; };
+		4DC7CEDC238DA21700699EE3 /* Pending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEDB238DA21700699EE3 /* Pending.swift */; };
+		4DC7CEE123925ED200699EE3 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEE023925ED200699EE3 /* NetworkHandler.swift */; };
+		4DC7CEE5239261F500699EE3 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEE4239261F500699EE3 /* AlertHandler.swift */; };
+		4DC7CEE923927A8100699EE3 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEE823927A8100699EE3 /* CurrencyFormatter.swift */; };
+		4DC7CEEB239283B400699EE3 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEEA239283B400699EE3 /* Application.swift */; };
+		4DC7CEF12392A62D00699EE3 /* FriendHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEF02392A62D00699EE3 /* FriendHandler.swift */; };
+		4DC7CEF32392B32B00699EE3 /* CashflowHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEF22392B32B00699EE3 /* CashflowHandler.swift */; };
+		4DCCAA8E238AF0480050F6F4 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCAA8D238AF0480050F6F4 /* NotificationHandler.swift */; };
+		4DE1C6BA23735C5D00EA0153 /* GetOweVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1C6B923735C5D00EA0153 /* GetOweVC.swift */; };
+		4DFBCC1E237DAE7A00AAA22B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFBCC1D237DAE7A00AAA22B /* GoogleService-Info.plist */; };
+		4DFFD30422D20E6F00D714E6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD30322D20E6F00D714E6 /* RegisterVC.swift */; };
+		4DFFD30622D2298000D714E6 /* IOUUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD30522D2298000D714E6 /* IOUUser.swift */; };
+		4DFFD30F22D2306200D714E6 /* View_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD30E22D2306200D714E6 /* View_Extensions.swift */; };
+		4DFFD31122D230C200D714E6 /* IOUHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD31022D230C200D714E6 /* IOUHeader.swift */; };
+		4DFFD31522D2335000D714E6 /* ImageView_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD31422D2335000D714E6 /* ImageView_Extensions.swift */; };
+		4DFFD31722D235D600D714E6 /* IOULabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD31622D235D600D714E6 /* IOULabel.swift */; };
+		4DFFD31922D2388900D714E6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD31822D2388900D714E6 /* HomeVC.swift */; };
+		C663FCC8CC2D8C580FD791FD /* Pods_IOUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672B4147A15EEA7C9687A0E0 /* Pods_IOUTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D9D40C822CF3CC000AD0A0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D9D40A822CF3CBE00AD0A0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D9D40AF22CF3CBE00AD0A0D;
+			remoteInfo = IOU;
+		};
+		4D9D40D322CF3CC000AD0A0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D9D40A822CF3CBE00AD0A0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D9D40AF22CF3CBE00AD0A0D;
+			remoteInfo = IOU;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DAF074A34CEB642FB131758 /* Pods-IOUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOUTests/Pods-IOUTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3670834E97A92248E58D908C /* Pods_IOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0EC1A92394ED0800CE1E52 /* IOU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOU.entitlements; sourceTree = "<group>"; };
+		4D1C7DA62380574A006273DC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		4D204F3B22D33A760070124D /* IOUHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUHomeCell.swift; sourceTree = "<group>"; };
+		4D204F3C22D33A760070124D /* IOUHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IOUHomeCell.xib; sourceTree = "<group>"; };
+		4D37B1F9237DDEF90044CCC2 /* IOUTransCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUTransCell.swift; sourceTree = "<group>"; };
+		4D37B1FA237DDEF90044CCC2 /* IOUTransCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IOUTransCell.xib; sourceTree = "<group>"; };
+		4D37B1FD237DE19A0044CCC2 /* UserCashFlowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCashFlowVC.swift; sourceTree = "<group>"; };
+		4D37B1FF237DE4890044CCC2 /* DetailedCashflowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCashflowVC.swift; sourceTree = "<group>"; };
+		4D37B202237DE5320044CCC2 /* IOUExpandedTransCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUExpandedTransCell.swift; sourceTree = "<group>"; };
+		4D37B203237DE5320044CCC2 /* IOUExpandedTransCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IOUExpandedTransCell.xib; sourceTree = "<group>"; };
+		4D37B208237DED720044CCC2 /* AddFriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsVC.swift; sourceTree = "<group>"; };
+		4D5433892371DE3600BD7396 /* IOUHomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUHomeCard.swift; sourceTree = "<group>"; };
+		4D5AE1F523730878001644F5 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		4D5AE1F623730878001644F5 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
+		4D5AE1F923730A40001644F5 /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
+		4D5AE1FB237339B2001644F5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		4D65EBC1239400870089BD3F /* BadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
+		4D79DE302382C18600349232 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		4D79DE3223843DB600349232 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		4D91C8B52386C108007A62E0 /* CashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlow.swift; sourceTree = "<group>"; };
+		4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
+		4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CashFlows.storyboard; sourceTree = "<group>"; };
+		4D91C8BD2389B050007A62E0 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		4D9D40B022CF3CBE00AD0A0D /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D9D40B522CF3CBE00AD0A0D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4D9D40B822CF3CBE00AD0A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D9D40BB22CF3CBE00AD0A0D /* IOU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOU.xcdatamodel; sourceTree = "<group>"; };
+		4D9D40BD22CF3CC000AD0A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D9D40C022CF3CC000AD0A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D9D40C222CF3CC000AD0A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D9D40C722CF3CC000AD0A0D /* IOUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9D40CB22CF3CC000AD0A0D /* IOUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUTests.swift; sourceTree = "<group>"; };
+		4D9D40CD22CF3CC000AD0A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D9D40D222CF3CC000AD0A0D /* IOUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9D40D622CF3CC000AD0A0D /* IOUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUUITests.swift; sourceTree = "<group>"; };
+		4D9D40D822CF3CC000AD0A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D9D40E422CF41E100AD0A0D /* IOUColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUColors.swift; sourceTree = "<group>"; };
+		4D9D40E822CF589F00AD0A0D /* IOUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUTextField.swift; sourceTree = "<group>"; };
+		4D9D40EA22CF663900AD0A0D /* IOUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUButton.swift; sourceTree = "<group>"; };
+		4D9D40ED22CF71B700AD0A0D /* AnimationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
+		4D9D40EF22CF7FE700AD0A0D /* ViewController_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Extensions.swift; sourceTree = "<group>"; };
+		4DC7CEBE238BC5FF00699EE3 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4DC7CEBF238BC5FF00699EE3 /* FriendsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCollectionViewCell.xib; sourceTree = "<group>"; };
+		4DC7CEC2238D372B00699EE3 /* FriendRequestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsVC.swift; sourceTree = "<group>"; };
+		4DC7CEC7238D383600699EE3 /* FriendRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestCell.swift; sourceTree = "<group>"; };
+		4DC7CEC8238D383600699EE3 /* FriendRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
+		4DC7CECC238D7B3800699EE3 /* WormTabStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormTabStrip.swift; sourceTree = "<group>"; };
+		4DC7CECE238D7B5400699EE3 /* WormTabStripButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormTabStripButton.swift; sourceTree = "<group>"; };
+		4DC7CED0238D7BA700699EE3 /* PendingTransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTransactionsVC.swift; sourceTree = "<group>"; };
+		4DC7CED7238D7DA600699EE3 /* PendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingCell.swift; sourceTree = "<group>"; };
+		4DC7CED8238D7DA600699EE3 /* PendingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PendingCell.xib; sourceTree = "<group>"; };
+		4DC7CEDB238DA21700699EE3 /* Pending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pending.swift; sourceTree = "<group>"; };
+		4DC7CEE023925ED200699EE3 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		4DC7CEE4239261F500699EE3 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		4DC7CEE823927A8100699EE3 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		4DC7CEEA239283B400699EE3 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		4DC7CEF02392A62D00699EE3 /* FriendHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendHandler.swift; sourceTree = "<group>"; };
+		4DC7CEF22392B32B00699EE3 /* CashflowHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashflowHandler.swift; sourceTree = "<group>"; };
+		4DCCAA8D238AF0480050F6F4 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		4DE1C6B923735C5D00EA0153 /* GetOweVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOweVC.swift; sourceTree = "<group>"; };
+		4DFBCC1D237DAE7A00AAA22B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DFFD30322D20E6F00D714E6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		4DFFD30522D2298000D714E6 /* IOUUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUUser.swift; sourceTree = "<group>"; };
+		4DFFD30E22D2306200D714E6 /* View_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Extensions.swift; sourceTree = "<group>"; };
+		4DFFD31022D230C200D714E6 /* IOUHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUHeader.swift; sourceTree = "<group>"; };
+		4DFFD31422D2335000D714E6 /* ImageView_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView_Extensions.swift; sourceTree = "<group>"; };
+		4DFFD31622D235D600D714E6 /* IOULabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOULabel.swift; sourceTree = "<group>"; };
+		4DFFD31822D2388900D714E6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		672B4147A15EEA7C9687A0E0 /* Pods_IOUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACD482E43EB5731C5772237F /* Pods-IOU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOU/Pods-IOU.debug.xcconfig"; sourceTree = "<group>"; };
+		B85E3695A36E69468F6218CE /* Pods-IOUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOUTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOUTests/Pods-IOUTests.release.xcconfig"; sourceTree = "<group>"; };
+		C46358CAB5859C526EEB70E0 /* Pods-IOUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOUUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOUUITests/Pods-IOUUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA6A14B4AD707F2AA70A8EB2 /* Pods_IOUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3CE52F60F31E96015F2E68 /* Pods-IOU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOU.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOU/Pods-IOU.release.xcconfig"; sourceTree = "<group>"; };
+		FD5EF003418D7628D37CB936 /* Pods-IOUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOUUITests/Pods-IOUUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D9D40AD22CF3CBE00AD0A0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C92D3F47C69AC611BED738C /* Pods_IOU.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9D40C422CF3CC000AD0A0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C663FCC8CC2D8C580FD791FD /* Pods_IOUTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9D40CF22CF3CC000AD0A0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A448EE7D63F7FCE12F08345 /* Pods_IOUUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		476FB5090BC9B1DB8B026B28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACD482E43EB5731C5772237F /* Pods-IOU.debug.xcconfig */,
+				DD3CE52F60F31E96015F2E68 /* Pods-IOU.release.xcconfig */,
+				0DAF074A34CEB642FB131758 /* Pods-IOUTests.debug.xcconfig */,
+				B85E3695A36E69468F6218CE /* Pods-IOUTests.release.xcconfig */,
+				FD5EF003418D7628D37CB936 /* Pods-IOUUITests.debug.xcconfig */,
+				C46358CAB5859C526EEB70E0 /* Pods-IOUUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4D37B1F8237DDED70044CCC2 /* IOUTransCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D37B1F9237DDEF90044CCC2 /* IOUTransCell.swift */,
+				4D37B1FA237DDEF90044CCC2 /* IOUTransCell.xib */,
+			);
+			path = IOUTransCell;
+			sourceTree = "<group>";
+		};
+		4D37B201237DE50F0044CCC2 /* IOUExpandedTransCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D37B202237DE5320044CCC2 /* IOUExpandedTransCell.swift */,
+				4D37B203237DE5320044CCC2 /* IOUExpandedTransCell.xib */,
+			);
+			path = IOUExpandedTransCell;
+			sourceTree = "<group>";
+		};
+		4D5433882371CCA300BD7396 /* IOUHomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D204F3B22D33A760070124D /* IOUHomeCell.swift */,
+				4D204F3C22D33A760070124D /* IOUHomeCell.xib */,
+			);
+			path = IOUHomeCell;
+			sourceTree = "<group>";
+		};
+		4D5AE1F42373083E001644F5 /* FriendsCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D5AE1F523730878001644F5 /* FriendsCell.swift */,
+				4D5AE1F623730878001644F5 /* FriendsCell.xib */,
+			);
+			path = FriendsCell;
+			sourceTree = "<group>";
+		};
+		4D91C8BF2389B273007A62E0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D40B722CF3CBE00AD0A0D /* Main.storyboard */,
+				4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */,
+				4D91C8BD2389B050007A62E0 /* Friends.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4D9D40A722CF3CBE00AD0A0D = {
+			isa = PBXGroup;
+			children = (
+				4D9D40B222CF3CBE00AD0A0D /* IOU */,
+				4D9D40CA22CF3CC000AD0A0D /* IOUTests */,
+				4D9D40D522CF3CC000AD0A0D /* IOUUITests */,
+				4D9D40B122CF3CBE00AD0A0D /* Products */,
+				476FB5090BC9B1DB8B026B28 /* Pods */,
+				6D370936AACC12C7A0570672 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D9D40B122CF3CBE00AD0A0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D40B022CF3CBE00AD0A0D /* IOU.app */,
+				4D9D40C722CF3CC000AD0A0D /* IOUTests.xctest */,
+				4D9D40D222CF3CC000AD0A0D /* IOUUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D9D40B222CF3CBE00AD0A0D /* IOU */ = {
+			isa = PBXGroup;
+			children = (
+				4D0EC1A92394ED0800CE1E52 /* IOU.entitlements */,
+				4DC7CEDE23925E8E00699EE3 /* Networking */,
+				4D9D40EC22CF71A600AD0A0D /* Utils */,
+				4D9D40E722CF588F00AD0A0D /* Views */,
+				4DFFD30722D2298600D714E6 /* Models */,
+				4D9D40E622CF588500AD0A0D /* Controllers */,
+				4D91C8BF2389B273007A62E0 /* Storyboards */,
+				4D9D40BD22CF3CC000AD0A0D /* Assets.xcassets */,
+				4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */,
+				4D9D40BF22CF3CC000AD0A0D /* LaunchScreen.storyboard */,
+				4DFBCC1D237DAE7A00AAA22B /* GoogleService-Info.plist */,
+				4D9D40BA22CF3CBE00AD0A0D /* IOU.xcdatamodeld */,
+				4D9D40E422CF41E100AD0A0D /* IOUColors.swift */,
+				4D9D40C222CF3CC000AD0A0D /* Info.plist */,
+			);
+			path = IOU;
+			sourceTree = "<group>";
+		};
+		4D9D40CA22CF3CC000AD0A0D /* IOUTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D40CB22CF3CC000AD0A0D /* IOUTests.swift */,
+				4D9D40CD22CF3CC000AD0A0D /* Info.plist */,
+			);
+			path = IOUTests;
+			sourceTree = "<group>";
+		};
+		4D9D40D522CF3CC000AD0A0D /* IOUUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D40D622CF3CC000AD0A0D /* IOUUITests.swift */,
+				4D9D40D822CF3CC000AD0A0D /* Info.plist */,
+			);
+			path = IOUUITests;
+			sourceTree = "<group>";
+		};
+		4D9D40E622CF588500AD0A0D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D1C7DA62380574A006273DC /* MainVC.swift */,
+				4DCCAA892389EA5C0050F6F4 /* User */,
+				4DCCAA8A2389EA780050F6F4 /* Cashflow */,
+				4DCCAA8B2389EA8C0050F6F4 /* Friends */,
+				4DCCAA8C2389EA9C0050F6F4 /* Settings */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4D9D40E722CF588F00AD0A0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DC7CEEF2392A58A00699EE3 /* General */,
+				4DC7CEED2392A56A00699EE3 /* Friends */,
+				4DC7CEEE2392A57600699EE3 /* Cashflow */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D9D40EC22CF71A600AD0A0D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4DC7CEE4239261F500699EE3 /* AlertHandler.swift */,
+				4D65EBC1239400870089BD3F /* BadgeButton.swift */,
+				4D9D40ED22CF71B700AD0A0D /* AnimationEngine.swift */,
+				4D79DE302382C18600349232 /* NavigationBar.swift */,
+				4DCCAA8D238AF0480050F6F4 /* NotificationHandler.swift */,
+				4DC7CEE823927A8100699EE3 /* CurrencyFormatter.swift */,
+				4DC7CECB238D7B2300699EE3 /* WormTab */,
+				4DC7CEDF23925EA300699EE3 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4DC7CEC4238D37E500699EE3 /* FriendRequestCell */ = {
+			isa = PBXGroup;
+			children = (
+				4DC7CEC7238D383600699EE3 /* FriendRequestCell.swift */,
+				4DC7CEC8238D383600699EE3 /* FriendRequestCell.xib */,
+			);
+			path = FriendRequestCell;
+			sourceTree = "<group>";
+		};
+		4DC7CECB238D7B2300699EE3 /* WormTab */ = {
+			isa = PBXGroup;
+			children = (
+				4DC7CECC238D7B3800699EE3 /* WormTabStrip.swift */,
+				4DC7CECE238D7B5400699EE3 /* WormTabStripButton.swift */,
+			);
+			path = WormTab;
+			sourceTree = "<group>";
+		};
+		4DC7CED2238D7D4D00699EE3 /* PendingTransactions */ = {
+			isa = PBXGroup;
+			children = (
+				4DC7CED7238D7DA600699EE3 /* PendingCell.swift */,
+				4DC7CED8238D7DA600699EE3 /* PendingCell.xib */,
+			);
+			path = PendingTransactions;
+			sourceTree = "<group>";
+		};
+		4DC7CEDE23925E8E00699EE3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4DC7CEE023925ED200699EE3 /* NetworkHandler.swift */,
+				4DC7CEF02392A62D00699EE3 /* FriendHandler.swift */,
+				4DC7CEF22392B32B00699EE3 /* CashflowHandler.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4DC7CEDF23925EA300699EE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D40EF22CF7FE700AD0A0D /* ViewController_Extensions.swift */,
+				4DFFD30E22D2306200D714E6 /* View_Extensions.swift */,
+				4DFFD31422D2335000D714E6 /* ImageView_Extensions.swift */,
+				4DC7CEEA239283B400699EE3 /* Application.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4DC7CEED2392A56A00699EE3 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				4D5AE1F42373083E001644F5 /* FriendsCell */,
+				4DC7CEC4238D37E500699EE3 /* FriendRequestCell */,
+				4DCCAA93238B32490050F6F4 /* FriendsCollectionViewCell */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		4DC7CEEE2392A57600699EE3 /* Cashflow */ = {
+			isa = PBXGroup;
+			children = (
+				4D5433892371DE3600BD7396 /* IOUHomeCard.swift */,
+				4D5433882371CCA300BD7396 /* IOUHomeCell */,
+				4D37B1F8237DDED70044CCC2 /* IOUTransCell */,
+				4D37B201237DE50F0044CCC2 /* IOUExpandedTransCell */,
+				4DC7CED2238D7D4D00699EE3 /* PendingTransactions */,
+			);
+			path = Cashflow;
+			sourceTree = "<group>";
+		};
+		4DC7CEEF2392A58A00699EE3 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D40E822CF589F00AD0A0D /* IOUTextField.swift */,
+				4D9D40EA22CF663900AD0A0D /* IOUButton.swift */,
+				4DFFD31022D230C200D714E6 /* IOUHeader.swift */,
+				4DFFD31622D235D600D714E6 /* IOULabel.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		4DCCAA892389EA5C0050F6F4 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D40B522CF3CBE00AD0A0D /* LoginVC.swift */,
+				4DFFD30322D20E6F00D714E6 /* RegisterVC.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		4DCCAA8A2389EA780050F6F4 /* Cashflow */ = {
+			isa = PBXGroup;
+			children = (
+				4DFFD31822D2388900D714E6 /* HomeVC.swift */,
+				4DE1C6B923735C5D00EA0153 /* GetOweVC.swift */,
+				4D37B1FD237DE19A0044CCC2 /* UserCashFlowVC.swift */,
+				4D37B1FF237DE4890044CCC2 /* DetailedCashflowVC.swift */,
+				4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */,
+				4DC7CED0238D7BA700699EE3 /* PendingTransactionsVC.swift */,
+			);
+			path = Cashflow;
+			sourceTree = "<group>";
+		};
+		4DCCAA8B2389EA8C0050F6F4 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				4D5AE1F923730A40001644F5 /* FriendsVC.swift */,
+				4D37B208237DED720044CCC2 /* AddFriendsVC.swift */,
+				4DC7CEC2238D372B00699EE3 /* FriendRequestsVC.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		4DCCAA8C2389EA9C0050F6F4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4D5AE1FB237339B2001644F5 /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4DCCAA93238B32490050F6F4 /* FriendsCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4DC7CEBE238BC5FF00699EE3 /* FriendsCollectionViewCell.swift */,
+				4DC7CEBF238BC5FF00699EE3 /* FriendsCollectionViewCell.xib */,
+			);
+			path = FriendsCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		4DFFD30722D2298600D714E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DFFD30522D2298000D714E6 /* IOUUser.swift */,
+				4D91C8B52386C108007A62E0 /* CashFlow.swift */,
+				4D79DE3223843DB600349232 /* Transaction.swift */,
+				4DC7CEDB238DA21700699EE3 /* Pending.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6D370936AACC12C7A0570672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3670834E97A92248E58D908C /* Pods_IOU.framework */,
+				672B4147A15EEA7C9687A0E0 /* Pods_IOUTests.framework */,
+				CA6A14B4AD707F2AA70A8EB2 /* Pods_IOUUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D9D40AF22CF3CBE00AD0A0D /* IOU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D9D40DB22CF3CC000AD0A0D /* Build configuration list for PBXNativeTarget "IOU" */;
+			buildPhases = (
+				5C470454965EC1C66E373701 /* [CP] Check Pods Manifest.lock */,
+				4D9D40AC22CF3CBE00AD0A0D /* Sources */,
+				4D9D40AD22CF3CBE00AD0A0D /* Frameworks */,
+				4D9D40AE22CF3CBE00AD0A0D /* Resources */,
+				7957F44257F45755D69321AA /* [CP] Embed Pods Frameworks */,
+				4DC7CEDD2391A4C900699EE3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOU;
+			productName = IOU;
+			productReference = 4D9D40B022CF3CBE00AD0A0D /* IOU.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D9D40C622CF3CC000AD0A0D /* IOUTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D9D40DE22CF3CC000AD0A0D /* Build configuration list for PBXNativeTarget "IOUTests" */;
+			buildPhases = (
+				89A8DE55C312DF84D29A59FA /* [CP] Check Pods Manifest.lock */,
+				4D9D40C322CF3CC000AD0A0D /* Sources */,
+				4D9D40C422CF3CC000AD0A0D /* Frameworks */,
+				4D9D40C522CF3CC000AD0A0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D9D40C922CF3CC000AD0A0D /* PBXTargetDependency */,
+			);
+			name = IOUTests;
+			productName = IOUTests;
+			productReference = 4D9D40C722CF3CC000AD0A0D /* IOUTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4D9D40D122CF3CC000AD0A0D /* IOUUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D9D40E122CF3CC000AD0A0D /* Build configuration list for PBXNativeTarget "IOUUITests" */;
+			buildPhases = (
+				38F80E41CAE7548E2E479BDB /* [CP] Check Pods Manifest.lock */,
+				4D9D40CE22CF3CC000AD0A0D /* Sources */,
+				4D9D40CF22CF3CC000AD0A0D /* Frameworks */,
+				4D9D40D022CF3CC000AD0A0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D9D40D422CF3CC000AD0A0D /* PBXTargetDependency */,
+			);
+			name = IOUUITests;
+			productName = IOUUITests;
+			productReference = 4D9D40D222CF3CC000AD0A0D /* IOUUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D9D40A822CF3CBE00AD0A0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = IOU;
+				TargetAttributes = {
+					4D9D40AF22CF3CBE00AD0A0D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					4D9D40C622CF3CC000AD0A0D = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4D9D40AF22CF3CBE00AD0A0D;
+					};
+					4D9D40D122CF3CC000AD0A0D = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4D9D40AF22CF3CBE00AD0A0D;
+					};
+				};
+			};
+			buildConfigurationList = 4D9D40AB22CF3CBE00AD0A0D /* Build configuration list for PBXProject "IOU" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D9D40A722CF3CBE00AD0A0D;
+			productRefGroup = 4D9D40B122CF3CBE00AD0A0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D9D40AF22CF3CBE00AD0A0D /* IOU */,
+				4D9D40C622CF3CC000AD0A0D /* IOUTests */,
+				4D9D40D122CF3CC000AD0A0D /* IOUUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D9D40AE22CF3CBE00AD0A0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9D40C122CF3CC000AD0A0D /* LaunchScreen.storyboard in Resources */,
+				4D91C8BC2389AFCD007A62E0 /* CashFlows.storyboard in Resources */,
+				4D9D40BE22CF3CC000AD0A0D /* Assets.xcassets in Resources */,
+				4D204F3E22D33A760070124D /* IOUHomeCell.xib in Resources */,
+				4D5AE1F823730878001644F5 /* FriendsCell.xib in Resources */,
+				4D37B1FC237DDEF90044CCC2 /* IOUTransCell.xib in Resources */,
+				4D9D40B922CF3CBE00AD0A0D /* Main.storyboard in Resources */,
+				4DC7CECA238D383600699EE3 /* FriendRequestCell.xib in Resources */,
+				4DC7CEDA238D7DA600699EE3 /* PendingCell.xib in Resources */,
+				4DC7CEC1238BC5FF00699EE3 /* FriendsCollectionViewCell.xib in Resources */,
+				4DFBCC1E237DAE7A00AAA22B /* GoogleService-Info.plist in Resources */,
+				4D37B205237DE5320044CCC2 /* IOUExpandedTransCell.xib in Resources */,
+				4D91C8BE2389B050007A62E0 /* Friends.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9D40C522CF3CC000AD0A0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9D40D022CF3CC000AD0A0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38F80E41CAE7548E2E479BDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOUUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DC7CEDD2391A4C900699EE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n\n";
+		};
+		5C470454965EC1C66E373701 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOU-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7957F44257F45755D69321AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOU/Pods-IOU-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOU/Pods-IOU-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IOU/Pods-IOU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89A8DE55C312DF84D29A59FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOUTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D9D40AC22CF3CBE00AD0A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC7CEEB239283B400699EE3 /* Application.swift in Sources */,
+				4DFFD30422D20E6F00D714E6 /* RegisterVC.swift in Sources */,
+				4DC7CEE923927A8100699EE3 /* CurrencyFormatter.swift in Sources */,
+				4DFFD31122D230C200D714E6 /* IOUHeader.swift in Sources */,
+				4DC7CEC0238BC5FF00699EE3 /* FriendsCollectionViewCell.swift in Sources */,
+				4DC7CECF238D7B5400699EE3 /* WormTabStripButton.swift in Sources */,
+				4D9D40EE22CF71B700AD0A0D /* AnimationEngine.swift in Sources */,
+				4DE1C6BA23735C5D00EA0153 /* GetOweVC.swift in Sources */,
+				4DFFD30F22D2306200D714E6 /* View_Extensions.swift in Sources */,
+				4D91C8B62386C108007A62E0 /* CashFlow.swift in Sources */,
+				4D37B204237DE5320044CCC2 /* IOUExpandedTransCell.swift in Sources */,
+				4DC7CEF32392B32B00699EE3 /* CashflowHandler.swift in Sources */,
+				4D9D40B622CF3CBE00AD0A0D /* LoginVC.swift in Sources */,
+				4DC7CEF12392A62D00699EE3 /* FriendHandler.swift in Sources */,
+				4D9D40F022CF7FE700AD0A0D /* ViewController_Extensions.swift in Sources */,
+				4DFFD31522D2335000D714E6 /* ImageView_Extensions.swift in Sources */,
+				4DFFD31722D235D600D714E6 /* IOULabel.swift in Sources */,
+				4D54338A2371DE3600BD7396 /* IOUHomeCard.swift in Sources */,
+				4D204F3D22D33A760070124D /* IOUHomeCell.swift in Sources */,
+				4D9D40E522CF41E100AD0A0D /* IOUColors.swift in Sources */,
+				4D1C7DA72380574A006273DC /* MainVC.swift in Sources */,
+				4D79DE3323843DB600349232 /* Transaction.swift in Sources */,
+				4DFFD31922D2388900D714E6 /* HomeVC.swift in Sources */,
+				4DC7CEC3238D372B00699EE3 /* FriendRequestsVC.swift in Sources */,
+				4D37B200237DE4890044CCC2 /* DetailedCashflowVC.swift in Sources */,
+				4D9D40E922CF589F00AD0A0D /* IOUTextField.swift in Sources */,
+				4DC7CECD238D7B3800699EE3 /* WormTabStrip.swift in Sources */,
+				4D65EBC2239400870089BD3F /* BadgeButton.swift in Sources */,
+				4D37B1FE237DE19A0044CCC2 /* UserCashFlowVC.swift in Sources */,
+				4DC7CED9238D7DA600699EE3 /* PendingCell.swift in Sources */,
+				4D9D40EB22CF663900AD0A0D /* IOUButton.swift in Sources */,
+				4DC7CEE5239261F500699EE3 /* AlertHandler.swift in Sources */,
+				4D5AE1FA23730A40001644F5 /* FriendsVC.swift in Sources */,
+				4D9D40BC22CF3CBE00AD0A0D /* IOU.xcdatamodeld in Sources */,
+				4D79DE312382C18600349232 /* NavigationBar.swift in Sources */,
+				4DCCAA8E238AF0480050F6F4 /* NotificationHandler.swift in Sources */,
+				4D91C8B82389AE11007A62E0 /* AddTransactionVC.swift in Sources */,
+				4D37B209237DED720044CCC2 /* AddFriendsVC.swift in Sources */,
+				4D5AE1F723730878001644F5 /* FriendsCell.swift in Sources */,
+				4DC7CEDC238DA21700699EE3 /* Pending.swift in Sources */,
+				4DC7CEC9238D383600699EE3 /* FriendRequestCell.swift in Sources */,
+				4D37B1FB237DDEF90044CCC2 /* IOUTransCell.swift in Sources */,
+				4DFFD30622D2298000D714E6 /* IOUUser.swift in Sources */,
+				4DC7CED1238D7BA700699EE3 /* PendingTransactionsVC.swift in Sources */,
+				4D9D40B422CF3CBE00AD0A0D /* AppDelegate.swift in Sources */,
+				4D5AE1FC237339B2001644F5 /* SettingsVC.swift in Sources */,
+				4DC7CEE123925ED200699EE3 /* NetworkHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9D40C322CF3CC000AD0A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9D40CC22CF3CC000AD0A0D /* IOUTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9D40CE22CF3CC000AD0A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9D40D722CF3CC000AD0A0D /* IOUUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D9D40C922CF3CC000AD0A0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D9D40AF22CF3CBE00AD0A0D /* IOU */;
+			targetProxy = 4D9D40C822CF3CC000AD0A0D /* PBXContainerItemProxy */;
+		};
+		4D9D40D422CF3CC000AD0A0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D9D40AF22CF3CBE00AD0A0D /* IOU */;
+			targetProxy = 4D9D40D322CF3CC000AD0A0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4D9D40B722CF3CBE00AD0A0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D9D40B822CF3CBE00AD0A0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D9D40BF22CF3CC000AD0A0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D9D40C022CF3CC000AD0A0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D9D40D922CF3CC000AD0A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D9D40DA22CF3CC000AD0A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D9D40DC22CF3CC000AD0A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACD482E43EB5731C5772237F /* Pods-IOU.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IOU/IOU.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = IOU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IOU.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4D9D40DD22CF3CC000AD0A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD3CE52F60F31E96015F2E68 /* Pods-IOU.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IOU/IOU.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = IOU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IOU.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4D9D40DF22CF3CC000AD0A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DAF074A34CEB642FB131758 /* Pods-IOUTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = IOUTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.IOUTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOU.app/IOU";
+			};
+			name = Debug;
+		};
+		4D9D40E022CF3CC000AD0A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B85E3695A36E69468F6218CE /* Pods-IOUTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = IOUTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.IOUTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOU.app/IOU";
+			};
+			name = Release;
+		};
+		4D9D40E222CF3CC000AD0A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD5EF003418D7628D37CB936 /* Pods-IOUUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = IOUUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.IOUUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IOU;
+			};
+			name = Debug;
+		};
+		4D9D40E322CF3CC000AD0A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C46358CAB5859C526EEB70E0 /* Pods-IOUUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = IOUUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.IOUUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IOU;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D9D40AB22CF3CBE00AD0A0D /* Build configuration list for PBXProject "IOU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D9D40D922CF3CC000AD0A0D /* Debug */,
+				4D9D40DA22CF3CC000AD0A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D9D40DB22CF3CC000AD0A0D /* Build configuration list for PBXNativeTarget "IOU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D9D40DC22CF3CC000AD0A0D /* Debug */,
+				4D9D40DD22CF3CC000AD0A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D9D40DE22CF3CC000AD0A0D /* Build configuration list for PBXNativeTarget "IOUTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D9D40DF22CF3CC000AD0A0D /* Debug */,
+				4D9D40E022CF3CC000AD0A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D9D40E122CF3CC000AD0A0D /* Build configuration list for PBXNativeTarget "IOUUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D9D40E222CF3CC000AD0A0D /* Debug */,
+				4D9D40E322CF3CC000AD0A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D9D40BA22CF3CBE00AD0A0D /* IOU.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D9D40BB22CF3CBE00AD0A0D /* IOU.xcdatamodel */,
+			);
+			currentVersion = 4D9D40BB22CF3CBE00AD0A0D /* IOU.xcdatamodel */;
+			path = IOU.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4D9D40A822CF3CBE00AD0A0D /* Project object */;
+}

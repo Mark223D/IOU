@@ -1,0 +1,6 @@
+framework module Pods_IOUUITests {
+  umbrella header "Pods-IOUUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

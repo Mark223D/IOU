@@ -12,6 +12,7 @@ target 'IOU' do
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.14.0'
 

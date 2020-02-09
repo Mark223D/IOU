@@ -166,6 +166,8 @@ class AddTransactionVC: MainVC {
             
             alertController.showAlert(on: self, with: message, and: actions)
         }
+        
+
         self.navigationController?.popViewController(animated: true)
                    self.dismiss(animated: true) {
                        self.giveBtn.isEnabled = true

@@ -37,29 +37,23 @@ class LoginVC: MainVC {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //        if firstLoad {
-        //            self.registerStackView.alpha = 0.0
-        //            self.fieldsStackView.alpha = 0.0
-        //            self.signinBtn.alpha = 0.0
-        //            self.logoImageView.alpha = 0.0
-        //
-        //            self.animEngine.animateOnScreen(delay: 1) { () in
-        //                UIView.animate(withDuration: 0.5, animations: {
-        //                    self.fieldsStackView.alpha = 1.0
-        //                    self.registerStackView.alpha = 1.0
-        //                    self.signinBtn.alpha = 1.0
-        //                    self.logoImageView.alpha = 1.0
-        //
-        //                })
-        //            }
-        //            firstLoad = false
-        //        }
-        //        else{
-        //        self.animEngine.animateOnScreen(delay: 1) { () in }
-        
-        //        }
-        
-        if let _ = Auth.auth().currentUser {
+
+        if let user = Auth.auth().currentUser {
+            let token = Messaging.messaging().fcmToken
+
+            let ref = Database.database().reference()
+            NetworkHandler().getUser(user.uid) { (test) in
+                 ref.child("users")
+                            .child(user.uid)
+                            .setValue([
+                                "id": user.uid,
+                                "email": test.email,
+                                "firstName": test.firstName,
+                                "lastName": test.lastName,
+                                "pushToken": token
+                            ])
+            }
+            
             self.performSegue(withIdentifier: "toHomeSegue", sender: self)
         }
     }

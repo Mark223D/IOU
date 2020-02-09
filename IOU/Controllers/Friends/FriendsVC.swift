@@ -36,7 +36,6 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkRequests(_:)), name: .checkRequest, object: nil)
         
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +43,8 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
         super.viewWillAppear(animated)
         
         getFriends()
+        checkPending()
+
         
     }
     
@@ -95,7 +96,7 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
         }
         
         currentFriends = friends.filter({ friend -> Bool in
-            return friend.firstName!.lowercased().contains(searchText.lowercased())
+            return friend.name!.lowercased().contains(searchText.lowercased())
         })
         
         tableView.reloadData()

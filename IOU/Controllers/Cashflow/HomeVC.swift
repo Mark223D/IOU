@@ -17,7 +17,7 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     
     @IBOutlet weak private var getAmount: UILabel!
     @IBOutlet weak private var fromLabel: UILabel!
-    
+
     @IBOutlet weak private var oweAmount: UILabel!
     @IBOutlet weak private var toLabel: UILabel!
     
@@ -50,8 +50,11 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkPending(_:)), name: .updatePending, object: nil)
 
+     
+           
     }
     
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is GetOweVC {
@@ -199,6 +202,18 @@ extension HomeVC {
                     self.pendingBtn.removeBadge()
                 }
                 print("Updating Pending")
+               }
+        
+        let friendHandler = FriendHandler()
+               friendHandler.getFriendRequests { (requests) in
+                   if requests.count > 0 {
+                    self.tabBarController?.tabBar.items?[1].badgeColor = .green
+                       self.tabBarController?.tabBar.items?[1].badgeValue = "\(requests.count)"
+                   }
+                   else {
+                    self.tabBarController?.tabBar.items?[1].badgeValue = nil
+
+                   }
                }
     }
     

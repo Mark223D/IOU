@@ -12,10 +12,12 @@ import Firebase
 import Fabric
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     var window: UIWindow?
     var ref: DatabaseReference!
+    var gcmMessageIDKey = "gcm.token"
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -28,8 +30,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.sharedSDK().debug = true
         
+        if #available(iOS 10.0, *) {
+          // For iOS 10 display notification (sent via APNS)
+          UNUserNotificationCenter.current().delegate = self
+
+          let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+          UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in })
+        } else {
+          let settings: UIUserNotificationSettings =
+          UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+          application.registerUserNotificationSettings(settings)
+        }
+        
+        
+
+        application.registerForRemoteNotifications()
+        Messaging.messaging().delegate = self
+        Messaging.messaging().isAutoInitEnabled = true
+       
+        
         return true
     }
+ 
+
     
     func setupNavigationBar(){
         if #available(iOS 13.0, *) {
@@ -71,6 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+   
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -142,4 +168,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+@available(iOS 10, *)
+extension AppDelegate : UNUserNotificationCenterDelegate {
 
+  // Receive displayed notifications for iOS 10 devices.
+  func userNotificationCenter(_ center: UNUserNotificationCenter,
+                              willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    let userInfo = notification.request.content.userInfo
+
+    // With swizzling disabled you must let Messaging know about the message, for Analytics
+    Messaging.messaging().appDidReceiveMessage(userInfo)
+
+//    let aps = userInfo["aps"] as! NSDictionary
+    completionHandler([.alert, .badge, .sound])
+
+  }
+
+  func userNotificationCenter(_ center: UNUserNotificationCenter,
+                              didReceive response: UNNotificationResponse,
+                              withCompletionHandler completionHandler: @escaping () -> Void) {
+    let userInfo = response.notification.request.content.userInfo
+    // Print message ID.
+    if let messageID = userInfo[gcmMessageIDKey] {
+      print("Message ID: \(messageID)")
+    }
+
+    // Print full message.
+//    print(userInfo)
+
+    completionHandler()
+  }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+//      print("Firebase registration token: \(fcmToken)")
+
+      let dataDict:[String: String] = ["token": fcmToken]
+      NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+      // TODO: If necessary send token to application server.
+      // Note: This callback is fired at each app startup and whenever a new token is generated.
+    }
+    
+    
+    
+}

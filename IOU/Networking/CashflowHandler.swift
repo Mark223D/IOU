@@ -118,7 +118,12 @@ class CashFlowHandler: NetworkHandler {
                         .updateChildValues(["status": "Confirmed"])
                     
                     self.updateCashFlows(friend, transaction)
-                    
+                    NetworkHandler().getUser(friend.id ?? "") { (test) in
+                        NetworkHandler().getUser(user.uid, completion: { (realUser) in
+                            NotifHandler().sendPushNotification(to: (test.pushToken ?? ""), title: "IOU", body: "\(realUser.firstName ?? "") \(realUser.lastName ?? "") accepted your a transaction! Check who owes who!")
+
+                        })
+                    }
                     completion()
                 }
                 
@@ -274,6 +279,12 @@ class CashFlowHandler: NetworkHandler {
                                              giver: selectedID,
                                              receiver: user.uid)
                     }
+                    NetworkHandler().getUser(selected.id ?? "") { (test) in
+                        NetworkHandler().getUser(user.uid, completion: { (realUser) in
+                            NotifHandler().sendPushNotification(to: (test.pushToken ?? ""), title: "IOU", body: "\(realUser.firstName ?? "") \(realUser.lastName ?? "") sent you a transaction! Check it out now")
+
+                        })
+                    }
                     completion(true)
                 }
                 completion(false)
@@ -324,6 +335,8 @@ class CashFlowHandler: NetworkHandler {
                             "sender": user.uid,
                             "receiver": receiver,
                             "status" : "Created"])
+                
+               
             }
         }
         

@@ -29,7 +29,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
     func setModel(_ model: Friend)
     {
         self.model = model
-        self.usernameLabel.text = model.firstName ?? ""
+        self.usernameLabel.text = model.name ?? ""
         self.imageView.backgroundColor = .green
 
         

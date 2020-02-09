@@ -14,6 +14,7 @@ class FriendRequestCell: UITableViewCell {
     var model: Friend?
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var declineBtn: UIButton!
     @IBOutlet weak var confirmBtn: UIButton!
     
@@ -31,7 +32,9 @@ class FriendRequestCell: UITableViewCell {
     
     func setModel(_ model: Friend){
         self.model = model
-        self.userLabel.text = self.model?.firstName ?? ""
+        self.userLabel.text = self.model?.name ?? ""
+        self.emailLabel.text = self.model?.email ?? ""
+
         
     }
     

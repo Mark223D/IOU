@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C92D3F47C69AC611BED738C /* Pods_IOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3670834E97A92248E58D908C /* Pods_IOU.framework */; };
 		2A448EE7D63F7FCE12F08345 /* Pods_IOUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6A14B4AD707F2AA70A8EB2 /* Pods_IOUUITests.framework */; };
+		4D09390B23EC547A00107F5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D09390A23EC547900107F5A /* GoogleService-Info.plist */; };
+		4D09390D23ED92AC00107F5A /* NotifHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09390C23ED92AC00107F5A /* NotifHandler.swift */; };
 		4D1C7DA72380574A006273DC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C7DA62380574A006273DC /* MainVC.swift */; };
 		4D204F3D22D33A760070124D /* IOUHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D204F3B22D33A760070124D /* IOUHomeCell.swift */; };
 		4D204F3E22D33A760070124D /* IOUHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D204F3C22D33A760070124D /* IOUHomeCell.xib */; };
@@ -63,7 +65,6 @@
 		4DC7CEF32392B32B00699EE3 /* CashflowHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEF22392B32B00699EE3 /* CashflowHandler.swift */; };
 		4DCCAA8E238AF0480050F6F4 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCAA8D238AF0480050F6F4 /* NotificationHandler.swift */; };
 		4DE1C6BA23735C5D00EA0153 /* GetOweVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1C6B923735C5D00EA0153 /* GetOweVC.swift */; };
-		4DFBCC1E237DAE7A00AAA22B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFBCC1D237DAE7A00AAA22B /* GoogleService-Info.plist */; };
 		4DFFD30422D20E6F00D714E6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD30322D20E6F00D714E6 /* RegisterVC.swift */; };
 		4DFFD30622D2298000D714E6 /* IOUUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD30522D2298000D714E6 /* IOUUser.swift */; };
 		4DFFD30F22D2306200D714E6 /* View_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFD30E22D2306200D714E6 /* View_Extensions.swift */; };
@@ -94,6 +95,8 @@
 /* Begin PBXFileReference section */
 		0DAF074A34CEB642FB131758 /* Pods-IOUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOUTests/Pods-IOUTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3670834E97A92248E58D908C /* Pods_IOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D09390A23EC547900107F5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D09390C23ED92AC00107F5A /* NotifHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifHandler.swift; sourceTree = "<group>"; };
 		4D0EC1A92394ED0800CE1E52 /* IOU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOU.entitlements; sourceTree = "<group>"; };
 		4D1C7DA62380574A006273DC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4D204F3B22D33A760070124D /* IOUHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUHomeCell.swift; sourceTree = "<group>"; };
@@ -155,7 +158,6 @@
 		4DC7CEF22392B32B00699EE3 /* CashflowHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashflowHandler.swift; sourceTree = "<group>"; };
 		4DCCAA8D238AF0480050F6F4 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		4DE1C6B923735C5D00EA0153 /* GetOweVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOweVC.swift; sourceTree = "<group>"; };
-		4DFBCC1D237DAE7A00AAA22B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DFFD30322D20E6F00D714E6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4DFFD30522D2298000D714E6 /* IOUUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUUser.swift; sourceTree = "<group>"; };
 		4DFFD30E22D2306200D714E6 /* View_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Extensions.swift; sourceTree = "<group>"; };
@@ -294,8 +296,8 @@
 				4D9D40BD22CF3CC000AD0A0D /* Assets.xcassets */,
 				4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */,
 				4D9D40BF22CF3CC000AD0A0D /* LaunchScreen.storyboard */,
-				4DFBCC1D237DAE7A00AAA22B /* GoogleService-Info.plist */,
 				4D9D40BA22CF3CBE00AD0A0D /* IOU.xcdatamodeld */,
+				4D09390A23EC547900107F5A /* GoogleService-Info.plist */,
 				4D9D40E422CF41E100AD0A0D /* IOUColors.swift */,
 				4D9D40C222CF3CC000AD0A0D /* Info.plist */,
 			);
@@ -390,6 +392,7 @@
 				4DC7CEE023925ED200699EE3 /* NetworkHandler.swift */,
 				4DC7CEF02392A62D00699EE3 /* FriendHandler.swift */,
 				4DC7CEF22392B32B00699EE3 /* CashflowHandler.swift */,
+				4D09390C23ED92AC00107F5A /* NotifHandler.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -627,9 +630,9 @@
 				4DC7CECA238D383600699EE3 /* FriendRequestCell.xib in Resources */,
 				4DC7CEDA238D7DA600699EE3 /* PendingCell.xib in Resources */,
 				4DC7CEC1238BC5FF00699EE3 /* FriendsCollectionViewCell.xib in Resources */,
-				4DFBCC1E237DAE7A00AAA22B /* GoogleService-Info.plist in Resources */,
 				4D37B205237DE5320044CCC2 /* IOUExpandedTransCell.xib in Resources */,
 				4D91C8BE2389B050007A62E0 /* Friends.storyboard in Resources */,
+				4D09390B23EC547A00107F5A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +785,7 @@
 				4DFFD31922D2388900D714E6 /* HomeVC.swift in Sources */,
 				4DC7CEC3238D372B00699EE3 /* FriendRequestsVC.swift in Sources */,
 				4D37B200237DE4890044CCC2 /* DetailedCashflowVC.swift in Sources */,
+				4D09390D23ED92AC00107F5A /* NotifHandler.swift in Sources */,
 				4D9D40E922CF589F00AD0A0D /* IOUTextField.swift in Sources */,
 				4DC7CECD238D7B3800699EE3 /* WormTabStrip.swift in Sources */,
 				4D65EBC2239400870089BD3F /* BadgeButton.swift in Sources */,
@@ -981,7 +985,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IOU/IOU.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7VHDJ49KYT;
 				INFOPLIST_FILE = IOU/Info.plist;
@@ -1005,7 +1009,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IOU/IOU.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 7VHDJ49KYT;
 				INFOPLIST_FILE = IOU/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;

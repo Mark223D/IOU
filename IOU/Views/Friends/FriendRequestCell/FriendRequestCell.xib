@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +18,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOa-Aq-JaE">
-                        <rect key="frame" x="148.5" y="19" width="36.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="148" y="19.5" width="37" height="19.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -51,14 +51,21 @@
                         </subviews>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NSL-o8-XYl">
-                        <rect key="frame" x="69.5" y="8" width="43" height="43"/>
+                        <rect key="frame" x="69" y="8" width="43" height="43"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="NSL-o8-XYl" secondAttribute="height" multiplier="1:1" id="g80-7B-KUE"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acp-np-Wmf">
+                        <rect key="frame" x="151" y="47" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="Acp-np-Wmf" firstAttribute="top" secondItem="LOa-Aq-JaE" secondAttribute="bottom" constant="8" id="1Mc-rY-LRC"/>
                     <constraint firstAttribute="bottom" secondItem="KvS-ZA-GD6" secondAttribute="bottom" constant="5" id="RZX-5L-Q7l"/>
                     <constraint firstItem="KvS-ZA-GD6" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="V3x-3K-T6W"/>
                     <constraint firstItem="NSL-o8-XYl" firstAttribute="centerY" secondItem="LOa-Aq-JaE" secondAttribute="centerY" id="XjK-r8-58H"/>
@@ -66,6 +73,7 @@
                     <constraint firstItem="NSL-o8-XYl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tN7-4v-xuh"/>
                     <constraint firstItem="NSL-o8-XYl" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.4" id="wrV-EQ-PZm"/>
                     <constraint firstItem="LOa-Aq-JaE" firstAttribute="leading" secondItem="NSL-o8-XYl" secondAttribute="trailing" constant="36" id="xOv-ew-2tT"/>
+                    <constraint firstItem="Acp-np-Wmf" firstAttribute="centerX" secondItem="LOa-Aq-JaE" secondAttribute="centerX" id="z9f-oq-c2c"/>
                     <constraint firstItem="LOa-Aq-JaE" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zhY-Rb-QDA"/>
                 </constraints>
             </tableViewCellContentView>
@@ -74,6 +82,7 @@
             <connections>
                 <outlet property="confirmBtn" destination="IUx-XX-Mv6" id="l8w-ch-A3u"/>
                 <outlet property="declineBtn" destination="7DZ-81-l3p" id="qZX-Pd-blq"/>
+                <outlet property="emailLabel" destination="Acp-np-Wmf" id="fJk-AG-Unm"/>
                 <outlet property="userImage" destination="NSL-o8-XYl" id="alV-Jq-2L9"/>
                 <outlet property="userLabel" destination="LOa-Aq-JaE" id="lPs-Wb-7pn"/>
             </connections>

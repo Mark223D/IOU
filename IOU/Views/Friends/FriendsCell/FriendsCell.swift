@@ -12,6 +12,7 @@ class FriendsCell: UITableViewCell {
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     private var userModel: IOUUser?
     private var friendModel: Friend?
@@ -38,7 +39,9 @@ class FriendsCell: UITableViewCell {
         
         self.friendModel = model
         
-        self.nameLabel.text = model.firstName
+        self.nameLabel.text = model.name
+        self.emailLabel.text = model.email
+
     }
     
 }

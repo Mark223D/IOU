@@ -121,7 +121,9 @@ class FriendHandler: NetworkHandler {
                 
                 if let id = selectedUser.id,
                     let selectedFirstName = selectedUser.firstName,
-                    let selectedLastName = selectedUser.lastName {
+                    let selectedLastName = selectedUser.lastName,
+                    let selectedEmail = selectedUser.email
+                {
                     
                     let selectedUserName = "\(selectedFirstName) \(selectedLastName)"
                     
@@ -133,7 +135,9 @@ class FriendHandler: NetworkHandler {
                             let signedInUser = IOUUser(snapshot: snapshot)
                             
                             if let userFirstName = signedInUser.firstName,
-                                let userLastName = signedInUser.lastName
+                                let userLastName = signedInUser.lastName,
+                                let userEmail = signedInUser.email
+
                             {
                                 
                                 let userName = "\(userFirstName) \(userLastName)"
@@ -143,6 +147,7 @@ class FriendHandler: NetworkHandler {
                                     .setValue(
                                         [
                                             "name": selectedUserName,
+                                            "email": selectedEmail,
                                             "sender": user.uid,
                                             "status": "Sent",
                                             "created": Date().description
@@ -153,10 +158,18 @@ class FriendHandler: NetworkHandler {
                                     .child(user.uid).setValue(
                                         [
                                             "name": userName,
+                                            "email": userEmail,
                                             "sender": user.uid,
                                             "status": "Sent",
                                             "created": Date().description
                                     ])
+                                
+                                NetworkHandler().getUser(selectedUser.id ?? "") { (test) in
+                                    NetworkHandler().getUser(user.uid, completion: { (realUser) in
+                                        NotifHandler().sendPushNotification(to: (test.pushToken ?? ""), title: "IOU", body: "\(realUser.firstName ?? "") \(realUser.lastName ?? "")  wants to be your friend! Don't keep them waiting. ")
+
+                                    })
+                                }
                                 completion(true)
                             }
                             else{
@@ -225,6 +238,13 @@ class FriendHandler: NetworkHandler {
                                             "amount" : 0,
                                             "userID": sender,
                                             "name": "\(userFirstName) \(userLastName)"])
+                                    
+                                    NetworkHandler().getUser(model.id ?? "") { (test) in
+                                        NetworkHandler().getUser(user.uid, completion: { (realUser) in
+                                            NotifHandler().sendPushNotification(to: (test.pushToken ?? ""), title: "IOU", body: "You & \(realUser.firstName ?? "") \(realUser.lastName ?? "") are now Friends! ")
+
+                                        })
+                                    }
                                 }
                                 
                             }
@@ -242,6 +262,7 @@ class FriendHandler: NetworkHandler {
                 if let sender = model.sender{
                     ref.child("friends").child(user.uid).child(sender).updateChildValues(["status" : "Declined"])
                     ref.child("friends").child(sender).child(user.uid).updateChildValues(["status" : "Declined"])
+                    
                 }
             }
         }

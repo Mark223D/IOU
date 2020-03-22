@@ -49,6 +49,7 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
         addTransactionBtn.layer.cornerRadius = addTransactionBtn.frame.height*0.2
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkPending(_:)), name: .updatePending, object: nil)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
 
      
            

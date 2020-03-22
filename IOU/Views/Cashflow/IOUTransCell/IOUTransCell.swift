@@ -33,7 +33,7 @@ class IOUTransCell: UITableViewCell {
     
     func setModel(_ model: CashFlow, _ get: Bool){
         self.model = model
-        self.avatarImageView.backgroundColor = .green
+        self.avatarImageView.backgroundColor =  UIColor.appColor(.background)
         self.userLabel.text = model.username
         self.amountLabel.text = currencyFormatter.formatAmountToLBP(get ?  (model.amount ?? 0) : (model.amount ?? 0) * -1)
         self.gaveTookLabel.isHidden = true

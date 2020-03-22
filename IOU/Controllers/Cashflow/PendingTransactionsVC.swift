@@ -36,8 +36,10 @@ class PendingTransactionsVC: MainVC {
         view.eyStyle.wormStyel = .BUBBLE
         view.eyStyle.isWormEnable = false
         view.eyStyle.spacingBetweenTabs = 15
-        view.eyStyle.dividerBackgroundColor = .lightGrey
+      view.eyStyle.dividerBackgroundColor = UIColor.appColor(.foreground) ?? .blue
+      view.eyStyle.topScrollViewBackgroundColor = UIColor.appColor(.foreground) ?? .blue
         view.eyStyle.tabItemSelectedColor = .white
+      view.eyStyle.WormColor = UIColor.appColor(.highlight) ?? .orange
 
         view.currentTabIndex = 0
         view.shouldCenterSelectedWorm = false

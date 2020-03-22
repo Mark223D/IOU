@@ -13,11 +13,10 @@ import Firebase
 class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
-        self.navigationController?.navigationBar.setGradientBackground(colors: [.mediumGrey, .mediumGrey], startPoint: .bottomLeft, endPoint: .topRight)
-        
-        self.view.setGradientBackground(colorTop: .mediumGrey, colorBottom: .darkGrey)
     }
+
     
     
     func format(_ amount: Int) -> String?{
@@ -28,8 +27,6 @@ class MainVC: UIViewController {
         return formatter.string(from: NSNumber(value: amount))
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    
     
 }

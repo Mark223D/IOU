@@ -20,10 +20,11 @@ class IOUButton: UIButton {
 
             self.setAttributedTitle(attribute, for: .normal)
             self.titleLabel?.text = titleText
-            self.titleLabel?.textColor = UIColor.white
-            
+            self.titleLabel?.textColor = UIColor.white   
         }
     }
+  
+  
     @IBInspectable var cornerRadius: CGFloat = 10.0 {
         didSet{
             setupView()
@@ -41,7 +42,7 @@ class IOUButton: UIButton {
     }
     
     func setupView(){
-        self.backgroundColor = UIColor.green
+        self.backgroundColor =  UIColor.appColor(.highlight)
         self.layer.cornerRadius = cornerRadius
         self.addTarget(self, action: #selector(scaleToSmall), for: .touchDown)
         self.addTarget(self, action: #selector(scaleToSmall), for: .touchDragEnter)

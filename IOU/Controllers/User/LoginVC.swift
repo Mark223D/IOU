@@ -33,11 +33,29 @@ class LoginVC: MainVC {
         self.initKeyboardEvents()
         
         self.initAnimationEngine()
+      
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.background) ?? .green)
+
+
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
 
+ override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+          self.navigationController?.navigationBar.barTintColor = UIColor.appColor(.background)
+  self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.background)
+
+
+  }
+
+
+  override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+    self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
+
+  }
+   
+  override func viewDidAppear(_ animated: Bool) {
         if let user = Auth.auth().currentUser {
             let token = Messaging.messaging().fcmToken
 
@@ -57,7 +75,8 @@ class LoginVC: MainVC {
             self.performSegue(withIdentifier: "toHomeSegue", sender: self)
         }
     }
-    
+  
+
     
     
     @IBAction func signinBtnPressed(_ sender: Any) {

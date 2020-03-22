@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xPk-29-eeG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xPk-29-eeG">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,41 +14,35 @@
             <objects>
                 <viewController storyboardIdentifier="LoginVC" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Yh-sd-k2q">
                                 <rect key="frame" x="94" y="20" width="187.5" height="187.5"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="highlight"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Yh-sd-k2q" secondAttribute="height" multiplier="1:1" id="6TH-2n-113"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-3i-bY1">
-                                <rect key="frame" x="37.5" y="272.5" width="300" height="140"/>
+                                <rect key="frame" x="37.5" y="250" width="300" height="128.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xwp-8t-Kdc">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="49.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-ly-bfd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-ly-bfd">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="EMAIL">
-                                                        <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <size key="shadowOffset" width="0.0" height="4"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEp-qj-nh0" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="34" width="300" height="21"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEp-qj-nh0" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="34" width="300" height="15.5"/>
                                                 <color key="tintColor" red="0.091867275540000001" green="0.1154149547" blue="0.14701038599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <attributedString key="attributedText"/>
+                                                <color key="textColor" name="tabBarSelected"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" textContentType="email"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSecure" value="NO"/>
@@ -60,27 +55,21 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sgU-uH-3h1">
-                                        <rect key="frame" x="0.0" y="85" width="300" height="55"/>
+                                        <rect key="frame" x="0.0" y="79.5" width="300" height="49"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAl-94-9B4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAl-94-9B4">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="PASSWORD">
-                                                        <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <size key="shadowOffset" width="0.0" height="4"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKA-OT-DbK" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="34" width="300" height="21"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKA-OT-DbK" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="34" width="300" height="15"/>
                                                 <color key="tintColor" red="0.091867275540000001" green="0.1154149547" blue="0.14701038599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <attributedString key="attributedText"/>
+                                                <color key="textColor" name="tabBarSelected"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="webSearch" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSecure" value="YES"/>
@@ -95,8 +84,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFE-13-JOU" customClass="IOUButton" customModule="IOU" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="466.5" width="300" height="37.5"/>
-                                <color key="backgroundColor" red="0.87450980389999999" green="0.67450980390000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="37.5" y="400.5" width="300" height="51.5"/>
+                                <color key="backgroundColor" name="Orange"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Log In">
@@ -113,30 +102,23 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ANI-rN-ji1">
-                                <rect key="frame" x="169" y="230.5" width="37" height="37"/>
-                                <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="169" y="267" width="37" height="37"/>
+                                <color key="color" name="highlight"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQd-rr-HTZ">
-                                <rect key="frame" x="106" y="560" width="163" height="33"/>
+                                <rect key="frame" x="106" y="508" width="163" height="33"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB3-LJ-AF7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New user ?  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB3-LJ-AF7">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="33"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="New user ?  ">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <color key="textColor" name="tabBarSelected"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPQ-i5-nhv">
                                         <rect key="frame" x="94" y="0.0" width="69" height="33"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="Register">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" name="tabBarSelected"/>
                                         </state>
                                         <connections>
                                             <segue destination="hl4-Sx-rbR" kind="show" id="ICL-R4-Kra"/>
@@ -145,7 +127,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Yh-sd-k2q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1oU-oE-mPc"/>
@@ -154,10 +136,10 @@
                             <constraint firstItem="oQd-rr-HTZ" firstAttribute="top" secondItem="BFE-13-JOU" secondAttribute="bottom" constant="56" id="Bqy-4X-yYY"/>
                             <constraint firstItem="oQd-rr-HTZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ngg-S6-nYg"/>
                             <constraint firstItem="6Yh-sd-k2q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="QRn-mw-5Rm"/>
-                            <constraint firstItem="BFE-13-JOU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="R8j-lD-BXW"/>
+                            <constraint firstItem="BFE-13-JOU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.09" id="R8j-lD-BXW"/>
                             <constraint firstItem="TJ5-3i-bY1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="S0C-qa-a4r"/>
                             <constraint firstItem="TJ5-3i-bY1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="X39-6E-Bkd"/>
-                            <constraint firstItem="ANI-rN-ji1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="ZKh-fM-NTs"/>
+                            <constraint firstItem="ANI-rN-ji1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZKh-fM-NTs"/>
                             <constraint firstItem="BFE-13-JOU" firstAttribute="width" secondItem="TJ5-3i-bY1" secondAttribute="width" id="p4J-wA-21H"/>
                             <constraint firstItem="BFE-13-JOU" firstAttribute="centerX" secondItem="TJ5-3i-bY1" secondAttribute="centerX" id="qDh-q0-GAQ"/>
                             <constraint firstItem="ANI-rN-ji1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wiI-k2-aQU"/>
@@ -181,18 +163,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4105" y="1062"/>
+            <point key="canvasLocation" x="3966" y="313"/>
         </scene>
-        <!--RegisterVC-->
+        <!--Register-->
         <scene sceneID="llH-Hw-dBu">
             <objects>
                 <viewController storyboardIdentifier="RegisterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hl4-Sx-rbR" customClass="RegisterVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRq-WE-SAY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1VD-fK-HNZ" customClass="IOUButton" customModule="IOU" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="529" width="300" height="37.5"/>
+                                <rect key="frame" x="37.5" y="467.5" width="300" height="51.5"/>
+                                <color key="backgroundColor" name="Orange"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Register">
@@ -208,26 +191,21 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lPj-co-sGX">
-                                <rect key="frame" x="37.5" y="118.5" width="300" height="324"/>
+                                <rect key="frame" x="37.5" y="106" width="300" height="301.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2te-4N-7OR">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="45.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wv-WhB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wv-WhB">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="EMAIL">
-                                                        <attributes>
-                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9F3-nb-qim" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="30" width="300" height="21"/>
-                                                <attributedString key="attributedText"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9F3-nb-qim" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="300" height="15.5"/>
+                                                <color key="textColor" name="tabBarSelected"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="johndoe@IOU.com"/>
@@ -239,23 +217,18 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GNg-Ea-lid">
-                                        <rect key="frame" x="0.0" y="91" width="300" height="51"/>
+                                        <rect key="frame" x="0.0" y="85.5" width="300" height="45.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-Uc-2MJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-Uc-2MJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="FIRST NAME">
-                                                        <attributes>
-                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZQf-yx-o2L" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="30" width="300" height="21"/>
-                                                <attributedString key="attributedText"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZQf-yx-o2L" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="300" height="15.5"/>
+                                                <color key="textColor" name="tabBarSelected"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="John"/>
@@ -267,23 +240,18 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1vF-uS-uT5">
-                                        <rect key="frame" x="0.0" y="182" width="300" height="51"/>
+                                        <rect key="frame" x="0.0" y="171" width="300" height="45.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJQ-dL-jxf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJQ-dL-jxf">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="LAST NAME">
-                                                        <attributes>
-                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77P-In-1Qm" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="30" width="300" height="21"/>
-                                                <attributedString key="attributedText"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77P-In-1Qm" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="300" height="15.5"/>
+                                                <color key="textColor" name="tabBarSelected"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Doe"/>
@@ -295,23 +263,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c0R-OE-FAB">
-                                        <rect key="frame" x="0.0" y="273" width="300" height="51"/>
+                                        <rect key="frame" x="0.0" y="256.5" width="300" height="45"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZW-tL-Bgb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZW-tL-Bgb">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="PASSWORD">
-                                                        <attributes>
-                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHp-a7-Fx6" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="30" width="300" height="21"/>
-                                                <attributedString key="attributedText"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHp-a7-Fx6" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="300" height="15"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="••••••••••"/>
@@ -326,11 +288,11 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="13O-S0-5VQ">
-                                <rect key="frame" x="169" y="293" width="37" height="37"/>
+                                <rect key="frame" x="169" y="267" width="37" height="37"/>
                                 <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ysi-Kp-CmP" firstAttribute="bottom" secondItem="1VD-fK-HNZ" secondAttribute="bottom" multiplier="1.1" id="23k-gz-yeu"/>
@@ -341,12 +303,12 @@
                             <constraint firstItem="13O-S0-5VQ" firstAttribute="centerX" secondItem="Ysi-Kp-CmP" secondAttribute="centerX" id="de4-xj-qYf"/>
                             <constraint firstItem="1VD-fK-HNZ" firstAttribute="width" secondItem="gRq-WE-SAY" secondAttribute="width" multiplier="0.8" id="eO4-I2-00B"/>
                             <constraint firstItem="lPj-co-sGX" firstAttribute="centerY" secondItem="Ysi-Kp-CmP" secondAttribute="centerY" multiplier="0.9" id="sLA-wm-siB"/>
-                            <constraint firstItem="1VD-fK-HNZ" firstAttribute="height" secondItem="gRq-WE-SAY" secondAttribute="height" multiplier="0.06" id="vtG-iS-hMu"/>
+                            <constraint firstItem="1VD-fK-HNZ" firstAttribute="height" secondItem="gRq-WE-SAY" secondAttribute="height" multiplier="0.09" id="vtG-iS-hMu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ysi-Kp-CmP"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="7hs-8K-gmr"/>
+                    <navigationItem key="navigationItem" title="Register" id="7hs-8K-gmr"/>
                     <connections>
                         <outlet property="emailTextField" destination="9F3-nb-qim" id="yaO-hA-mdO"/>
                         <outlet property="firstnameTextField" destination="ZQf-yx-o2L" id="EVr-gz-Z0Y"/>
@@ -358,28 +320,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFf-io-suv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5052" y="1060"/>
+            <point key="canvasLocation" x="4740" y="313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F6Z-Ne-z3V">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xPk-29-eeG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="HU8-Z6-M0s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="HU8-Z6-M0s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
+                        <color key="tintColor" name="tabBarSelected"/>
+                        <color key="barTintColor" name="background"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NGq-KQ-IME">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="M2q-84-mrG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEY-Th-6wV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3252" y="827"/>
+            <point key="canvasLocation" x="2938" y="313"/>
         </scene>
         <!--TabBar-->
         <scene sceneID="g5X-lf-gIP">
@@ -390,10 +355,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="1xo-am-fVO">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="foreground"/>
+                        <color key="tintColor" name="background"/>
                         <color key="barTintColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" name="tabBarSelected"/>
                     </tabBar>
                     <connections>
                         <segue destination="lSV-Qq-vIP" kind="relationship" relationship="viewControllers" id="uKJ-qj-nvQ"/>
@@ -419,7 +384,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyL-iM-hZz">
                                         <rect key="frame" x="0.0" y="14" width="217.5" height="38.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="tabBarSelected"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="RnN-kT-flx">
@@ -456,7 +421,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="3Xj-fJ-drq" firstAttribute="centerX" secondItem="LKs-YH-TSs" secondAttribute="centerX" id="1Z0-qX-YiR"/>
                             <constraint firstItem="3Xj-fJ-drq" firstAttribute="width" secondItem="K4O-Th-Zed" secondAttribute="width" multiplier="0.8" id="Fam-U1-Tuc"/>
@@ -530,5 +495,20 @@
         <image name="hammer" catalog="system" width="64" height="56"/>
         <image name="hammer.fill" catalog="system" width="64" height="56"/>
         <image name="user-placeholder" width="86" height="86"/>
+        <namedColor name="Orange">
+            <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background">
+            <color red="0.85490196078431369" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="foreground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="highlight">
+            <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarSelected">
+            <color red="0.078431372549019607" green="0.11764705882352941" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

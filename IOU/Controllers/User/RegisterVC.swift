@@ -21,7 +21,15 @@ class RegisterVC: MainVC {
     private var editingField: Int = 0
     private var ref: DatabaseReference!
 
-    override func viewDidLoad() {
+ 
+  
+  override func viewWillAppear(_ animated: Bool) {
+     super.viewWillAppear(animated)
+                 self.navigationController?.navigationBar.barTintColor = UIColor.appColor(.foreground)
+    self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
+
+   }
+  override func viewDidLoad() {
         super.viewDidLoad()
        
         self.ref = Database.database().reference()
@@ -29,8 +37,17 @@ class RegisterVC: MainVC {
         self.initUI()
         
         self.hideKeyboardWhenTappedAround()
+
     }
-    
+
+
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.background) ?? .green)
+
+
+    }
     @IBAction func emailEditingBegin(_ sender: Any) {
         editingField = 0
     }

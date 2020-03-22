@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         Messaging.messaging().delegate = self
         Messaging.messaging().isAutoInitEnabled = true
        
-        
+      
         return true
     }
  
@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         else{
             UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
             UINavigationBar.appearance().shadowImage = UIImage()
-            UINavigationBar.appearance().barTintColor = .darkGrey
+          UINavigationBar.appearance().barTintColor = UIColor.appColor(.background)
             UINavigationBar.appearance().backgroundColor = .clear
             
         }
@@ -211,4 +211,21 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     
     
     
+}
+
+
+extension UINavigationController {
+
+    func setStatusBar(backgroundColor: UIColor) {
+        let statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
+        let statusBarView = UIView(frame: statusBarFrame)
+        statusBarView.backgroundColor = backgroundColor
+        view.addSubview(statusBarView)
+    }
+
 }

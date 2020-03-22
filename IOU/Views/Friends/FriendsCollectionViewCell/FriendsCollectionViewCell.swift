@@ -30,7 +30,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
     {
         self.model = model
         self.usernameLabel.text = model.name ?? ""
-        self.imageView.backgroundColor = .green
+        self.imageView.backgroundColor =  UIColor.appColor(.background)
 
         
     }

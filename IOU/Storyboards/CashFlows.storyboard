@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHR-xh-JOc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHR-xh-JOc">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ez0-99-4Fy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <viewLayoutGuide key="safeArea" id="9Qp-6a-p1z"/>
                     </view>
                 </viewController>
@@ -162,7 +163,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="thU-3C-YN2" firstAttribute="width" secondItem="Fb0-jW-2CP" secondAttribute="width" multiplier="0.16" id="4uR-iQ-E6m"/>
@@ -217,12 +218,12 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LBP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ft-wU-HK4">
                                         <rect key="frame" x="0.0" y="0.0" width="88.5" height="39"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="tabBarSelected"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="AMOUNT" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-oQ-WRV">
                                         <rect key="frame" x="88.5" y="0.0" width="211.5" height="39"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="tabBarSelected"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                         <connections>
@@ -237,8 +238,8 @@
                                     <segment title="Each"/>
                                     <segment title="Total"/>
                                 </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedSegmentTintColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" name="tabBarSelected"/>
+                                <color key="selectedSegmentTintColor" name="highlight"/>
                                 <connections>
                                     <action selector="eachTotalChanged:" destination="M5C-24-PdY" eventType="valueChanged" id="U5G-xb-ONo"/>
                                 </connections>
@@ -257,12 +258,12 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA9-jk-g59">
                                                 <rect key="frame" x="0.0" y="0.0" width="27" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jja-1M-9MG">
                                                 <rect key="frame" x="43" y="0.0" width="294.5" height="20.5"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                                 <connections>
@@ -278,12 +279,12 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB4-m0-H3d">
                                                 <rect key="frame" x="0.0" y="0.0" width="337.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPZ-g0-EWs">
                                                 <rect key="frame" x="0.0" y="36.5" width="337.5" height="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                                 <connections>
@@ -340,7 +341,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="89" height="133"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </collectionViewCellContentView>
-                                                <color key="backgroundColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="customSize" width="89" height="133"/>
                                             </collectionViewCell>
                                         </cells>
@@ -348,7 +349,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="NzY-ng-Y9p" firstAttribute="width" secondItem="4hk-CB-Onm" secondAttribute="width" multiplier="0.9" id="4en-85-ah2"/>
                             <constraint firstItem="eGx-ip-z41" firstAttribute="centerX" secondItem="bK1-Ag-J00" secondAttribute="centerX" id="5Jt-zK-VyZ"/>
@@ -387,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHS-Dy-Nhn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650.72463768115949" y="2568.75"/>
+            <point key="canvasLocation" x="652" y="2731"/>
         </scene>
         <!--Get OweVC-->
         <scene sceneID="hM8-B2-Eej">
@@ -407,23 +408,23 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Get" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcM-oH-mje">
                                             <rect key="frame" x="16" y="8" width="343" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="tabBarSelected"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kN-rz-k1P">
                                             <rect key="frame" x="16" y="66" width="343" height="38.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="tabBarSelected"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-cf-lPa">
                                             <rect key="frame" x="16" y="133" width="343" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="tabBarSelected"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" name="background"/>
                                     <constraints>
                                         <constraint firstItem="4kN-rz-k1P" firstAttribute="centerY" secondItem="r63-1U-c2g" secondAttribute="centerY" id="5GD-C0-WWW"/>
                                         <constraint firstAttribute="trailing" secondItem="rcM-oH-mje" secondAttribute="trailing" constant="16" id="6vW-GF-XfG"/>
@@ -448,7 +449,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="tBA-WM-mA2" firstAttribute="bottom" secondItem="Eff-tR-GcR" secondAttribute="bottom" id="SSE-zC-HGd"/>
                             <constraint firstItem="Eff-tR-GcR" firstAttribute="centerY" secondItem="tBA-WM-mA2" secondAttribute="centerY" id="cj2-Ep-M7O"/>
@@ -489,17 +490,17 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You &amp; Mark" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rh-YU-alg">
                                             <rect key="frame" x="16" y="8" width="343" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="tabBarSelected"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnG-c8-K4i">
                                             <rect key="frame" x="16" y="43.5" width="343" height="38.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="tabBarSelected"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" name="background"/>
                                     <constraints>
                                         <constraint firstItem="6rh-YU-alg" firstAttribute="top" secondItem="low-Zc-TC1" secondAttribute="top" constant="8" id="Ibf-Fe-y1U"/>
                                         <constraint firstItem="6rh-YU-alg" firstAttribute="leading" secondItem="low-Zc-TC1" secondAttribute="leading" constant="16" id="NqK-E8-7pq"/>
@@ -521,7 +522,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="LW2-yz-nSi" firstAttribute="centerY" secondItem="rLZ-56-LDk" secondAttribute="centerY" id="1jJ-WP-pE9"/>
                             <constraint firstItem="LW2-yz-nSi" firstAttribute="width" secondItem="AvZ-74-8Yu" secondAttribute="width" id="1ta-d2-vqu"/>
@@ -566,7 +567,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="Agj-F9-zR7" firstAttribute="width" secondItem="JVE-w8-din" secondAttribute="width" id="6B8-m6-V1G"/>
                             <constraint firstItem="Agj-F9-zR7" firstAttribute="centerX" secondItem="1AZ-s8-I1r" secondAttribute="centerX" id="Faw-Kn-BUM"/>
@@ -596,9 +597,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="FsM-CE-eeT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" name="foreground"/>
+                        <color key="tintColor" name="tabBarSelected"/>
+                        <color key="barTintColor" name="foreground"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -614,5 +615,17 @@
         <image name="archivebox.fill" catalog="system" width="64" height="52"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
+        <namedColor name="background">
+            <color red="0.85490196078431369" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="foreground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="highlight">
+            <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarSelected">
+            <color red="0.078431372549019607" green="0.11764705882352941" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

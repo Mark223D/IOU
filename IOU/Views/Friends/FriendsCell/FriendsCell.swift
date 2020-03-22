@@ -21,8 +21,8 @@ class FriendsCell: UITableViewCell {
         super.awakeFromNib()
         
 //        self.avatarImageView.maskCircle()
-        self.avatarImageView.backgroundColor = .green
-        
+      self.avatarImageView.backgroundColor = UIColor.appColor(.highlight)
+      self.backgroundColor = UIColor.appColor(.background)
     }
     
     

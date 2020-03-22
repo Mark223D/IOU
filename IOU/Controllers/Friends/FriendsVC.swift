@@ -149,7 +149,6 @@ extension FriendsVC {
         glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         glassIconView.tintColor = .lightGrey
         
-        UIApplication.shared.statusBarUIView?.backgroundColor = .mediumGrey
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -158,7 +157,9 @@ extension FriendsVC {
         self.hideKeyboardWhenTappedAround()
         self.tableView.backgroundColor = .clear
         self.searchBar.delegate = self
-        
+      self.view.backgroundColor = UIColor.appColor(.background)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
+
         
     }
     

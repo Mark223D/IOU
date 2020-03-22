@@ -9,11 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C92D3F47C69AC611BED738C /* Pods_IOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3670834E97A92248E58D908C /* Pods_IOU.framework */; };
 		2A448EE7D63F7FCE12F08345 /* Pods_IOUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6A14B4AD707F2AA70A8EB2 /* Pods_IOUUITests.framework */; };
-		4D09390B23EC547A00107F5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D09390A23EC547900107F5A /* GoogleService-Info.plist */; };
 		4D09390D23ED92AC00107F5A /* NotifHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09390C23ED92AC00107F5A /* NotifHandler.swift */; };
 		4D1C7DA72380574A006273DC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C7DA62380574A006273DC /* MainVC.swift */; };
-		4D204F3D22D33A760070124D /* IOUHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D204F3B22D33A760070124D /* IOUHomeCell.swift */; };
-		4D204F3E22D33A760070124D /* IOUHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D204F3C22D33A760070124D /* IOUHomeCell.xib */; };
 		4D37B1FB237DDEF90044CCC2 /* IOUTransCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B1F9237DDEF90044CCC2 /* IOUTransCell.swift */; };
 		4D37B1FC237DDEF90044CCC2 /* IOUTransCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37B1FA237DDEF90044CCC2 /* IOUTransCell.xib */; };
 		4D37B1FE237DE19A0044CCC2 /* UserCashFlowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B1FD237DE19A0044CCC2 /* UserCashFlowVC.swift */; };
@@ -29,6 +26,7 @@
 		4D65EBC2239400870089BD3F /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65EBC1239400870089BD3F /* BadgeButton.swift */; };
 		4D79DE312382C18600349232 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79DE302382C18600349232 /* NavigationBar.swift */; };
 		4D79DE3323843DB600349232 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79DE3223843DB600349232 /* Transaction.swift */; };
+		4D818DB723FDA34400CA3CB3 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D818DB623FDA34400CA3CB3 /* Friend.swift */; };
 		4D91C8B62386C108007A62E0 /* CashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C8B52386C108007A62E0 /* CashFlow.swift */; };
 		4D91C8B82389AE11007A62E0 /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */; };
 		4D91C8BC2389AFCD007A62E0 /* CashFlows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */; };
@@ -46,6 +44,8 @@
 		4D9D40EB22CF663900AD0A0D /* IOUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40EA22CF663900AD0A0D /* IOUButton.swift */; };
 		4D9D40EE22CF71B700AD0A0D /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40ED22CF71B700AD0A0D /* AnimationEngine.swift */; };
 		4D9D40F022CF7FE700AD0A0D /* ViewController_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40EF22CF7FE700AD0A0D /* ViewController_Extensions.swift */; };
+		4DB06A3F2426C3D00015EFFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DB06A3E2426C3D00015EFFE /* GoogleService-Info.plist */; };
+		4DB06A472426DBE30015EFFE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB06A462426DBE30015EFFE /* Colors.swift */; };
 		4DC7CEC0238BC5FF00699EE3 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEBE238BC5FF00699EE3 /* FriendsCollectionViewCell.swift */; };
 		4DC7CEC1238BC5FF00699EE3 /* FriendsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7CEBF238BC5FF00699EE3 /* FriendsCollectionViewCell.xib */; };
 		4DC7CEC3238D372B00699EE3 /* FriendRequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7CEC2238D372B00699EE3 /* FriendRequestsVC.swift */; };
@@ -95,12 +95,9 @@
 /* Begin PBXFileReference section */
 		0DAF074A34CEB642FB131758 /* Pods-IOUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOUTests/Pods-IOUTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3670834E97A92248E58D908C /* Pods_IOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D09390A23EC547900107F5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D09390C23ED92AC00107F5A /* NotifHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifHandler.swift; sourceTree = "<group>"; };
 		4D0EC1A92394ED0800CE1E52 /* IOU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOU.entitlements; sourceTree = "<group>"; };
 		4D1C7DA62380574A006273DC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		4D204F3B22D33A760070124D /* IOUHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUHomeCell.swift; sourceTree = "<group>"; };
-		4D204F3C22D33A760070124D /* IOUHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IOUHomeCell.xib; sourceTree = "<group>"; };
 		4D37B1F9237DDEF90044CCC2 /* IOUTransCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUTransCell.swift; sourceTree = "<group>"; };
 		4D37B1FA237DDEF90044CCC2 /* IOUTransCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IOUTransCell.xib; sourceTree = "<group>"; };
 		4D37B1FD237DE19A0044CCC2 /* UserCashFlowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCashFlowVC.swift; sourceTree = "<group>"; };
@@ -116,6 +113,7 @@
 		4D65EBC1239400870089BD3F /* BadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
 		4D79DE302382C18600349232 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		4D79DE3223843DB600349232 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		4D818DB623FDA34400CA3CB3 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		4D91C8B52386C108007A62E0 /* CashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlow.swift; sourceTree = "<group>"; };
 		4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
 		4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CashFlows.storyboard; sourceTree = "<group>"; };
@@ -139,6 +137,8 @@
 		4D9D40EA22CF663900AD0A0D /* IOUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUButton.swift; sourceTree = "<group>"; };
 		4D9D40ED22CF71B700AD0A0D /* AnimationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
 		4D9D40EF22CF7FE700AD0A0D /* ViewController_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Extensions.swift; sourceTree = "<group>"; };
+		4DB06A3E2426C3D00015EFFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DB06A462426DBE30015EFFE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4DC7CEBE238BC5FF00699EE3 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DC7CEBF238BC5FF00699EE3 /* FriendsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4DC7CEC2238D372B00699EE3 /* FriendRequestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsVC.swift; sourceTree = "<group>"; };
@@ -233,15 +233,6 @@
 			path = IOUExpandedTransCell;
 			sourceTree = "<group>";
 		};
-		4D5433882371CCA300BD7396 /* IOUHomeCell */ = {
-			isa = PBXGroup;
-			children = (
-				4D204F3B22D33A760070124D /* IOUHomeCell.swift */,
-				4D204F3C22D33A760070124D /* IOUHomeCell.xib */,
-			);
-			path = IOUHomeCell;
-			sourceTree = "<group>";
-		};
 		4D5AE1F42373083E001644F5 /* FriendsCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,9 +286,9 @@
 				4D91C8BF2389B273007A62E0 /* Storyboards */,
 				4D9D40BD22CF3CC000AD0A0D /* Assets.xcassets */,
 				4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */,
+				4DB06A3E2426C3D00015EFFE /* GoogleService-Info.plist */,
 				4D9D40BF22CF3CC000AD0A0D /* LaunchScreen.storyboard */,
 				4D9D40BA22CF3CBE00AD0A0D /* IOU.xcdatamodeld */,
-				4D09390A23EC547900107F5A /* GoogleService-Info.plist */,
 				4D9D40E422CF41E100AD0A0D /* IOUColors.swift */,
 				4D9D40C222CF3CC000AD0A0D /* Info.plist */,
 			);
@@ -355,6 +346,7 @@
 				4DC7CEE823927A8100699EE3 /* CurrencyFormatter.swift */,
 				4DC7CECB238D7B2300699EE3 /* WormTab */,
 				4DC7CEDF23925EA300699EE3 /* Extensions */,
+				4DB06A462426DBE30015EFFE /* Colors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -422,7 +414,6 @@
 			isa = PBXGroup;
 			children = (
 				4D5433892371DE3600BD7396 /* IOUHomeCard.swift */,
-				4D5433882371CCA300BD7396 /* IOUHomeCell */,
 				4D37B1F8237DDED70044CCC2 /* IOUTransCell */,
 				4D37B201237DE50F0044CCC2 /* IOUExpandedTransCell */,
 				4DC7CED2238D7D4D00699EE3 /* PendingTransactions */,
@@ -497,6 +488,7 @@
 				4D91C8B52386C108007A62E0 /* CashFlow.swift */,
 				4D79DE3223843DB600349232 /* Transaction.swift */,
 				4DC7CEDB238DA21700699EE3 /* Pending.swift */,
+				4D818DB623FDA34400CA3CB3 /* Friend.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -620,10 +612,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB06A3F2426C3D00015EFFE /* GoogleService-Info.plist in Resources */,
 				4D9D40C122CF3CC000AD0A0D /* LaunchScreen.storyboard in Resources */,
 				4D91C8BC2389AFCD007A62E0 /* CashFlows.storyboard in Resources */,
 				4D9D40BE22CF3CC000AD0A0D /* Assets.xcassets in Resources */,
-				4D204F3E22D33A760070124D /* IOUHomeCell.xib in Resources */,
 				4D5AE1F823730878001644F5 /* FriendsCell.xib in Resources */,
 				4D37B1FC237DDEF90044CCC2 /* IOUTransCell.xib in Resources */,
 				4D9D40B922CF3CBE00AD0A0D /* Main.storyboard in Resources */,
@@ -632,7 +624,6 @@
 				4DC7CEC1238BC5FF00699EE3 /* FriendsCollectionViewCell.xib in Resources */,
 				4D37B205237DE5320044CCC2 /* IOUExpandedTransCell.xib in Resources */,
 				4D91C8BE2389B050007A62E0 /* Friends.storyboard in Resources */,
-				4D09390B23EC547A00107F5A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,10 +769,10 @@
 				4DFFD31522D2335000D714E6 /* ImageView_Extensions.swift in Sources */,
 				4DFFD31722D235D600D714E6 /* IOULabel.swift in Sources */,
 				4D54338A2371DE3600BD7396 /* IOUHomeCard.swift in Sources */,
-				4D204F3D22D33A760070124D /* IOUHomeCell.swift in Sources */,
 				4D9D40E522CF41E100AD0A0D /* IOUColors.swift in Sources */,
 				4D1C7DA72380574A006273DC /* MainVC.swift in Sources */,
 				4D79DE3323843DB600349232 /* Transaction.swift in Sources */,
+				4D818DB723FDA34400CA3CB3 /* Friend.swift in Sources */,
 				4DFFD31922D2388900D714E6 /* HomeVC.swift in Sources */,
 				4DC7CEC3238D372B00699EE3 /* FriendRequestsVC.swift in Sources */,
 				4D37B200237DE4890044CCC2 /* DetailedCashflowVC.swift in Sources */,
@@ -798,6 +789,7 @@
 				4D79DE312382C18600349232 /* NavigationBar.swift in Sources */,
 				4DCCAA8E238AF0480050F6F4 /* NotificationHandler.swift in Sources */,
 				4D91C8B82389AE11007A62E0 /* AddTransactionVC.swift in Sources */,
+				4DB06A472426DBE30015EFFE /* Colors.swift in Sources */,
 				4D37B209237DED720044CCC2 /* AddFriendsVC.swift in Sources */,
 				4D5AE1F723730878001644F5 /* FriendsCell.swift in Sources */,
 				4DC7CEDC238DA21700699EE3 /* Pending.swift in Sources */,

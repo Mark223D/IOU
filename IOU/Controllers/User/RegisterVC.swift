@@ -23,10 +23,9 @@ class RegisterVC: MainVC {
 
  
   
-  override func viewWillAppear(_ animated: Bool) {
-     super.viewWillAppear(animated)
-                 self.navigationController?.navigationBar.barTintColor = UIColor.appColor(.foreground)
-    self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
+  override func viewDidAppear(_ animated: Bool) {
+     super.viewDidAppear(animated)
+    self.view.backgroundColor = UIColor.appColor(.background)
 
    }
   override func viewDidLoad() {
@@ -44,7 +43,7 @@ class RegisterVC: MainVC {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.background) ?? .green)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
 
 
     }

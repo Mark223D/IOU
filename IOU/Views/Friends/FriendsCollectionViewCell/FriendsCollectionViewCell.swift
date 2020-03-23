@@ -30,7 +30,8 @@ class FriendsCollectionViewCell: UICollectionViewCell {
     {
         self.model = model
         self.usernameLabel.text = model.name ?? ""
-        self.imageView.backgroundColor =  UIColor.appColor(.background)
+        self.imageView.backgroundColor =  UIColor.appColor(.highlight)
+      self.usernameLabel.textColor = UIColor.appColor(.tabBarSelected)
 
         
     }

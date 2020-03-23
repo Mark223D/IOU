@@ -23,6 +23,9 @@ class FriendsCell: UITableViewCell {
 //        self.avatarImageView.maskCircle()
       self.avatarImageView.backgroundColor = UIColor.appColor(.highlight)
       self.backgroundColor = UIColor.appColor(.background)
+      self.nameLabel.textColor = UIColor.appColor(.tabBarSelected)
+      self.emailLabel.textColor = UIColor.appColor(.tabBarSelected)
+
     }
     
     

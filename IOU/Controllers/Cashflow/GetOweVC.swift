@@ -14,10 +14,9 @@ class GetOweVC: MainVC {
     var ref: DatabaseReference!
     
     @IBOutlet weak private var tableView: UITableView!
-    @IBOutlet weak private var fromToLabel: UILabel!
-    @IBOutlet weak private var getOweLabel: UILabel!
     @IBOutlet weak private var amountLabel: UILabel!
-    
+    @IBOutlet weak var amountView: HomeCard!
+  
     var isGet: Bool?
     var items: [CashFlow] = []
     var getTotal: Int = 0
@@ -49,14 +48,19 @@ class GetOweVC: MainVC {
     override func viewWillAppear(_ animated: Bool) {
         if let get = isGet {
             if get{
-                self.getOweLabel.text = "You Get"
-                self.fromToLabel.text = "From"
+                self.title = "You Get"
                 self.amountLabel.text = self.formatter.formatAmountToLBP(self.getTotal)
+              self.amountView.backgroundColor = UIColor.appColor(.foreground)
+              self.amountLabel.textColor = UIColor.appColor(.tabBarSelected)
+              self.amountView.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: 40, borderColor: UIColor.appColor(.tabBarSelected) ?? .green, borderWidth: 3)
             }
             else{
-                self.getOweLabel.text = "You Owe"
-                self.fromToLabel.text = "To"
+                self.title = "You Owe"
                 self.amountLabel.text = self.formatter.formatAmountToLBP(self.oweTotal)
+              self.amountView.backgroundColor = UIColor.appColor(.tabBarSelected)
+              self.amountLabel.textColor = UIColor.appColor(.background)
+              self.amountView.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: 40, borderColor: UIColor.appColor(.background) ?? .green, borderWidth: 3)
+
             }
             
         }

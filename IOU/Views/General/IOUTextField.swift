@@ -30,19 +30,19 @@ class IOUTextField: UITextField {
     }
     
     func setupView(){
-        self.tintColor = UIColor.white
-        self.textColor = UIColor.white
+      self.tintColor = UIColor.appColor(.tabBarSelected)
+      self.textColor = UIColor.appColor(.tabBarSelected)
         self.isSecureTextEntry = isSecure
         
         self.textAlignment = .right
         
         self.minimumFontSize = 20
         
-        self.attributedPlaceholder = NSAttributedString(string: placeholderText,attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGrey])
+      self.attributedPlaceholder = NSAttributedString(string: placeholderText,attributes: [NSAttributedString.Key.foregroundColor: UIColor.appColor(.tabBarSelected) ?? .green])
         
         
         bottomBar = UIView(frame: CGRect(x: self.frame.origin.x-38, y: self.frame.height, width: self.frame.width, height: 1))
-        bottomBar?.backgroundColor = UIColor.white
+      bottomBar?.backgroundColor = UIColor.appColor(.tabBarSelected)
 //        self.addSubview(bottomBar!)
     }
     override func prepareForInterfaceBuilder() {

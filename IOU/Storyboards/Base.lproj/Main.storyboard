@@ -25,21 +25,22 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-3i-bY1">
-                                <rect key="frame" x="37.5" y="250" width="300" height="128.5"/>
+                                <rect key="frame" x="37.5" y="254" width="300" height="120.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xwp-8t-Kdc">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="49.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="45.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-ly-bfd">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                <color key="tintColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <size key="shadowOffset" width="0.0" height="4"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEp-qj-nh0" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="34" width="300" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="300" height="15.5"/>
                                                 <color key="tintColor" red="0.091867275540000001" green="0.1154149547" blue="0.14701038599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -55,18 +56,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sgU-uH-3h1">
-                                        <rect key="frame" x="0.0" y="79.5" width="300" height="49"/>
+                                        <rect key="frame" x="0.0" y="75.5" width="300" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAl-94-9B4">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                <color key="tintColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <size key="shadowOffset" width="0.0" height="4"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKA-OT-DbK" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="34" width="300" height="15"/>
+                                                <rect key="frame" x="0.0" y="30" width="300" height="15"/>
                                                 <color key="tintColor" red="0.091867275540000001" green="0.1154149547" blue="0.14701038599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -110,6 +112,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New user ?  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB3-LJ-AF7">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="33"/>
+                                        <color key="tintColor" name="tabBarSelected"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <color key="textColor" name="tabBarSelected"/>
                                         <nil key="highlightedColor"/>
@@ -117,6 +120,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPQ-i5-nhv">
                                         <rect key="frame" x="94" y="0.0" width="69" height="33"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="tintColor" name="tabBarSelected"/>
                                         <state key="normal" title="Register">
                                             <color key="titleColor" name="tabBarSelected"/>
                                         </state>
@@ -127,8 +131,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="background"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="foreground"/>
+                        <color key="tintColor" name="tabBarSelected"/>
                         <constraints>
                             <constraint firstItem="6Yh-sd-k2q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1oU-oE-mPc"/>
                             <constraint firstItem="TJ5-3i-bY1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.1" id="6ES-BJ-9Tm"/>
@@ -198,6 +202,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-wv-WhB">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                <color key="tintColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
@@ -221,6 +226,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-Uc-2MJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                <color key="tintColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
@@ -244,6 +250,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJQ-dL-jxf">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                <color key="tintColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
@@ -267,6 +274,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZW-tL-Bgb">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                <color key="tintColor" name="tabBarSelected"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" name="tabBarSelected"/>
                                                 <nil key="highlightedColor"/>
@@ -327,12 +335,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xPk-29-eeG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="HU8-Z6-M0s">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="HU8-Z6-M0s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="background"/>
+                        <color key="backgroundColor" name="foreground"/>
                         <color key="tintColor" name="tabBarSelected"/>
-                        <color key="barTintColor" name="background"/>
+                        <color key="barTintColor" name="foreground"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NGq-KQ-IME">
@@ -352,12 +360,12 @@
                 <tabBarController storyboardIdentifier="TabBar" title="TabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YBy-Jp-8Ps" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oaS-mJ-E0s"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="1xo-am-fVO">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="1xo-am-fVO">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="foreground"/>
-                        <color key="tintColor" name="background"/>
-                        <color key="barTintColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="tabBarSelected"/>
+                        <color key="tintColor" name="tabBarSelected"/>
+                        <color key="barTintColor" name="foreground"/>
                         <color key="selectedImageTintColor" name="tabBarSelected"/>
                     </tabBar>
                     <connections>
@@ -370,7 +378,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="1080"/>
         </scene>
-        <!--SettingsVC-->
+        <!--Settings-->
         <scene sceneID="gyl-t9-mBm">
             <objects>
                 <viewController storyboardIdentifier="SettingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0h5-47-4ZQ" customClass="SettingsVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
@@ -379,7 +387,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3Xj-fJ-drq">
-                                <rect key="frame" x="37.5" y="24" width="300" height="66.5"/>
+                                <rect key="frame" x="37.5" y="120" width="300" height="66.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyL-iM-hZz">
                                         <rect key="frame" x="0.0" y="14" width="217.5" height="38.5"/>
@@ -399,14 +407,8 @@
                                     <constraint firstItem="RnN-kT-flx" firstAttribute="height" secondItem="3Xj-fJ-drq" secondAttribute="height" id="aWJ-nX-xcX"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="T1X-AR-o72">
-                                <rect key="frame" x="54" y="106.5" width="267" height="267"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="T1X-AR-o72" secondAttribute="height" multiplier="1:1" id="Wzb-dn-d8V"/>
-                                </constraints>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HuB-L5-b4F">
-                                <rect key="frame" x="0.0" y="389.5" width="375" height="228.5"/>
+                                <rect key="frame" x="0.0" y="210.5" width="375" height="407.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendsCell" rowHeight="76" id="C5w-rv-TdH">
@@ -425,22 +427,18 @@
                         <constraints>
                             <constraint firstItem="3Xj-fJ-drq" firstAttribute="centerX" secondItem="LKs-YH-TSs" secondAttribute="centerX" id="1Z0-qX-YiR"/>
                             <constraint firstItem="3Xj-fJ-drq" firstAttribute="width" secondItem="K4O-Th-Zed" secondAttribute="width" multiplier="0.8" id="Fam-U1-Tuc"/>
-                            <constraint firstItem="T1X-AR-o72" firstAttribute="centerX" secondItem="LKs-YH-TSs" secondAttribute="centerX" id="KuH-BM-cfa"/>
-                            <constraint firstItem="T1X-AR-o72" firstAttribute="height" secondItem="K4O-Th-Zed" secondAttribute="height" multiplier="0.4" id="N9u-vU-Raw"/>
+                            <constraint firstItem="HuB-L5-b4F" firstAttribute="top" secondItem="3Xj-fJ-drq" secondAttribute="bottom" constant="24" id="LOf-md-yNM"/>
                             <constraint firstItem="3Xj-fJ-drq" firstAttribute="height" secondItem="K4O-Th-Zed" secondAttribute="height" multiplier="0.1" id="QJv-sb-rwr"/>
-                            <constraint firstItem="HuB-L5-b4F" firstAttribute="top" secondItem="T1X-AR-o72" secondAttribute="bottom" constant="16" id="Zf4-io-OkH"/>
                             <constraint firstItem="LKs-YH-TSs" firstAttribute="bottom" secondItem="HuB-L5-b4F" secondAttribute="bottom" id="eM5-Lh-dI8"/>
-                            <constraint firstItem="T1X-AR-o72" firstAttribute="top" secondItem="3Xj-fJ-drq" secondAttribute="bottom" constant="16" id="jf4-sG-z5T"/>
                             <constraint firstItem="HuB-L5-b4F" firstAttribute="width" secondItem="K4O-Th-Zed" secondAttribute="width" id="jhO-qQ-RZh"/>
                             <constraint firstItem="3Xj-fJ-drq" firstAttribute="top" secondItem="LKs-YH-TSs" secondAttribute="top" constant="24" id="o7Q-Oe-eYf"/>
                             <constraint firstItem="HuB-L5-b4F" firstAttribute="centerX" secondItem="LKs-YH-TSs" secondAttribute="centerX" id="pra-fD-FxO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LKs-YH-TSs"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uM4-HN-8Bj"/>
+                    <navigationItem key="navigationItem" title="Settings" id="uM4-HN-8Bj"/>
                     <connections>
                         <outlet property="avatarImageView" destination="RnN-kT-flx" id="Vdz-at-Ics"/>
-                        <outlet property="qrCodeImageView" destination="T1X-AR-o72" id="1oC-LQ-ZhZ"/>
                         <outlet property="tableView" destination="HuB-L5-b4F" id="q0U-qU-VDM"/>
                         <outlet property="usernameLabel" destination="iyL-iM-hZz" id="jNL-fc-PaK"/>
                         <segue destination="xPk-29-eeG" kind="presentation" identifier="toSignOut" modalPresentationStyle="fullScreen" id="cPd-bC-Szs"/>
@@ -473,11 +471,14 @@
         <!--Navigation Controller-->
         <scene sceneID="lz3-nN-UuG">
             <objects>
-                <navigationController navigationBarHidden="YES" id="hZu-N5-PVf" sceneMemberID="viewController">
+                <navigationController id="hZu-N5-PVf" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="" image="hammer" catalog="system" selectedImage="hammer.fill" id="sno-TK-kpx"/>
+                    <tabBarItem key="tabBarItem" title="" image="hammer" catalog="system" selectedImage="hammer.fill" id="sno-TK-kpx">
+                        <color key="badgeColor" name="tabBarSelected"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1na-3H-tFn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -491,7 +492,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="QRCode" width="318" height="318"/>
         <image name="hammer" catalog="system" width="64" height="56"/>
         <image name="hammer.fill" catalog="system" width="64" height="56"/>
         <image name="user-placeholder" width="86" height="86"/>

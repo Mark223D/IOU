@@ -12,6 +12,7 @@ import UIKit
 class IOULabel: UILabel{
 
     func setupView(){
+      self.textColor = UIColor.appColor(.tabBarSelected)
         self.shadowColor = UIColor.shadowColor
         self.shadowOffset = CGSize(width: 0, height: 4)
     }

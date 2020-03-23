@@ -15,7 +15,6 @@ class SettingsVC: MainVC {
     var ref: DatabaseReference!
     
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -133,7 +132,6 @@ extension SettingsVC {
         
 //        qrCodeImageView.backgroundColor = .green
         
-        self.qrCodeImageView.roundCorners([.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner], radius: 20, borderColor: .clear, borderWidth: 10)
         
         
     }

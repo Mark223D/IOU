@@ -22,7 +22,8 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
     @IBOutlet weak var requestBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    @IBOutlet weak var addFriendBtn: UIBarButtonItem!
+  
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -44,8 +45,11 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
         
         getFriends()
         checkPending()
+//      guard let button = self.navigationItem.rightBarButtonItem else {return }
 
-        
+//      button.background
+//      self.addFriendBtn.setBackButtonBackgroundImage(imageView, for: .normal, barMetrics: .default)
+
     }
     
     func getFriends(){
@@ -73,7 +77,7 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
         let friendHandler = FriendHandler()
         friendHandler.getFriendRequests { (requests) in
             if requests.count > 0 {
-                self.requestBtn.addBadge(number: requests.count, withOffset: CGPoint(x: 0, y:0), andColor: .green, andFilled: true)
+              self.requestBtn.addBadge(number: requests.count, withOffset: CGPoint(x: 0, y:0), andColor: UIColor.appColor(.highlight) ?? .green, andFilled: true)
             }
             else {
                 self.requestBtn.removeBadge()
@@ -147,7 +151,7 @@ extension FriendsVC {
         let textField = searchBar.searchTextField
         let glassIconView = textField.leftView as! UIImageView
         glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-        glassIconView.tintColor = .lightGrey
+        glassIconView.tintColor = UIColor.appColor(.tabBarSelected) ?? .green
         
         
         self.tableView.delegate = self

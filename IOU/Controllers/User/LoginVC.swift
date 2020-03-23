@@ -34,7 +34,7 @@ class LoginVC: MainVC {
         
         self.initAnimationEngine()
       
-      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.background) ?? .green)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
 
 
         
@@ -42,8 +42,8 @@ class LoginVC: MainVC {
 
  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-          self.navigationController?.navigationBar.barTintColor = UIColor.appColor(.background)
-  self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.background)
+          self.navigationController?.navigationBar.barTintColor = UIColor.appColor(.foreground)
+  self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
 
 
   }
@@ -136,6 +136,7 @@ extension LoginVC {
         
         self.loader.isHidden = true
         self.loader.hidesWhenStopped = true
+      
     }
     
     

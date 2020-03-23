@@ -15,8 +15,8 @@ class UserCashFlowVC: MainVC {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var userLabel: UILabel!
-    
+    @IBOutlet weak var amountView: HomeCard!
+  
     var items:[Transaction] = []
     var userName: String?
     var total: Int = 0
@@ -36,6 +36,7 @@ class UserCashFlowVC: MainVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupCashflow()
+        self.amountView.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: 48, borderColor: UIColor.appColor(.tabBarSelected) ?? .green, borderWidth: 3)
     }
     
     /*
@@ -51,18 +52,28 @@ class UserCashFlowVC: MainVC {
             userCashflow.getUserTransactions(user) { (total, transactions) in
                 self.total = total
                 self.items = transactions
-                self.amountLabel.text = self.formatter.formatAmountToLBP(self.total)
+              if self.total < 0{
+                self.amountLabel.text = self.formatter.formatAmountToLBP(self.total * -1)
+              }
+
                 
                 self.tableView.reloadData()
             }
             
             userCashflow.getUser(user) { (user) in
                 if let name = user.firstName {
-                    self.userLabel.text = "You & \(name)"
+                  if self.total < 0{
+                    self.title = "\(name)"
+
+                  }
+                  else if self.total > 0 {
+                    self.title = "From \(name)"
+
+                  }
                     self.userName = name
                 }
                 else{
-                    self.userLabel.text = "Error"
+                    self.title = "Error"
                 }
             }
             

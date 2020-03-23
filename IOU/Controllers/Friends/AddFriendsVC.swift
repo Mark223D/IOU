@@ -32,6 +32,8 @@ class AddFriendsVC: MainVC {
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
+      self.title = "Add Friends"
+
         
     }
     
@@ -163,7 +165,7 @@ extension AddFriendsVC {
         let textField = searchBar.searchTextField
         let glassIconView = textField.leftView as! UIImageView
         glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-        glassIconView.tintColor = .lightGrey
+      glassIconView.tintColor = UIColor.appColor(.tabBarSelected) ?? .green
         
         self.searchBar.delegate = self
     }

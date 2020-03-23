@@ -43,16 +43,12 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
         
         self.tabBarItem.image = #imageLiteral(resourceName: "home")
         self.tabBarItem.selectedImage = #imageLiteral(resourceName: "home_filled")
-        self.getView.backgroundColor = .green
-        self.oweView.backgroundColor = .red
-        
+
+      self.tabBarController?.tabBar.tintColor = UIColor.appColor(.tabBarSelected)
         addTransactionBtn.layer.cornerRadius = addTransactionBtn.frame.height*0.2
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkPending(_:)), name: .updatePending, object: nil)
-      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
-
-     
-           
+      self.view.backgroundColor = UIColor.appColor(.foreground)
     }
     
    
@@ -82,11 +78,20 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
+
+           self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
+      self.navigationController?.navigationBar.tintColor = UIColor.appColor(.tabBarSelected)
+                
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
+
+           self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
+                
         setupCashflow()
         updatePending()
     }
@@ -197,7 +202,7 @@ extension HomeVC {
                    
                    
                    if pendingTransactions.count > 0 {
-                       self.pendingBtn.addBadge(number: pendingTransactions.count, withOffset: CGPoint(x: 0, y: 0), andColor: .green, andFilled: true)
+                       self.pendingBtn.addBadge(number: pendingTransactions.count, withOffset: CGPoint(x: 0, y: 0), andColor: UIColor.appColor(.highlight) ?? .green, andFilled: true)
                    }
                    else{
                     self.pendingBtn.removeBadge()
@@ -208,7 +213,7 @@ extension HomeVC {
         let friendHandler = FriendHandler()
                friendHandler.getFriendRequests { (requests) in
                    if requests.count > 0 {
-                    self.tabBarController?.tabBar.items?[1].badgeColor = .green
+                    self.tabBarController?.tabBar.items?[1].badgeColor = UIColor.appColor(.highlight) ?? .green
                        self.tabBarController?.tabBar.items?[1].badgeValue = "\(requests.count)"
                    }
                    else {

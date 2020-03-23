@@ -60,19 +60,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
-            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarAppearance.backgroundColor = .clear
-            navBarAppearance.shadowColor = .clear
-            navBarAppearance.shadowImage = UIImage()
+          navBarAppearance.titleTextAttributes = [.foregroundColor:  UIColor.appColor(.foreground) ?? .green]
+          navBarAppearance.largeTitleTextAttributes = [.foregroundColor:  UIColor.appColor(.tabBarSelected) ?? .green]
+            navBarAppearance.backgroundColor =  UIColor.appColor(.foreground)
             UINavigationBar.appearance().standardAppearance = navBarAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         }
         else{
-            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-            UINavigationBar.appearance().shadowImage = UIImage()
-          UINavigationBar.appearance().barTintColor = UIColor.appColor(.background)
-            UINavigationBar.appearance().backgroundColor = .clear
+          UINavigationBar.appearance().barTintColor = UIColor.appColor(.tabBarSelected)
+          UINavigationBar.appearance().backgroundColor = UIColor.appColor(.foreground)
             
         }
     }
@@ -81,16 +77,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         if #available(iOS 13.0, *) {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithOpaqueBackground()
-            tabBarAppearance.backgroundColor = .clear
-            tabBarAppearance.shadowImage = UIImage()
-            tabBarAppearance.shadowColor = .clear
+          tabBarAppearance.backgroundColor = UIColor.appColor(.foreground)
+          
+          tabBarAppearance.selectionIndicatorTintColor = UIColor.appColor(.tabBarSelected)
             UITabBar.appearance().standardAppearance = tabBarAppearance
             
         }
         else{
-            UITabBar.appearance().shadowImage = UIImage()
-            UITabBar.appearance().barTintColor = .blue
-            UITabBar.appearance().backgroundColor = .clear
+          UITabBar.appearance().barTintColor = UIColor.appColor(.tabBarSelected)
+          UITabBar.appearance().backgroundColor = UIColor.appColor(.foreground)
             UITabBar.appearance().isOpaque = true
         }
         

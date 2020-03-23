@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FriendsVC-->
+        <!--Friends-->
         <scene sceneID="yTU-yw-UGp">
             <objects>
                 <viewController storyboardIdentifier="FriendsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hgc-lO-IFS" customClass="FriendsVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wau-st-xVP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So7-l2-igZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="75.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-cn-nSz">
                                         <rect key="frame" x="20.5" y="6" width="373" height="56"/>
@@ -40,8 +40,10 @@
                                     <constraint firstItem="4aF-cn-nSz" firstAttribute="centerX" secondItem="So7-l2-igZ" secondAttribute="centerX" id="J60-Oe-iYR"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0UF-QU-Jnu">
-                                <rect key="frame" x="0.0" y="62" width="414" height="712"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0UF-QU-Jnu">
+                                <rect key="frame" x="0.0" y="62" width="414" height="660"/>
+                                <color key="separatorColor" name="tabBarSelected"/>
+                                <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendsCell" rowHeight="72" id="FHG-6M-WNa">
                                         <rect key="frame" x="0.0" y="28" width="414" height="72"/>
@@ -69,24 +71,24 @@
                         <viewLayoutGuide key="safeArea" id="FgE-xZ-DPW"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" id="6gM-cC-5Ah">
-                        <barButtonItem key="backBarButtonItem" title="Friends" id="gnt-gt-0ri"/>
+                    <navigationItem key="navigationItem" title="Friends" id="6gM-cC-5Ah">
                         <barButtonItem key="leftBarButtonItem" image="envelope.fill" catalog="system" id="eQq-X4-umi">
-                            <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" name="tabBarSelected"/>
                             <connections>
                                 <segue destination="hm8-aN-hIm" kind="popoverPresentation" popoverAnchorBarButtonItem="eQq-X4-umi" id="9Ho-Kg-fGm">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="plus.circle.fill" catalog="system" id="9hd-vX-4ZI">
-                            <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="addFriendIcon" largeContentSizeImage="addFriendIcon" style="plain" id="9hd-vX-4ZI">
+                            <color key="tintColor" name="tabBarSelected"/>
                             <connections>
                                 <segue destination="jk2-p1-t5N" kind="show" identifier="toAddFriends" id="p4e-pX-CeF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addFriendBtn" destination="9hd-vX-4ZI" id="2KD-D1-hfv"/>
                         <outlet property="requestBtn" destination="eQq-X4-umi" id="eBQ-QE-Rwl"/>
                         <outlet property="searchBar" destination="3Lc-sS-sBW" id="tGo-dv-zIk"/>
                         <outlet property="tableView" destination="0UF-QU-Jnu" id="9uE-b3-e1X"/>
@@ -110,15 +112,15 @@
                                 <color key="textColor" name="tabBarSelected"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-Jf-cYy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-Jf-cYy">
                                 <rect key="frame" x="0.0" y="81" width="414" height="727"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendRequestCell" id="Swb-Ng-6oa">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Swb-Ng-6oa" id="DtT-Nq-NND">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,22 +153,27 @@
             <objects>
                 <viewController id="jk2-p1-t5N" customClass="AddFriendsVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OeR-fL-RRg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="John Doe" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNL-vy-FhU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" name="highlight"/>
-                                <color key="barTintColor" name="tabBarSelected"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ABa-OX-dxX">
+                                <rect key="frame" x="20.5" y="0.0" width="373" height="56"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="John Doe" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNL-vy-FhU">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="56"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="highlight"/>
+                                        <color key="barTintColor" name="tabBarSelected"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                </subviews>
+                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5T9-KU-2mk">
-                                <rect key="frame" x="0.0" y="56" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendsCell" id="xhx-YT-Dv9">
@@ -182,13 +189,13 @@
                         </subviews>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
+                            <constraint firstItem="ABa-OX-dxX" firstAttribute="top" secondItem="SyJ-9X-qSV" secondAttribute="top" id="B3u-Vf-PD2"/>
+                            <constraint firstItem="ABa-OX-dxX" firstAttribute="width" secondItem="SyJ-9X-qSV" secondAttribute="width" multiplier="0.9" id="GY6-dQ-VC6"/>
                             <constraint firstItem="5T9-KU-2mk" firstAttribute="centerX" secondItem="SyJ-9X-qSV" secondAttribute="centerX" id="Hb8-l1-rxd"/>
                             <constraint firstItem="5T9-KU-2mk" firstAttribute="width" secondItem="OeR-fL-RRg" secondAttribute="width" id="JFz-7c-88j"/>
                             <constraint firstItem="SyJ-9X-qSV" firstAttribute="bottom" secondItem="5T9-KU-2mk" secondAttribute="bottom" id="LeC-5B-kl4"/>
-                            <constraint firstItem="5T9-KU-2mk" firstAttribute="top" secondItem="gNL-vy-FhU" secondAttribute="bottom" id="fOB-7r-5j3"/>
-                            <constraint firstItem="gNL-vy-FhU" firstAttribute="width" secondItem="SyJ-9X-qSV" secondAttribute="width" id="jZd-Cf-QmR"/>
-                            <constraint firstItem="gNL-vy-FhU" firstAttribute="top" secondItem="SyJ-9X-qSV" secondAttribute="top" id="juD-Am-qaI"/>
-                            <constraint firstItem="gNL-vy-FhU" firstAttribute="centerX" secondItem="SyJ-9X-qSV" secondAttribute="centerX" id="uDh-Ni-nog"/>
+                            <constraint firstItem="ABa-OX-dxX" firstAttribute="centerX" secondItem="SyJ-9X-qSV" secondAttribute="centerX" id="XPN-i3-dUs"/>
+                            <constraint firstItem="5T9-KU-2mk" firstAttribute="top" secondItem="ABa-OX-dxX" secondAttribute="bottom" id="vFg-UG-MF8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SyJ-9X-qSV"/>
                     </view>
@@ -208,8 +215,8 @@
                 <navigationController id="eqd-5b-OHO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="person.3" catalog="system" selectedImage="person.3.fill" id="0sk-cJ-ULe"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Vo1-RE-CI2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Vo1-RE-CI2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="foreground"/>
                         <color key="tintColor" name="tabBarSelected"/>
@@ -226,10 +233,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addFriendIcon" width="22" height="22"/>
         <image name="envelope.fill" catalog="system" width="64" height="46"/>
         <image name="person.3" catalog="system" width="72" height="35"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
-        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
         <namedColor name="background">
             <color red="0.85490196078431369" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

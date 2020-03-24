@@ -11,7 +11,6 @@ import Firebase
 import Crashlytics
 
 class HomeVC: MainVC, UIGestureRecognizerDelegate {
-    @IBOutlet weak var pendingBtn: UIBarButtonItem!
     @IBOutlet weak private var getView: HomeCard!
     @IBOutlet weak private var oweView: HomeCard!
     
@@ -203,12 +202,7 @@ extension HomeVC {
                    
                    
                    
-                   if pendingTransactions.count > 0 {
-                       self.pendingBtn.addBadge(number: pendingTransactions.count, withOffset: CGPoint(x: 0, y: 0), andColor: UIColor.appColor(.highlight) ?? .green, andFilled: true)
-                   }
-                   else{
-                    self.pendingBtn.removeBadge()
-                }
+                  
                 print("Updating Pending")
                }
         

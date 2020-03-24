@@ -19,7 +19,6 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
     
     var searchActive = false
     
-    @IBOutlet weak var requestBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var addFriendBtn: UIBarButtonItem!
@@ -76,12 +75,12 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
     func checkPending(){
         let friendHandler = FriendHandler()
         friendHandler.getFriendRequests { (requests) in
-            if requests.count > 0 {
-              self.requestBtn.addBadge(number: requests.count, withOffset: CGPoint(x: 0, y:0), andColor: UIColor.appColor(.highlight) ?? .green, andFilled: true)
-            }
-            else {
-                self.requestBtn.removeBadge()
-            }
+//            if requests.count > 0 {
+//              self.requestBtn.addBadge(number: requests.count, withOffset: CGPoint(x: 0, y:0), andColor: UIColor.appColor(.highlight) ?? .green, andFilled: true)
+//            }
+//            else {
+//                self.requestBtn.removeBadge()
+//            }
         }
     }
     

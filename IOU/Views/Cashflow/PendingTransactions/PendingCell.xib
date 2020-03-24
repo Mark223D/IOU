@@ -11,122 +11,73 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PendingCell" rowHeight="153" id="KGk-i7-Jjw" customClass="PendingCell" customModule="IOU" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PendingCell" rowHeight="106" id="KGk-i7-Jjw" customClass="PendingCell" customModule="IOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="106"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
+                <rect key="frame" x="0.0" y="0.0" width="322" height="106"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jqn-Y3-PHm">
-                        <rect key="frame" x="70" y="8" width="160" height="46"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8SS-bM-18I">
+                        <rect key="frame" x="89" y="8" width="221" height="89"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-au-OpL">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" name="tabBarSelected"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAS-3o-nU1">
-                                <rect key="frame" x="0.0" y="23" width="160" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" name="tabBarSelected"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-dh-GEl">
+                                <rect key="frame" x="0.0" y="0.0" width="221" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-au-OpL">
+                                        <rect key="frame" x="0.0" y="0.0" width="27.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAS-3o-nU1">
+                                        <rect key="frame" x="35.5" y="0.0" width="185.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-p3-0wl">
+                                <rect key="frame" x="0.0" y="62" width="221" height="27"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S0-w5K">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEq-Ss-awH">
+                                        <rect key="frame" x="76" y="0.0" width="145" height="27"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <state key="normal" title="CONFIRM">
+                                            <color key="titleColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirmPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NN8-7Q-Dx6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                            </stackView>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="46" id="e6h-y6-za5"/>
-                        </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LtK-DW-b6C">
-                        <rect key="frame" x="8" y="8" width="46" height="46"/>
+                        <rect key="frame" x="12" y="8" width="69" height="69"/>
                         <color key="backgroundColor" name="highlight"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="LtK-DW-b6C" secondAttribute="height" multiplier="1:1" id="bh0-Cm-vBM"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEq-Ss-awH">
-                        <rect key="frame" x="237" y="12.5" width="75" height="37"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                        <state key="normal" title="CONFIRM">
-                            <color key="titleColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                        <connections>
-                            <action selector="confirmPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NN8-7Q-Dx6"/>
-                        </connections>
-                    </button>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8RC-lb-5DK">
-                        <rect key="frame" x="16" y="63.5" width="288" height="81.5"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="in3-Bf-EKx">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="22"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhU-h9-d4b">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="22"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" name="tabBarSelected"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0L-kf-uhl">
-                                        <rect key="frame" x="134" y="0.0" width="154" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="tabBarSelected"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-j1-20g">
-                                <rect key="frame" x="0.0" y="30" width="288" height="21.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2R-lW-SGZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="199.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" name="tabBarSelected"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jab-Ad-vVJ">
-                                        <rect key="frame" x="199.5" y="0.0" width="88.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="tabBarSelected"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-dh-GEl">
-                                <rect key="frame" x="0.0" y="59.5" width="288" height="22"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEa-qQ-3kx">
-                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="22"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" name="tabBarSelected"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S0-w5K">
-                                        <rect key="frame" x="137.5" y="0.0" width="150.5" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="tabBarSelected"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                    </stackView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="8RC-lb-5DK" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="5Q9-j4-4Lu"/>
-                    <constraint firstItem="LtK-DW-b6C" firstAttribute="height" secondItem="jqn-Y3-PHm" secondAttribute="height" id="6Bg-BT-Yoe"/>
-                    <constraint firstItem="LtK-DW-b6C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6Op-nk-yPu"/>
-                    <constraint firstItem="bEq-Ss-awH" firstAttribute="height" secondItem="jqn-Y3-PHm" secondAttribute="height" multiplier="0.8" id="7Jh-0P-dUY"/>
-                    <constraint firstItem="jqn-Y3-PHm" firstAttribute="centerY" secondItem="LtK-DW-b6C" secondAttribute="centerY" id="VK0-PQ-WAK"/>
-                    <constraint firstItem="jqn-Y3-PHm" firstAttribute="leading" secondItem="LtK-DW-b6C" secondAttribute="trailing" constant="16" id="Wis-iy-3aF"/>
-                    <constraint firstItem="8RC-lb-5DK" firstAttribute="top" secondItem="jqn-Y3-PHm" secondAttribute="bottom" constant="9.5" id="YG5-jw-p5l"/>
-                    <constraint firstAttribute="trailing" secondItem="bEq-Ss-awH" secondAttribute="trailing" constant="8" id="ZhX-wW-4Fv"/>
-                    <constraint firstItem="bEq-Ss-awH" firstAttribute="centerY" secondItem="jqn-Y3-PHm" secondAttribute="centerY" id="dYO-yC-1QZ"/>
-                    <constraint firstItem="8RC-lb-5DK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="fgv-Bq-xpx"/>
-                    <constraint firstItem="jqn-Y3-PHm" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="i4x-EX-xqo"/>
-                    <constraint firstItem="LtK-DW-b6C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="i81-Q3-gce"/>
-                    <constraint firstAttribute="bottom" secondItem="8RC-lb-5DK" secondAttribute="bottom" constant="8" id="uI9-4J-o7L"/>
+                    <constraint firstItem="LtK-DW-b6C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="1Pg-e6-N5v"/>
+                    <constraint firstItem="8SS-bM-18I" firstAttribute="leading" secondItem="LtK-DW-b6C" secondAttribute="trailing" constant="8" id="BGK-xz-RM4"/>
+                    <constraint firstItem="LtK-DW-b6C" firstAttribute="top" secondItem="8SS-bM-18I" secondAttribute="top" id="G9z-RI-n5E"/>
+                    <constraint firstItem="LtK-DW-b6C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="HJo-Bt-wRH"/>
+                    <constraint firstItem="LtK-DW-b6C" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.65" id="Qzz-Vg-7a8"/>
+                    <constraint firstAttribute="trailing" secondItem="8SS-bM-18I" secondAttribute="trailing" constant="12" id="w1h-Xq-cvU"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,12 +86,10 @@
                 <outlet property="amountLabel" destination="TAS-3o-nU1" id="O41-kp-8Yw"/>
                 <outlet property="confirmBtn" destination="bEq-Ss-awH" id="Cbd-aG-GJK"/>
                 <outlet property="dateLabel" destination="vbN-S0-w5K" id="qu3-9O-nEI"/>
-                <outlet property="descriptionLabel" destination="Jab-Ad-vVJ" id="kF0-Oj-AIJ"/>
-                <outlet property="titleLabel" destination="g0L-kf-uhl" id="cYK-J4-Ae2"/>
                 <outlet property="userImage" destination="LtK-DW-b6C" id="5m3-dX-XFS"/>
                 <outlet property="userLabel" destination="Xm6-au-OpL" id="7JH-XT-wug"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="140.29017857142856"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </tableViewCell>
     </objects>
     <resources>
@@ -148,7 +97,7 @@
             <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabBarSelected">
-            <color red="0.078431372549019607" green="0.11764705882352941" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.11800000071525574" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

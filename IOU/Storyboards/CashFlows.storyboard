@@ -10,21 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pending TransactionsVC-->
-        <scene sceneID="f0i-CB-w12">
-            <objects>
-                <viewController id="Q2h-b8-u0x" customClass="PendingTransactionsVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ez0-99-4Fy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="background"/>
-                        <viewLayoutGuide key="safeArea" id="9Qp-6a-p1z"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aRC-cp-sRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1697" y="1059"/>
-        </scene>
         <!--HomeVC-->
         <scene sceneID="1QD-Dz-0Xf">
             <objects>
@@ -45,106 +30,117 @@
                                     <action selector="addBtnPressed:" destination="iOU-GP-APV" eventType="touchUpInside" id="V3u-SW-qzb"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="128" translatesAutoresizingMaskIntoConstraints="NO" id="4oI-p0-YWi">
-                                <rect key="frame" x="82.5" y="127.5" width="210" height="316"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Evh-kx-171">
+                                <rect key="frame" x="140.5" y="16" width="94" height="114"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSQ-Pn-c2W" customClass="HomeCard" customModule="IOU" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="210" height="94"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U06-oY-eUt">
-                                                <rect key="frame" x="19.5" y="19" width="171.5" height="55.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fua-Dd-MNw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="36"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                        <color key="textColor" name="tabBarSelected"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 5 People" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czf-2F-LmQ">
-                                                        <rect key="frame" x="32" y="36" width="107" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                                        <color key="textColor" name="tabBarSelected"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" name="foreground"/>
-                                        <color key="tintColor" name="tabBarSelected"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mIl-7l-rjQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                        <color key="backgroundColor" name="highlight"/>
                                         <constraints>
-                                            <constraint firstItem="U06-oY-eUt" firstAttribute="centerX" secondItem="FSQ-Pn-c2W" secondAttribute="centerX" id="5dV-vK-ygt"/>
-                                            <constraint firstItem="U06-oY-eUt" firstAttribute="centerY" secondItem="FSQ-Pn-c2W" secondAttribute="centerY" id="opm-7Y-WlK"/>
+                                            <constraint firstAttribute="width" constant="94" id="M5Q-Jn-W3H"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8v-4w-lmH" customClass="HomeCard" customModule="IOU" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="222" width="210" height="94"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="N7i-cW-heh">
-                                                <rect key="frame" x="19.5" y="19.5" width="171.5" height="55.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 100.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vq-7C-FnP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="36"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                        <color key="textColor" name="background"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To 5 People" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIo-Na-YHq">
-                                                        <rect key="frame" x="0.0" y="36" width="171.5" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                                        <color key="textColor" name="background"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" name="tabBarSelected"/>
-                                        <color key="tintColor" name="background"/>
-                                        <constraints>
-                                            <constraint firstItem="N7i-cW-heh" firstAttribute="centerX" secondItem="B8v-4w-lmH" secondAttribute="centerX" id="lvp-bu-PeU"/>
-                                            <constraint firstItem="N7i-cW-heh" firstAttribute="centerY" secondItem="B8v-4w-lmH" secondAttribute="centerY" id="wIl-3L-sym"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbW-Km-vIH">
+                                        <rect key="frame" x="26" y="94" width="42" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="FSQ-Pn-c2W" firstAttribute="width" secondItem="B8v-4w-lmH" secondAttribute="width" id="Bq9-Ba-8VK"/>
-                                    <constraint firstItem="B8v-4w-lmH" firstAttribute="width" secondItem="4oI-p0-YWi" secondAttribute="width" id="b5P-HY-cW4"/>
+                                    <constraint firstItem="mIl-7l-rjQ" firstAttribute="width" secondItem="Evh-kx-171" secondAttribute="width" id="Xk3-Jj-mwS"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8v-4w-lmH" customClass="HomeCard" customModule="IOU" customModuleProvider="target">
+                                <rect key="frame" x="78" y="355.5" width="206.5" height="91.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="N7i-cW-heh">
+                                        <rect key="frame" x="17.5" y="18" width="171.5" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 100.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vq-7C-FnP">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <color key="textColor" name="background"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To 5 People" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIo-Na-YHq">
+                                                <rect key="frame" x="0.0" y="36" width="171.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" name="background"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="tabBarSelected"/>
+                                <color key="tintColor" name="background"/>
+                                <constraints>
+                                    <constraint firstItem="N7i-cW-heh" firstAttribute="centerX" secondItem="B8v-4w-lmH" secondAttribute="centerX" id="bWk-rg-3ZR"/>
+                                    <constraint firstItem="N7i-cW-heh" firstAttribute="centerY" secondItem="B8v-4w-lmH" secondAttribute="centerY" id="wIl-3L-sym"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSQ-Pn-c2W" customClass="HomeCard" customModule="IOU" customModuleProvider="target">
+                                <rect key="frame" x="28" y="182.5" width="206.5" height="91"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U06-oY-eUt">
+                                        <rect key="frame" x="17.5" y="17.5" width="171.5" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fua-Dd-MNw">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <color key="textColor" name="tabBarSelected"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 5 People" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czf-2F-LmQ">
+                                                <rect key="frame" x="32.5" y="36" width="107" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" name="tabBarSelected"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="foreground"/>
+                                <color key="tintColor" name="tabBarSelected"/>
+                                <constraints>
+                                    <constraint firstItem="U06-oY-eUt" firstAttribute="centerX" secondItem="FSQ-Pn-c2W" secondAttribute="centerX" id="5dV-vK-ygt"/>
+                                    <constraint firstItem="U06-oY-eUt" firstAttribute="centerY" secondItem="FSQ-Pn-c2W" secondAttribute="centerY" id="opm-7Y-WlK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="foreground"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="4oI-p0-YWi" firstAttribute="width" secondItem="Fb0-jW-2CP" secondAttribute="width" multiplier="0.56" id="4Il-Ji-bOT"/>
                             <constraint firstItem="thU-3C-YN2" firstAttribute="width" secondItem="Fb0-jW-2CP" secondAttribute="width" multiplier="0.16" id="4uR-iQ-E6m"/>
-                            <constraint firstItem="4oI-p0-YWi" firstAttribute="centerY" secondItem="I6J-F9-QbF" secondAttribute="centerY" id="Sb1-Yf-gK5"/>
-                            <constraint firstItem="4oI-p0-YWi" firstAttribute="height" secondItem="Fb0-jW-2CP" secondAttribute="height" multiplier="0.553772" id="U3b-OE-cdg"/>
-                            <constraint firstItem="4oI-p0-YWi" firstAttribute="centerX" secondItem="I6J-F9-QbF" secondAttribute="centerX" id="n8w-Cu-pUG"/>
+                            <constraint firstItem="Evh-kx-171" firstAttribute="height" secondItem="I6J-F9-QbF" secondAttribute="height" multiplier="0.2" id="CTN-N4-IPI"/>
+                            <constraint firstItem="Evh-kx-171" firstAttribute="top" secondItem="I6J-F9-QbF" secondAttribute="top" constant="16" id="RlQ-TF-1ep"/>
+                            <constraint firstItem="FSQ-Pn-c2W" firstAttribute="height" secondItem="Fb0-jW-2CP" secondAttribute="height" multiplier="0.16" id="d0J-C8-CZ0"/>
+                            <constraint firstItem="B8v-4w-lmH" firstAttribute="top" secondItem="FSQ-Pn-c2W" secondAttribute="bottom" multiplier="1.3" id="eC5-0b-hRp"/>
+                            <constraint firstItem="FSQ-Pn-c2W" firstAttribute="width" secondItem="Fb0-jW-2CP" secondAttribute="width" multiplier="0.55" id="eNi-OA-vKA"/>
+                            <constraint firstItem="FSQ-Pn-c2W" firstAttribute="top" secondItem="Evh-kx-171" secondAttribute="bottom" multiplier="1.4" id="fbQ-Ra-Ajq"/>
                             <constraint firstItem="I6J-F9-QbF" firstAttribute="bottom" secondItem="thU-3C-YN2" secondAttribute="bottom" multiplier="1.02" id="nqb-nj-9Xt"/>
                             <constraint firstItem="I6J-F9-QbF" firstAttribute="trailing" secondItem="thU-3C-YN2" secondAttribute="trailing" constant="16" id="nxp-sh-q0M"/>
+                            <constraint firstItem="B8v-4w-lmH" firstAttribute="height" secondItem="FSQ-Pn-c2W" secondAttribute="height" id="qRD-2I-qEw"/>
+                            <constraint firstItem="B8v-4w-lmH" firstAttribute="width" secondItem="FSQ-Pn-c2W" secondAttribute="width" id="rAW-eL-8uY"/>
+                            <constraint firstItem="Evh-kx-171" firstAttribute="centerX" secondItem="I6J-F9-QbF" secondAttribute="centerX" id="sqT-fq-5Jl"/>
+                            <constraint firstItem="FSQ-Pn-c2W" firstAttribute="centerX" secondItem="Evh-kx-171" secondAttribute="centerX" multiplier="0.7" id="vRo-t4-HHW"/>
+                            <constraint firstItem="B8v-4w-lmH" firstAttribute="centerX" secondItem="FSQ-Pn-c2W" secondAttribute="centerX" multiplier="1.38" id="y5Y-ys-JOy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I6J-F9-QbF"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="Ogx-QZ-3tn">
                         <barButtonItem key="backBarButtonItem" title="Home" id="86s-4A-FOv"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="archivebox.fill" catalog="system" id="2s7-qC-cLm">
-                            <color key="tintColor" name="tabBarSelected"/>
-                            <connections>
-                                <segue destination="Q2h-b8-u0x" kind="popoverPresentation" popoverAnchorBarButtonItem="2s7-qC-cLm" id="Lel-9p-9AX">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addTransactionBtn" destination="thU-3C-YN2" id="uTy-Xv-tcA"/>
@@ -153,7 +149,6 @@
                         <outlet property="getView" destination="FSQ-Pn-c2W" id="dR2-YL-wYp"/>
                         <outlet property="oweAmount" destination="1vq-7C-FnP" id="QaF-5H-Lou"/>
                         <outlet property="oweView" destination="B8v-4w-lmH" id="S9q-Ol-T4j"/>
-                        <outlet property="pendingBtn" destination="2s7-qC-cLm" id="jm0-TL-ToN"/>
                         <outlet property="toLabel" destination="vIo-Na-YHq" id="2uv-Om-YpH"/>
                         <segue destination="gB1-pt-ePb" kind="show" identifier="toGetOwe" id="Qpz-k6-Fa1"/>
                         <segue destination="M5C-24-PdY" kind="presentation" identifier="toAddTrans" id="tcK-di-q2G"/>
@@ -572,17 +567,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="archivebox.fill" catalog="system" width="64" height="52"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <namedColor name="background">
-            <color red="0.85490196078431369" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85500001907348633" green="0.875" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="foreground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="highlight">
             <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarSelected">
+            <color red="0.078000001609325409" green="0.11800000071525574" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabBarSelected">
             <color red="0.078431372549019607" green="0.11764705882352941" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

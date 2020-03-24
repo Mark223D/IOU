@@ -16,8 +16,6 @@ class PendingCell: UITableViewCell {
     @IBOutlet weak var confirmBtn: UIButton!
     
     @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     var model: Transaction?
@@ -28,6 +26,7 @@ class PendingCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+     
         // Initialization code
     }
     func setModel(_ model: Transaction,  _ friend: Friend)
@@ -40,40 +39,53 @@ class PendingCell: UITableViewCell {
                 self.cashflowHandler.getSignedInUser { (user) in
                     
                     if let firstName = otherUser.firstName,
+                      let lastName = otherUser.lastName,
                         let amount = model.amount,
-                        let created = model.created,
-                        let title = model.title,
-                        let description = model.description
+                        let created = model.created
                     {
                         
                         if user.uid == model.giver {
-                            self.userLabel.text = "You gave \(firstName)"
+                            self.userLabel.text = "You gave \(firstName) \(lastName)"
                             
                         }else{
-                            self.userLabel.text = "\(firstName) gave you"
+                            self.userLabel.text = "\(firstName) \(lastName) gave you"
                             
                         }
                         
                         //User is not sender: Need to confirm transaction
                         if (user.uid != model.sender) && (model.status != "Confirmed")
                             {
-                                self.confirmBtn.setTitle("CONFIRM", for: .normal)
-                                self.confirmBtn.setTitleColor(.green, for: .normal)
+                                self.confirmBtn.setTitle("Confirm", for: .normal)
+                                self.confirmBtn.setTitleColor(UIColor.appColor(.highlight), for: .normal)
                                 self.confirmBtn.isEnabled = true
+                              self.confirmBtn.backgroundColor = .clear
+                                                      self.confirmBtn.layer.cornerRadius = self.confirmBtn.frame.height/2
+                                                      self.confirmBtn.layer.borderWidth = 1
+                              self.confirmBtn.layer.borderColor = UIColor.appColor(.highlight)?.cgColor
                             
                         }
                         //User is sender: No need to confirm anything
                         else if (user.uid == model.sender) && (model.status != "Confirmed") {
-                                self.confirmBtn.setTitle("SENT", for: .normal)
-                                self.confirmBtn.setTitleColor(.lightGrey, for: .normal)
+                                self.confirmBtn.setTitle("Sent", for: .normal)
+                                self.confirmBtn.setTitleColor(UIColor.appColor(.tabBarSelected), for: .normal)
                                 self.confirmBtn.isEnabled = false
+                          
+                          self.confirmBtn.backgroundColor = .clear
+                          self.confirmBtn.layer.cornerRadius = self.confirmBtn.frame.height/2
+                          self.confirmBtn.layer.borderWidth = 1
+                          self.confirmBtn.layer.borderColor = UIColor.appColor(.tabBarSelected)?.cgColor
                             
                         }
                         //Transaction has been confirmed
                         else {
-                                self.confirmBtn.setTitle("CONFIRMED", for: .normal)
-                                self.confirmBtn.setTitleColor(.lightGrey, for: .normal)
+                                self.confirmBtn.setTitle("Confirmed", for: .normal)
+                          self.confirmBtn.setTitleColor(UIColor.appColor(.tabBarSelected), for: .normal)
                                 self.confirmBtn.isEnabled = false
+                          self.confirmBtn.backgroundColor = .clear
+                          self.confirmBtn.layer.cornerRadius = self.confirmBtn.frame.height/2
+                          self.confirmBtn.layer.borderWidth = 1
+                          self.confirmBtn.layer.borderColor = UIColor.appColor(.tabBarSelected)?.cgColor
+                          self.confirmBtn.titleEdgeInsets = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
                                 
                             }
                         self.userImage.maskCircle()
@@ -97,10 +109,7 @@ class PendingCell: UITableViewCell {
                             print("There was an error decoding the string")
                         }
                         
-                        
-                        self.titleLabel.text = title
-                        self.descriptionLabel.text = description
-                    }
+                  }
                 }
             }
         }

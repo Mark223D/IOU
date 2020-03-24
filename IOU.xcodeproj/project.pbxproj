@@ -31,6 +31,9 @@
 		4D91C8B82389AE11007A62E0 /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */; };
 		4D91C8BC2389AFCD007A62E0 /* CashFlows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */; };
 		4D91C8BE2389B050007A62E0 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91C8BD2389B050007A62E0 /* Friends.storyboard */; };
+		4D978A0424298347001A5C3C /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D978A0324298347001A5C3C /* Activity.storyboard */; };
+		4D978A072429844F001A5C3C /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D978A062429844F001A5C3C /* ActivityVC.swift */; };
+		4D978A0924298951001A5C3C /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D978A0824298951001A5C3C /* Activity.swift */; };
 		4D9D40B422CF3CBE00AD0A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */; };
 		4D9D40B622CF3CBE00AD0A0D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40B522CF3CBE00AD0A0D /* LoginVC.swift */; };
 		4D9D40B922CF3CBE00AD0A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D40B722CF3CBE00AD0A0D /* Main.storyboard */; };
@@ -118,6 +121,9 @@
 		4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
 		4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CashFlows.storyboard; sourceTree = "<group>"; };
 		4D91C8BD2389B050007A62E0 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		4D978A0324298347001A5C3C /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
+		4D978A062429844F001A5C3C /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
+		4D978A0824298951001A5C3C /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		4D9D40B022CF3CBE00AD0A0D /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D9D40B522CF3CBE00AD0A0D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -248,8 +254,17 @@
 				4D9D40B722CF3CBE00AD0A0D /* Main.storyboard */,
 				4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */,
 				4D91C8BD2389B050007A62E0 /* Friends.storyboard */,
+				4D978A0324298347001A5C3C /* Activity.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4D978A0524298436001A5C3C /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				4D978A062429844F001A5C3C /* ActivityVC.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		4D9D40A722CF3CBE00AD0A0D = {
@@ -317,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1C7DA62380574A006273DC /* MainVC.swift */,
+				4D978A0524298436001A5C3C /* Activity */,
 				4DCCAA892389EA5C0050F6F4 /* User */,
 				4DCCAA8A2389EA780050F6F4 /* Cashflow */,
 				4DCCAA8B2389EA8C0050F6F4 /* Friends */,
@@ -489,6 +505,7 @@
 				4D79DE3223843DB600349232 /* Transaction.swift */,
 				4DC7CEDB238DA21700699EE3 /* Pending.swift */,
 				4D818DB623FDA34400CA3CB3 /* Friend.swift */,
+				4D978A0824298951001A5C3C /* Activity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -624,6 +641,7 @@
 				4DC7CEC1238BC5FF00699EE3 /* FriendsCollectionViewCell.xib in Resources */,
 				4D37B205237DE5320044CCC2 /* IOUExpandedTransCell.xib in Resources */,
 				4D91C8BE2389B050007A62E0 /* Friends.storyboard in Resources */,
+				4D978A0424298347001A5C3C /* Activity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,7 +769,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D978A0924298951001A5C3C /* Activity.swift in Sources */,
 				4DC7CEEB239283B400699EE3 /* Application.swift in Sources */,
+				4D978A072429844F001A5C3C /* ActivityVC.swift in Sources */,
 				4DFFD30422D20E6F00D714E6 /* RegisterVC.swift in Sources */,
 				4DC7CEE923927A8100699EE3 /* CurrencyFormatter.swift in Sources */,
 				4DFFD31122D230C200D714E6 /* IOUHeader.swift in Sources */,

@@ -36,7 +36,7 @@ class UserCashFlowVC: MainVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupCashflow()
-        self.amountView.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: 48, borderColor: UIColor.appColor(.tabBarSelected) ?? .green, borderWidth: 3)
+        self.amountView.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: 40, borderColor: UIColor.appColor(.tabBarSelected) ?? .green, borderWidth: 3)
     }
     
     /*

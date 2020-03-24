@@ -282,6 +282,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHp-a7-Fx6" customClass="IOUTextField" customModule="IOU" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="30" width="300" height="15"/>
                                                 <color key="textColor" name="tabBarSelected"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="••••••••••"/>
@@ -370,6 +371,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="lSV-Qq-vIP" kind="relationship" relationship="viewControllers" id="uKJ-qj-nvQ"/>
+                        <segue destination="lrB-KU-ofZ" kind="relationship" relationship="viewControllers" id="3ER-EH-YiB"/>
                         <segue destination="sZD-jT-2Pc" kind="relationship" relationship="viewControllers" id="BS5-kq-O7m"/>
                         <segue destination="hZu-N5-PVf" kind="relationship" relationship="viewControllers" id="bIU-V7-gRL"/>
                     </connections>
@@ -458,6 +460,16 @@
             </objects>
             <point key="canvasLocation" x="485" y="1535"/>
         </scene>
+        <!--Activity-->
+        <scene sceneID="AfN-Sb-GAL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Activity" id="lrB-KU-ofZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="u3q-5P-X5p"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Sh-l8-grW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="1535"/>
+        </scene>
         <!--Friends-->
         <scene sceneID="uz3-w7-t53">
             <objects>
@@ -466,7 +478,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjG-9f-UpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="1535"/>
+            <point key="canvasLocation" x="1170" y="1535"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lz3-nN-UuG">
@@ -499,7 +511,7 @@
             <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="background">
-            <color red="0.85490196078431369" green="0.87450980392156863" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85500001907348633" green="0.875" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="foreground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -508,7 +520,7 @@
             <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabBarSelected">
-            <color red="0.078431372549019607" green="0.11764705882352941" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.11800000071525574" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -19,7 +19,7 @@ class HomeCard: UIView {
     
    
     func setupView(){
-      self.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: 40, borderColor: UIColor.appColor(.tabBarSelected) ?? .green, borderWidth: 3)
+      self.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: self.frame.height/2, borderColor: UIColor.appColor(.tabBarSelected) ?? .green, borderWidth: 3)
        }
        override func prepareForInterfaceBuilder() {
            super.prepareForInterfaceBuilder()

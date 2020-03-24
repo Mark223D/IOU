@@ -79,7 +79,7 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
       self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
-
+      self.navigationController?.setNavigationBarHidden(false, animated: true)
            self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
       self.navigationController?.navigationBar.tintColor = UIColor.appColor(.tabBarSelected)
                 
@@ -87,6 +87,8 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     
     
     override func viewWillAppear(_ animated: Bool) {
+      self.navigationController?.setNavigationBarHidden(true, animated: true)
+
         super.viewWillAppear(animated)
       self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
 

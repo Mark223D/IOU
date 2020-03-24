@@ -11,26 +11,37 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendRequestCell" rowHeight="107" id="KGk-i7-Jjw" customClass="FriendRequestCell" customModule="IOU" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="333" height="107"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendRequestCell" rowHeight="88" id="KGk-i7-Jjw" customClass="FriendRequestCell" customModule="IOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="333" height="107"/>
+                <rect key="frame" x="0.0" y="0.0" width="333" height="88"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOa-Aq-JaE">
-                        <rect key="frame" x="148" y="19.5" width="37" height="19.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                        <color key="textColor" name="tabBarSelected"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="KvS-ZA-GD6">
-                        <rect key="frame" x="16.5" y="70" width="300" height="32"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h89-FW-HIX">
+                        <rect key="frame" x="77" y="8" width="244" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOa-Aq-JaE">
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" name="tabBarSelected"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acp-np-Wmf">
+                                <rect key="frame" x="0.0" y="22" width="244" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="tabBarSelected"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KvS-ZA-GD6">
+                        <rect key="frame" x="188" y="48" width="133" height="28"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DZ-81-l3p">
-                                <rect key="frame" x="0.0" y="0.0" width="130" height="32"/>
+                                <rect key="frame" x="0.0" y="1" width="62.5" height="27"/>
                                 <color key="backgroundColor" red="0.67843137249999996" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="Decline">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -39,9 +50,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-XX-Mv6">
-                                <rect key="frame" x="170" y="0.0" width="130" height="32"/>
+                                <rect key="frame" x="70.5" y="1" width="62.5" height="27"/>
                                 <color key="backgroundColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -52,32 +63,26 @@
                         </subviews>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NSL-o8-XYl">
-                        <rect key="frame" x="69" y="8" width="43" height="43"/>
+                        <rect key="frame" x="12" y="8" width="57" height="57"/>
                         <color key="backgroundColor" name="highlight"/>
                         <color key="tintColor" name="highlight"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="NSL-o8-XYl" secondAttribute="height" multiplier="1:1" id="g80-7B-KUE"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acp-np-Wmf">
-                        <rect key="frame" x="151" y="47" width="31" height="14.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" name="tabBarSelected"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Acp-np-Wmf" firstAttribute="top" secondItem="LOa-Aq-JaE" secondAttribute="bottom" constant="8" id="1Mc-rY-LRC"/>
-                    <constraint firstAttribute="bottom" secondItem="KvS-ZA-GD6" secondAttribute="bottom" constant="5" id="RZX-5L-Q7l"/>
-                    <constraint firstItem="KvS-ZA-GD6" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="V3x-3K-T6W"/>
-                    <constraint firstItem="NSL-o8-XYl" firstAttribute="centerY" secondItem="LOa-Aq-JaE" secondAttribute="centerY" id="XjK-r8-58H"/>
-                    <constraint firstItem="KvS-ZA-GD6" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="khY-0o-FJz"/>
+                    <constraint firstItem="KvS-ZA-GD6" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="0YI-Dr-gQ5"/>
+                    <constraint firstItem="KvS-ZA-GD6" firstAttribute="trailing" secondItem="h89-FW-HIX" secondAttribute="trailing" id="54q-LD-QTX"/>
+                    <constraint firstItem="NSL-o8-XYl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="FEU-Ov-cnZ"/>
+                    <constraint firstItem="h89-FW-HIX" firstAttribute="leading" secondItem="NSL-o8-XYl" secondAttribute="trailing" constant="8" id="Np8-UA-BwG"/>
+                    <constraint firstAttribute="bottom" secondItem="KvS-ZA-GD6" secondAttribute="bottom" constant="12" id="RZX-5L-Q7l"/>
+                    <constraint firstItem="KvS-ZA-GD6" firstAttribute="top" secondItem="h89-FW-HIX" secondAttribute="bottom" id="T4t-p9-STq"/>
+                    <constraint firstAttribute="trailing" secondItem="h89-FW-HIX" secondAttribute="trailing" constant="12" id="aI7-Oa-GLJ"/>
+                    <constraint firstItem="h89-FW-HIX" firstAttribute="top" secondItem="NSL-o8-XYl" secondAttribute="top" id="gdj-U5-OkE"/>
                     <constraint firstItem="NSL-o8-XYl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tN7-4v-xuh"/>
-                    <constraint firstItem="NSL-o8-XYl" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.4" id="wrV-EQ-PZm"/>
-                    <constraint firstItem="LOa-Aq-JaE" firstAttribute="leading" secondItem="NSL-o8-XYl" secondAttribute="trailing" constant="36" id="xOv-ew-2tT"/>
-                    <constraint firstItem="Acp-np-Wmf" firstAttribute="centerX" secondItem="LOa-Aq-JaE" secondAttribute="centerX" id="z9f-oq-c2c"/>
-                    <constraint firstItem="LOa-Aq-JaE" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zhY-Rb-QDA"/>
+                    <constraint firstItem="NSL-o8-XYl" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.65" id="wrV-EQ-PZm"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,7 +94,7 @@
                 <outlet property="userImage" destination="NSL-o8-XYl" id="alV-Jq-2L9"/>
                 <outlet property="userLabel" destination="LOa-Aq-JaE" id="lPs-Wb-7pn"/>
             </connections>
-            <point key="canvasLocation" x="147.10144927536234" y="124.88839285714285"/>
+            <point key="canvasLocation" x="147.10144927536234" y="118.52678571428571"/>
         </tableViewCell>
     </objects>
     <resources>
@@ -97,7 +102,7 @@
             <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabBarSelected">
-            <color red="0.078431372549019607" green="0.11764705882352941" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.11800000071525574" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

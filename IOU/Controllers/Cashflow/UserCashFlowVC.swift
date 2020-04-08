@@ -44,16 +44,34 @@ class UserCashFlowVC: MainVC {
      */
     func setupCashflow(){
         self.items.removeAll()
-        self.total = 0
     
 
         let userCashflow = CashFlowHandler()
         if let user = self.userID {
-            userCashflow.getUserTransactions(user) { (total, transactions) in
-                self.total = total
-                self.items = transactions
+            userCashflow.getUserTransactions(user) { (transactions) in
+              self.items = transactions
+              self.total = 0
+
+              for transaction in transactions {
+                if let amount = transaction.amount {
+                  if  transaction.giver == user  {//Signed In user is giver
+                    self.total += amount //So add to total of user cashflow
+                    
+                  }
+                  else {//Signed in user is taker
+                    
+                    self.total  -= amount // So remove from total of user cashflow
+                    
+                  }
+                }
+              }
+              
               if self.total < 0{
                 self.amountLabel.text = self.formatter.formatAmountToLBP(self.total * -1)
+              }
+              else{
+                self.amountLabel.text = self.formatter.formatAmountToLBP(self.total)
+
               }
 
                 
@@ -63,11 +81,11 @@ class UserCashFlowVC: MainVC {
             userCashflow.getUser(user) { (user) in
                 if let name = user.firstName {
                   if self.total < 0{
-                    self.title = "\(name)"
+                    self.title = "From \(name)"
 
                   }
                   else if self.total > 0 {
-                    self.title = "From \(name)"
+                    self.title = "\(name)"
 
                   }
                     self.userName = name

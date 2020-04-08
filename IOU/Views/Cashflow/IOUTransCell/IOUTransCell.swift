@@ -25,8 +25,9 @@ class IOUTransCell: UITableViewCell {
         self.avatarImageView.maskCircle()
         self.userLabel.text = "You"
         self.gaveTookLabel.isHidden = true
-        self.avatarImageView.isHidden = true
-
+//        self.avatarImageView.isHidden = true
+      self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.height/2
+      self.avatarImageView.setIcon(icon: .fontAwesomeSolid(.user), textColor: .white, backgroundColor: UIColor.appColor(.highlight) ?? .orange)
         self.userLabel.font = .boldSystemFont(ofSize: 16)
     }
     

@@ -19,27 +19,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h89-FW-HIX">
-                        <rect key="frame" x="77" y="8" width="244" height="40"/>
+                        <rect key="frame" x="77" y="8" width="244" height="39"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOa-Aq-JaE">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" name="tabBarSelected"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acp-np-Wmf">
-                                <rect key="frame" x="0.0" y="22" width="244" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <rect key="frame" x="0.0" y="22" width="244" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" name="tabBarSelected"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KvS-ZA-GD6">
-                        <rect key="frame" x="188" y="48" width="133" height="28"/>
+                        <rect key="frame" x="188" y="47" width="133" height="29"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DZ-81-l3p">
-                                <rect key="frame" x="0.0" y="1" width="62.5" height="27"/>
+                                <rect key="frame" x="0.0" y="2" width="62.5" height="27"/>
                                 <color key="backgroundColor" red="0.67843137249999996" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="Decline">
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-XX-Mv6">
-                                <rect key="frame" x="70.5" y="1" width="62.5" height="27"/>
+                                <rect key="frame" x="70.5" y="2" width="62.5" height="27"/>
                                 <color key="backgroundColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="Confirm">
@@ -70,6 +70,13 @@
                             <constraint firstAttribute="width" secondItem="NSL-o8-XYl" secondAttribute="height" multiplier="1:1" id="g80-7B-KUE"/>
                         </constraints>
                     </imageView>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMV-Lk-MIz">
+                        <rect key="frame" x="0.0" y="85" width="333" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bvC-ew-AR7"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -86,6 +93,11 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cMV-Lk-MIz" firstAttribute="width" secondItem="njF-e1-oar" secondAttribute="width" id="BS3-fk-7pA"/>
+                <constraint firstItem="cMV-Lk-MIz" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" constant="-2" id="jsR-0U-oij"/>
+                <constraint firstItem="cMV-Lk-MIz" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="qfT-Oh-XXv"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="confirmBtn" destination="IUx-XX-Mv6" id="l8w-ch-A3u"/>

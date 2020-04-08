@@ -33,7 +33,8 @@ class FriendsCollectionViewCell: UICollectionViewCell {
         self.imageView.backgroundColor =  UIColor.appColor(.highlight)
       self.usernameLabel.textColor = UIColor.appColor(.tabBarSelected)
 
-        
+        self.imageView.layer.cornerRadius = self.imageView.frame.height/2
+        self.imageView.setIcon(icon: .fontAwesomeSolid(.user), textColor: .white, backgroundColor: UIColor.appColor(.highlight) ?? .orange)
     }
     
 

@@ -11,6 +11,9 @@
 		2A448EE7D63F7FCE12F08345 /* Pods_IOUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6A14B4AD707F2AA70A8EB2 /* Pods_IOUUITests.framework */; };
 		4D09390D23ED92AC00107F5A /* NotifHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09390C23ED92AC00107F5A /* NotifHandler.swift */; };
 		4D1C7DA72380574A006273DC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C7DA62380574A006273DC /* MainVC.swift */; };
+		4D1E00ED243A67AF0045382F /* IOUTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E00EC243A67AF0045382F /* IOUTabBar.swift */; };
+		4D1E00F1243B4E120045382F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E00EF243B4E120045382F /* SettingsCell.swift */; };
+		4D1E00F2243B4E120045382F /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E00F0243B4E120045382F /* SettingsCell.xib */; };
 		4D37B1FB237DDEF90044CCC2 /* IOUTransCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B1F9237DDEF90044CCC2 /* IOUTransCell.swift */; };
 		4D37B1FC237DDEF90044CCC2 /* IOUTransCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37B1FA237DDEF90044CCC2 /* IOUTransCell.xib */; };
 		4D37B1FE237DE19A0044CCC2 /* UserCashFlowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B1FD237DE19A0044CCC2 /* UserCashFlowVC.swift */; };
@@ -101,6 +104,9 @@
 		4D09390C23ED92AC00107F5A /* NotifHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifHandler.swift; sourceTree = "<group>"; };
 		4D0EC1A92394ED0800CE1E52 /* IOU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOU.entitlements; sourceTree = "<group>"; };
 		4D1C7DA62380574A006273DC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		4D1E00EC243A67AF0045382F /* IOUTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUTabBar.swift; sourceTree = "<group>"; };
+		4D1E00EF243B4E120045382F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		4D1E00F0243B4E120045382F /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		4D37B1F9237DDEF90044CCC2 /* IOUTransCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUTransCell.swift; sourceTree = "<group>"; };
 		4D37B1FA237DDEF90044CCC2 /* IOUTransCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IOUTransCell.xib; sourceTree = "<group>"; };
 		4D37B1FD237DE19A0044CCC2 /* UserCashFlowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCashFlowVC.swift; sourceTree = "<group>"; };
@@ -219,6 +225,15 @@
 				C46358CAB5859C526EEB70E0 /* Pods-IOUUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4D1E00EE243B4DF70045382F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4D1E00EF243B4E120045382F /* SettingsCell.swift */,
+				4D1E00F0243B4E120045382F /* SettingsCell.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		4D37B1F8237DDED70044CCC2 /* IOUTransCell */ = {
@@ -344,6 +359,7 @@
 		4D9D40E722CF588F00AD0A0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D1E00EE243B4DF70045382F /* Settings */,
 				4DC7CEEF2392A58A00699EE3 /* General */,
 				4DC7CEED2392A56A00699EE3 /* Friends */,
 				4DC7CEEE2392A57600699EE3 /* Cashflow */,
@@ -444,6 +460,7 @@
 				4D9D40EA22CF663900AD0A0D /* IOUButton.swift */,
 				4DFFD31022D230C200D714E6 /* IOUHeader.swift */,
 				4DFFD31622D235D600D714E6 /* IOULabel.swift */,
+				4D1E00EC243A67AF0045382F /* IOUTabBar.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -629,6 +646,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1E00F2243B4E120045382F /* SettingsCell.xib in Resources */,
 				4DB06A3F2426C3D00015EFFE /* GoogleService-Info.plist in Resources */,
 				4D9D40C122CF3CC000AD0A0D /* LaunchScreen.storyboard in Resources */,
 				4D91C8BC2389AFCD007A62E0 /* CashFlows.storyboard in Resources */,
@@ -776,6 +794,7 @@
 				4DC7CEE923927A8100699EE3 /* CurrencyFormatter.swift in Sources */,
 				4DFFD31122D230C200D714E6 /* IOUHeader.swift in Sources */,
 				4DC7CEC0238BC5FF00699EE3 /* FriendsCollectionViewCell.swift in Sources */,
+				4D1E00ED243A67AF0045382F /* IOUTabBar.swift in Sources */,
 				4DC7CECF238D7B5400699EE3 /* WormTabStripButton.swift in Sources */,
 				4D9D40EE22CF71B700AD0A0D /* AnimationEngine.swift in Sources */,
 				4DE1C6BA23735C5D00EA0153 /* GetOweVC.swift in Sources */,
@@ -808,6 +827,7 @@
 				4D9D40BC22CF3CBE00AD0A0D /* IOU.xcdatamodeld in Sources */,
 				4D79DE312382C18600349232 /* NavigationBar.swift in Sources */,
 				4DCCAA8E238AF0480050F6F4 /* NotificationHandler.swift in Sources */,
+				4D1E00F1243B4E120045382F /* SettingsCell.swift in Sources */,
 				4D91C8B82389AE11007A62E0 /* AddTransactionVC.swift in Sources */,
 				4DB06A472426DBE30015EFFE /* Colors.swift in Sources */,
 				4D37B209237DED720044CCC2 /* AddFriendsVC.swift in Sources */,

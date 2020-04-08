@@ -145,7 +145,16 @@ class ActivityVC: UIViewController {
     
     NotificationCenter.default.addObserver(self, selector: #selector(self.updateFriendReq(_:)), name: .updateFriendRequests, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(self.callGetData(_:)), name: .updatePending, object: nil)
-    
+    self.tabBarItem.image = UIImage(named: "activity")
+
+        if traitCollection.userInterfaceStyle == .light {
+                     print("Light mode")
+                self.tabBarItem.selectedImage = UIImage(named: "activity-active-blue")
+                 } else {
+                     print("Dark mode")
+                self.tabBarItem.selectedImage = UIImage(named: "activity-active-white")
+
+                 }
     
   }
   
@@ -232,11 +241,11 @@ extension ActivityVC: UITableViewDataSource {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     
     if self.model.items?[indexPath.row].getType() == .friend {
-      return self.tableView.frame.height * 0.125 // For Friends
+      return self.tableView.frame.height * 0.15 // For Friends
       
     }
     else{
-      return tableView.frame.height/7 // For Transactions
+      return tableView.frame.height/6.5 // For Transactions
       
     }
     

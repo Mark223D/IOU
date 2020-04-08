@@ -72,7 +72,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Friends" id="6gM-cC-5Ah">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="addFriendIcon" largeContentSizeImage="addFriendIcon" style="plain" id="9hd-vX-4ZI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="addFriendIcon" largeContentSizeImage="addFriendIcon" id="9hd-vX-4ZI">
                             <color key="tintColor" name="tabBarSelected"/>
                             <connections>
                                 <segue destination="jk2-p1-t5N" kind="show" identifier="toAddFriends" id="p4e-pX-CeF"/>
@@ -154,7 +154,7 @@
         <scene sceneID="9zJ-aP-g1Q">
             <objects>
                 <navigationController id="eqd-5b-OHO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.3" catalog="system" selectedImage="person.3.fill" id="0sk-cJ-ULe"/>
+                    <tabBarItem key="tabBarItem" title="" id="0sk-cJ-ULe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Vo1-RE-CI2">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -175,8 +175,6 @@
     </scenes>
     <resources>
         <image name="addFriendIcon" width="22" height="22"/>
-        <image name="person.3" catalog="system" width="72" height="35"/>
-        <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <namedColor name="background">
             <color red="0.85500001907348633" green="0.875" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

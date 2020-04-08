@@ -28,6 +28,8 @@ class PendingCell: UITableViewCell {
         super.awakeFromNib()
      
         // Initialization code
+      self.userImage.layer.cornerRadius = self.userImage.frame.height/2
+      self.userImage.setIcon(icon: .fontAwesomeSolid(.user), textColor: .white, backgroundColor: UIColor.appColor(.highlight) ?? .orange)
     }
     func setModel(_ model: Transaction,  _ friend: Friend)
     {

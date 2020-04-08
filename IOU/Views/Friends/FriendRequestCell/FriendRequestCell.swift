@@ -27,7 +27,8 @@ class FriendRequestCell: UITableViewCell {
     self.confirmBtn.titleEdgeInsets = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
     self.declineBtn.titleEdgeInsets = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
 
-    
+    self.userImage.layer.cornerRadius = self.userImage.frame.height/2
+    self.userImage.setIcon(icon: .fontAwesomeSolid(.user), textColor: .white, backgroundColor: UIColor.appColor(.highlight) ?? .orange)
     
     
   }
@@ -44,7 +45,14 @@ class FriendRequestCell: UITableViewCell {
       self.confirmBtn.layer.cornerRadius = self.confirmBtn.frame.height/2
       self.confirmBtn.layer.borderWidth = 1
       self.confirmBtn.layer.borderColor = UIColor.appColor(.tabBarSelected)?.cgColor
-      self.declineBtn.isHidden = true
+      
+      
+      self.declineBtn.backgroundColor = .clear
+      self.declineBtn.layer.borderWidth = 1
+      self.declineBtn.layer.borderColor = UIColor.clear.cgColor
+      self.declineBtn.setTitle("", for: .normal)
+      self.declineBtn.setTitleColor( UIColor.clear, for: .normal)
+
 
       
     }
@@ -76,7 +84,11 @@ class FriendRequestCell: UITableViewCell {
       self.declineBtn.layer.cornerRadius = self.confirmBtn.frame.height/2
       self.declineBtn.layer.borderWidth = 1
       self.declineBtn.layer.borderColor = UIColor.appColor(.tabBarSelected)?.cgColor
-      self.confirmBtn.isHidden = true
+      self.confirmBtn.backgroundColor = .clear
+      self.confirmBtn.layer.borderWidth = 1
+      self.confirmBtn.layer.borderColor = UIColor.clear.cgColor
+      self.declineBtn.setTitle("", for: .normal)
+      self.declineBtn.setTitleColor( UIColor.clear, for: .normal)
     }
     self.userImage.maskCircle()
     

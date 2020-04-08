@@ -101,6 +101,7 @@ PODS:
   - nanopb/encode (0.3.9011)
   - pop (1.0.12)
   - Protobuf (3.10.0)
+  - SwiftIcons (3.0)
 
 DEPENDENCIES:
   - Crashlytics (~> 3.14.0)
@@ -111,6 +112,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - pop (~> 1.0)
+  - SwiftIcons (~> 3.0)
 
 SPEC REPOS:
   trunk:
@@ -136,6 +138,7 @@ SPEC REPOS:
     - nanopb
     - pop
     - Protobuf
+    - SwiftIcons
 
 SPEC CHECKSUMS:
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
@@ -160,7 +163,8 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+  SwiftIcons: 3b748e57d9eee0c7c8d3bdbf2d742c0b1b4c6172
 
-PODFILE CHECKSUM: aec224b85dbb930845076e0782ae2d0b85d0a398
+PODFILE CHECKSUM: a636604c8c2218aba1dff8fc1cf4124489781c90
 
 COCOAPODS: 1.8.4

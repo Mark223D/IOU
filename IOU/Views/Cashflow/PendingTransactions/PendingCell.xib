@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-dh-GEl">
                                 <rect key="frame" x="0.0" y="0.0" width="221" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-au-OpL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-au-OpL">
                                         <rect key="frame" x="0.0" y="0.0" width="27.5" height="18"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" name="tabBarSelected"/>
@@ -69,15 +69,25 @@
                             <constraint firstAttribute="width" secondItem="LtK-DW-b6C" secondAttribute="height" multiplier="1:1" id="bh0-Cm-vBM"/>
                         </constraints>
                     </imageView>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yv-wr-WrI">
+                        <rect key="frame" x="0.0" y="103" width="322" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Zw5-Yp-zh6"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="LtK-DW-b6C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="1Pg-e6-N5v"/>
                     <constraint firstItem="8SS-bM-18I" firstAttribute="leading" secondItem="LtK-DW-b6C" secondAttribute="trailing" constant="8" id="BGK-xz-RM4"/>
                     <constraint firstItem="LtK-DW-b6C" firstAttribute="top" secondItem="8SS-bM-18I" secondAttribute="top" id="G9z-RI-n5E"/>
+                    <constraint firstItem="9Yv-wr-WrI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Gep-7d-cWQ"/>
                     <constraint firstItem="LtK-DW-b6C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="HJo-Bt-wRH"/>
                     <constraint firstItem="LtK-DW-b6C" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.65" id="Qzz-Vg-7a8"/>
+                    <constraint firstItem="9Yv-wr-WrI" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="U2v-dZ-IGi"/>
                     <constraint firstAttribute="trailing" secondItem="8SS-bM-18I" secondAttribute="trailing" constant="12" id="w1h-Xq-cvU"/>
+                    <constraint firstAttribute="bottom" secondItem="9Yv-wr-WrI" secondAttribute="bottom" constant="2" id="xPf-Bl-kmx"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

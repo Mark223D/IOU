@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCY-Ch-shL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="1859.8200899550227"/>
+            <point key="canvasLocation" x="470" y="2102"/>
         </scene>
         <!--Add Transaction-->
         <scene sceneID="3IR-eD-ky3">
@@ -342,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHS-Dy-Nhn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="2731"/>
+            <point key="canvasLocation" x="470" y="2973"/>
         </scene>
         <!--Get OweVC-->
         <scene sceneID="hM8-B2-Eej">
@@ -416,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zC-LO-WWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645" y="1860"/>
+            <point key="canvasLocation" x="1462" y="2102"/>
         </scene>
         <!--User Cash FlowVC-->
         <scene sceneID="V3D-dk-rCB">
@@ -491,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYF-Xy-gAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="1860"/>
+            <point key="canvasLocation" x="2458" y="2102"/>
         </scene>
         <!--Detailed CashflowVC-->
         <scene sceneID="p51-Rr-LWW">
@@ -533,13 +533,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1D-5C-e4U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3781" y="1860"/>
+            <point key="canvasLocation" x="3598" y="2102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fdQ-DX-Yel">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dHR-xh-JOc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="gUE-Ud-h04">
+                    <tabBarItem key="tabBarItem" title="" id="gUE-Ud-h04">
                         <color key="badgeColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -563,12 +563,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztI-hU-NZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="1860"/>
+            <point key="canvasLocation" x="-409" y="2102"/>
         </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="64" height="54"/>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
         <namedColor name="background">
             <color red="0.85500001907348633" green="0.875" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -582,7 +580,7 @@
             <color red="0.078000001609325409" green="0.11800000071525574" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabBarSelected">
-            <color red="0.078431372549019607" green="0.11764705882352941" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.11800000071525574" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

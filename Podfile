@@ -15,6 +15,7 @@ target 'IOU' do
   pod 'Firebase/Messaging'
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.14.0'
+  pod 'SwiftIcons', '~> 3.0'
 
 
 

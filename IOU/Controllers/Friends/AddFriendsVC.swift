@@ -15,8 +15,8 @@ class AddFriendsVC: MainVC {
     var items: [IOUUser] = []
     var ref: DatabaseReference!
     var searchActive: Bool = false
-    
-    @IBOutlet weak var searchBar: UISearchBar!
+    let search = UISearchController(searchResultsController: nil)
+
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -26,6 +26,7 @@ class AddFriendsVC: MainVC {
         
         self.initUI()
         self.hideKeyboardWhenTappedAround()
+      setupSearchBar()
         
     }
     
@@ -33,9 +34,15 @@ class AddFriendsVC: MainVC {
         
         super.viewWillAppear(animated)
       self.title = "Add Friends"
+      navigationItem.hidesSearchBarWhenScrolling = false
 
         
     }
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    navigationItem.hidesSearchBarWhenScrolling = true
+
+  }
     
     func searchQueryUsers(text: String) {
         let firebase = NetworkHandler()
@@ -161,13 +168,25 @@ extension AddFriendsVC {
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "FriendsCell")
         
-        
-        let textField = searchBar.searchTextField
+      self.navigationItem.rightBarButtonItem?.setIcon(icon: .fontAwesomeSolid(.userPlus), iconSize: 32.0)
+    }
+  
+  func setupSearchBar(){
+
+        search.searchBar.delegate = self
+        search.searchBar.sizeToFit()
+        search.obscuresBackgroundDuringPresentation = false
+        search.hidesNavigationBarDuringPresentation = true
+        self.definesPresentationContext = true
+        search.searchBar.placeholder = "Search..."
+        self.navigationItem.searchController = search
+        let textField = search.searchBar.searchTextField
         let glassIconView = textField.leftView as! UIImageView
         glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-      glassIconView.tintColor = UIColor.appColor(.tabBarSelected) ?? .green
-        
-        self.searchBar.delegate = self
-    }
+        glassIconView.tintColor = UIColor.appColor(.tabBarSelected) ?? .green
+    
+    
+    
+  }
     
 }

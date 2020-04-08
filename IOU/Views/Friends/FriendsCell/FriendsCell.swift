@@ -20,8 +20,9 @@ class FriendsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        self.avatarImageView.maskCircle()
-      self.avatarImageView.backgroundColor = UIColor.appColor(.highlight)
+      self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.height/2
+      self.avatarImageView.setIcon(icon: .fontAwesomeSolid(.user), textColor: .white, backgroundColor: UIColor.appColor(.highlight) ?? .orange)
+//      self.avatarImageView.backgroundColor = UIColor.appColor(.highlight)
       self.backgroundColor = UIColor.appColor(.background)
       self.nameLabel.textColor = UIColor.appColor(.tabBarSelected)
       self.emailLabel.textColor = UIColor.appColor(.tabBarSelected)

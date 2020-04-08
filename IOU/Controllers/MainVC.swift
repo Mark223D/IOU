@@ -13,7 +13,11 @@ import Firebase
 class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+    self.tabBarController?.tabBar.items?[0].image = UIImage(named: "home")
+    self.tabBarController?.tabBar.items?[1].image = UIImage(named: "activity")
+    self.tabBarController?.tabBar.items?[3].image = UIImage(named: "friends")
+      self.tabBarController?.tabBar.items?[4].image = UIImage(named: "settings")
+     
         
     }
 

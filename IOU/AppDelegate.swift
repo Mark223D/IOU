@@ -51,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         Messaging.messaging().isAutoInitEnabled = true
        
       
+      
+      
         return true
     }
  
@@ -89,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
             UITabBar.appearance().isOpaque = true
         }
         
+    
     }
     
    

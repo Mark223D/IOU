@@ -20,9 +20,10 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     @IBOutlet weak private var oweAmount: UILabel!
     @IBOutlet weak private var toLabel: UILabel!
     
-    @IBOutlet weak private var addTransactionBtn: UIButton!
+//    @IBOutlet weak private var addTransactionBtn: UIButton!
     
-    var choice: Bool?// false: 0 : Get -- true: 1 : Owe
+  @IBOutlet weak var usernameLabel: UILabel!
+  var choice: Bool?// false: 0 : Get -- true: 1 : Owe
     
     var getItems: [CashFlow] = []
     var oweItems: [CashFlow] = []
@@ -37,17 +38,25 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarItem.image = UIImage(named: "house")
+
         attachTapGestures()
-        
-        self.tabBarItem.image = #imageLiteral(resourceName: "home")
-        self.tabBarItem.selectedImage = #imageLiteral(resourceName: "home_filled")
+  
 
       self.tabBarController?.tabBar.tintColor = UIColor.appColor(.tabBarSelected)
-        addTransactionBtn.layer.cornerRadius = addTransactionBtn.frame.height*0.2
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkPending(_:)), name: .updatePending, object: nil)
       self.view.backgroundColor = UIColor.appColor(.foreground)
+      
+
+          if traitCollection.userInterfaceStyle == .light {
+                       print("Light mode")
+                  self.tabBarItem.selectedImage = UIImage(named: "home-active-blue")
+                   } else {
+                       print("Dark mode")
+                  self.tabBarItem.selectedImage = UIImage(named: "home-active-white")
+
+                   }
     }
     
    
@@ -76,9 +85,9 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
       self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
-      self.navigationController?.setNavigationBarHidden(false, animated: true)
+      self.navigationController?.setNavigationBarHidden(false, animated: false)
            self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
       self.navigationController?.navigationBar.tintColor = UIColor.appColor(.tabBarSelected)
                 
@@ -86,7 +95,7 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     
     
     override func viewWillAppear(_ animated: Bool) {
-      self.navigationController?.setNavigationBarHidden(true, animated: true)
+      self.navigationController?.setNavigationBarHidden(true, animated: false)
 
         super.viewWillAppear(animated)
       self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
@@ -100,10 +109,10 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     
     
     
-    @IBAction func addBtnPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "toAddTrans", sender: self)
-        
-    }
+//    @IBAction func addBtnPressed(_ sender: Any) {
+//        self.performSegue(withIdentifier: "toAddTrans", sender: self)
+//
+//    }
     
 }
 
@@ -196,7 +205,7 @@ extension HomeVC {
                    
                    self.sent = sent
                    self.received = received
-                   let pendingTransactions = received.filter { (transaction) -> Bool in
+                _ = received.filter { (transaction) -> Bool in
                        return transaction.status != "Confirmed"
                    }
                    
@@ -217,6 +226,14 @@ extension HomeVC {
 
                    }
                }
+      
+      let userHandler = NetworkHandler()
+      userHandler.getUser(userHandler.currentUser?.uid ?? "") { (user: IOUUser) in
+        if let fName = user.firstName {
+          self.usernameLabel.text = "Welcome, \(fName) !"
+
+        }
+      }
     }
     
 }

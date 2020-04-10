@@ -65,14 +65,14 @@ class IOUExpandedTransCell: UITableViewCell {
         if model.giver == user.uid {
             //User is giver
             self.gaveTookLabel.text = "You Gave \(name)"
-            self.backView.backgroundColor = .green
+//            self.backView.backgroundColor = .green
         }
         else {
             //User is taker
-            self.gaveTookLabel.text = "You Took from \(name)"
-            self.backView.backgroundColor = .red
+            self.gaveTookLabel.text = "\(name) Gave You"
+//            self.backView.backgroundColor = .red
         }
-        
+      self.backView.backgroundColor = UIColor.appColor(.foreground)
     }
     
 }

@@ -46,7 +46,7 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
       self.tabBarController?.tabBar.tintColor = UIColor.appColor(.tabBarSelected)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkPending(_:)), name: .updatePending, object: nil)
-      self.view.backgroundColor = UIColor.appColor(.foreground)
+      self.view.backgroundColor = UIColor.appColor(.background)
       
 
           if traitCollection.userInterfaceStyle == .light {
@@ -86,9 +86,9 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.background) ?? .green)
       self.navigationController?.setNavigationBarHidden(false, animated: false)
-           self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
+           self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.background)
       self.navigationController?.navigationBar.tintColor = UIColor.appColor(.tabBarSelected)
                 
     }
@@ -98,9 +98,9 @@ class HomeVC: MainVC, UIGestureRecognizerDelegate {
       self.navigationController?.setNavigationBarHidden(true, animated: false)
 
         super.viewWillAppear(animated)
-      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.foreground) ?? .green)
+      self.navigationController?.setStatusBar(backgroundColor: UIColor.appColor(.background) ?? .green)
 
-           self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.foreground)
+           self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.background)
                 
         setupCashflow()
         updatePending()

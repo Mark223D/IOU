@@ -60,8 +60,16 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
     
     getFriends()
     checkPending()
-    self.addFriendBtn.setIcon(icon: .fontAwesomeSolid(.userPlus), iconSize: 20.0, color: .white)
-    self.addFriendBtn.tintColor = .white //UIColor.appColor(.highlight)
+
+    let profileButton = UIButton()
+       profileButton.frame = CGRect(x:0, y:0, width:30, height:30)
+    profileButton.setIcon(icon: .fontAwesomeSolid(.userPlus), iconSize: 15.0, color: .white, backgroundColor: UIColor.appColor(.highlight) ?? .orange, forState: .normal)
+    profileButton.backgroundColor = UIColor.appColor(.highlight)
+       profileButton.layer.cornerRadius = 8.0
+       profileButton.addTarget(self, action: #selector(didTapAddFriends(_:)), for: .touchUpInside)
+
+       let rightBarButton = UIBarButtonItem(customView: profileButton)
+       self.navigationItem.rightBarButtonItem = rightBarButton
     navigationItem.hidesSearchBarWhenScrolling = false
 
     
@@ -85,6 +93,10 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
         
       }
     }
+  }
+  
+  @objc func didTapAddFriends(_ sender: Any){
+    self.performSegue(withIdentifier: "toAddFriends", sender: self)
   }
   
   func setupSearchBar(){

@@ -32,9 +32,6 @@
 		4D818DB723FDA34400CA3CB3 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D818DB623FDA34400CA3CB3 /* Friend.swift */; };
 		4D91C8B62386C108007A62E0 /* CashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C8B52386C108007A62E0 /* CashFlow.swift */; };
 		4D91C8B82389AE11007A62E0 /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */; };
-		4D91C8BC2389AFCD007A62E0 /* CashFlows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */; };
-		4D91C8BE2389B050007A62E0 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91C8BD2389B050007A62E0 /* Friends.storyboard */; };
-		4D978A0424298347001A5C3C /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D978A0324298347001A5C3C /* Activity.storyboard */; };
 		4D978A072429844F001A5C3C /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D978A062429844F001A5C3C /* ActivityVC.swift */; };
 		4D978A0924298951001A5C3C /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D978A0824298951001A5C3C /* Activity.swift */; };
 		4D9D40B422CF3CBE00AD0A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */; };
@@ -125,9 +122,6 @@
 		4D818DB623FDA34400CA3CB3 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		4D91C8B52386C108007A62E0 /* CashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlow.swift; sourceTree = "<group>"; };
 		4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
-		4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CashFlows.storyboard; sourceTree = "<group>"; };
-		4D91C8BD2389B050007A62E0 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
-		4D978A0324298347001A5C3C /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		4D978A062429844F001A5C3C /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		4D978A0824298951001A5C3C /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		4D9D40B022CF3CBE00AD0A0D /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,9 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				4D9D40B722CF3CBE00AD0A0D /* Main.storyboard */,
-				4D91C8BB2389AFCD007A62E0 /* CashFlows.storyboard */,
-				4D91C8BD2389B050007A62E0 /* Friends.storyboard */,
-				4D978A0324298347001A5C3C /* Activity.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -359,10 +350,10 @@
 		4D9D40E722CF588F00AD0A0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D1E00EE243B4DF70045382F /* Settings */,
 				4DC7CEEF2392A58A00699EE3 /* General */,
 				4DC7CEED2392A56A00699EE3 /* Friends */,
 				4DC7CEEE2392A57600699EE3 /* Cashflow */,
+				4D1E00EE243B4DF70045382F /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -649,7 +640,6 @@
 				4D1E00F2243B4E120045382F /* SettingsCell.xib in Resources */,
 				4DB06A3F2426C3D00015EFFE /* GoogleService-Info.plist in Resources */,
 				4D9D40C122CF3CC000AD0A0D /* LaunchScreen.storyboard in Resources */,
-				4D91C8BC2389AFCD007A62E0 /* CashFlows.storyboard in Resources */,
 				4D9D40BE22CF3CC000AD0A0D /* Assets.xcassets in Resources */,
 				4D5AE1F823730878001644F5 /* FriendsCell.xib in Resources */,
 				4D37B1FC237DDEF90044CCC2 /* IOUTransCell.xib in Resources */,
@@ -658,8 +648,6 @@
 				4DC7CEDA238D7DA600699EE3 /* PendingCell.xib in Resources */,
 				4DC7CEC1238BC5FF00699EE3 /* FriendsCollectionViewCell.xib in Resources */,
 				4D37B205237DE5320044CCC2 /* IOUExpandedTransCell.xib in Resources */,
-				4D91C8BE2389B050007A62E0 /* Friends.storyboard in Resources */,
-				4D978A0424298347001A5C3C /* Activity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

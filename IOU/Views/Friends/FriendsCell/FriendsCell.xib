@@ -48,6 +48,13 @@
                             </stackView>
                         </subviews>
                     </stackView>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pON-KD-JBU">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="FVD-Vz-wIM"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -63,6 +70,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+            <constraints>
+                <constraint firstItem="pON-KD-JBU" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="7Wq-Uc-sYH"/>
+                <constraint firstItem="pON-KD-JBU" firstAttribute="width" secondItem="njF-e1-oar" secondAttribute="width" id="Y51-oZ-Exm"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="pON-KD-JBU" secondAttribute="bottom" id="yFF-Il-BpN"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avatarImageView" destination="Dhq-Mu-5qP" id="Jiz-Sm-Eup"/>

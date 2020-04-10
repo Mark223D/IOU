@@ -533,7 +533,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="foreground"/>
+                        <color key="backgroundColor" name="background"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hxj-sC-35I" firstAttribute="top" secondItem="eB8-LS-4QO" secondAttribute="top" constant="16" id="0GH-sL-8CO"/>
@@ -754,7 +754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywr-T3-px2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="2464"/>
+            <point key="canvasLocation" x="1286" y="2102"/>
         </scene>
         <!--Get OweVC-->
         <scene sceneID="Fd5-BE-Ohi">
@@ -862,13 +862,28 @@
                                                 <constraint firstItem="ezL-oI-5TE" firstAttribute="centerX" secondItem="sLx-aY-3ky" secondAttribute="centerX" id="w4Q-Yi-zRJ"/>
                                             </constraints>
                                         </view>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-it-kGg">
+                                            <rect key="frame" x="330" y="131" width="37" height="32"/>
+                                            <segments>
+                                                <segment title=""/>
+                                                <segment title=""/>
+                                            </segments>
+                                            <color key="tintColor" name="highlight"/>
+                                            <color key="selectedSegmentTintColor" name="highlight"/>
+                                            <connections>
+                                                <action selector="cellChanged:" destination="fQr-Iz-cCb" eventType="valueChanged" id="ydt-Kg-PAL"/>
+                                            </connections>
+                                        </segmentedControl>
                                     </subviews>
                                     <color key="backgroundColor" name="background"/>
                                     <constraints>
                                         <constraint firstItem="sLx-aY-3ky" firstAttribute="height" secondItem="l5G-2A-670" secondAttribute="height" multiplier="0.5" id="EoC-tK-vRm"/>
                                         <constraint firstItem="sLx-aY-3ky" firstAttribute="centerY" secondItem="l5G-2A-670" secondAttribute="centerY" id="J40-WW-t4s"/>
                                         <constraint firstItem="sLx-aY-3ky" firstAttribute="centerX" secondItem="l5G-2A-670" secondAttribute="centerX" id="L7W-jj-Zyb"/>
+                                        <constraint firstAttribute="bottom" secondItem="oyS-it-kGg" secondAttribute="bottom" constant="8" id="LtG-7e-HX9"/>
                                         <constraint firstItem="sLx-aY-3ky" firstAttribute="width" secondItem="l5G-2A-670" secondAttribute="width" multiplier="0.64" id="SXU-z5-mIU"/>
+                                        <constraint firstAttribute="trailing" secondItem="oyS-it-kGg" secondAttribute="trailing" constant="8" id="eZL-Nb-vq4"/>
+                                        <constraint firstItem="oyS-it-kGg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l5G-2A-670" secondAttribute="leading" constant="20" symbolic="YES" id="va0-lZ-3m7"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -897,55 +912,13 @@
                     <connections>
                         <outlet property="amountLabel" destination="ezL-oI-5TE" id="40K-D8-gn0"/>
                         <outlet property="amountView" destination="sLx-aY-3ky" id="iM1-Uu-KMj"/>
+                        <outlet property="cellControl" destination="oyS-it-kGg" id="Cgj-eC-7xO"/>
                         <outlet property="tableView" destination="pa5-qm-ZQR" id="lbO-QI-Vjq"/>
-                        <segue destination="jSK-lq-qPg" kind="show" identifier="toDetailedUserCashflow" id="InN-Ib-5OB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeu-mh-M63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-410" y="4715"/>
-        </scene>
-        <!--Detailed CashflowVC-->
-        <scene sceneID="7ZV-G3-qRK">
-            <objects>
-                <viewController id="jSK-lq-qPg" customClass="DetailedCashflowVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dKE-iI-Wph">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="522"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MWE-s1-o3F">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="522"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IOUExpandedTransCell" id="8Kx-6d-Lbe">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Kx-6d-Lbe" id="GTg-Fe-SEw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" name="background"/>
-                        <constraints>
-                            <constraint firstItem="MWE-s1-o3F" firstAttribute="centerY" secondItem="zrs-2A-zMd" secondAttribute="centerY" id="EV3-HW-26Y"/>
-                            <constraint firstItem="MWE-s1-o3F" firstAttribute="width" secondItem="dKE-iI-Wph" secondAttribute="width" id="NIN-pO-3m9"/>
-                            <constraint firstItem="MWE-s1-o3F" firstAttribute="bottom" secondItem="zrs-2A-zMd" secondAttribute="bottom" id="jA3-PF-vXP"/>
-                            <constraint firstItem="MWE-s1-o3F" firstAttribute="centerX" secondItem="zrs-2A-zMd" secondAttribute="centerX" id="pDy-Kl-aoV"/>
-                            <constraint firstItem="zrs-2A-zMd" firstAttribute="top" secondItem="MWE-s1-o3F" secondAttribute="top" id="rZL-Fu-BOc"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="zrs-2A-zMd"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jB6-Vt-oi7"/>
-                    <connections>
-                        <outlet property="tableView" destination="MWE-s1-o3F" id="bDQ-Fo-Uvb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cmQ-QI-E4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-410" y="5529"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q24-ml-Ecy">

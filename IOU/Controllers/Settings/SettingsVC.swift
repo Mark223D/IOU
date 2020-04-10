@@ -93,7 +93,7 @@ extension SettingsVC: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return self.tableView.frame.height/5
+    return self.tableView.frame.height/8
   }
   
   

@@ -38,6 +38,8 @@ class AddTransactionVC: MainVC {
         self.initUI()
         
         hideKeyboardWhenTapped()
+      
+      self.view.sizeThatFits(CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     }
     
     func hideKeyboardWhenTapped() {
@@ -55,8 +57,7 @@ class AddTransactionVC: MainVC {
         
         super.viewWillAppear(animated)
         self.friends.removeAll()
-        
-        if Auth.auth().currentUser != nil {
+              if Auth.auth().currentUser != nil {
             guard let user = Auth.auth().currentUser else { return  }
             self.ref.child("friends").child(user.uid).observe(.value) { (snapshot) -> Void in
                 if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {

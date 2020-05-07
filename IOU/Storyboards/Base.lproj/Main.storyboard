@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -373,7 +374,7 @@
                     <connections>
                         <segue destination="ubs-cI-sCI" kind="relationship" relationship="viewControllers" id="laC-is-ZeN"/>
                         <segue destination="PD4-on-3Fx" kind="relationship" relationship="viewControllers" id="i2g-IU-2Mn"/>
-                        <segue destination="88J-Ex-2Su" kind="relationship" relationship="viewControllers" id="ESc-fW-sbt"/>
+                        <segue destination="idZ-x0-GXP" kind="relationship" relationship="viewControllers" id="sgQ-4H-PHf"/>
                         <segue destination="LK1-rR-8hE" kind="relationship" relationship="viewControllers" id="fhy-Ae-e4q"/>
                         <segue destination="hZu-N5-PVf" kind="relationship" relationship="viewControllers" id="bIU-V7-gRL"/>
                     </connections>
@@ -572,9 +573,9 @@
         <!--Add Transaction-->
         <scene sceneID="pUi-1U-Il5">
             <objects>
-                <viewController title="Add Transaction" id="88J-Ex-2Su" customClass="AddTransactionVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Transaction" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="88J-Ex-2Su" customClass="AddTransactionVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gQ7-9p-K9w">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xzW-wi-dzD">
@@ -609,13 +610,8 @@
                                     <action selector="eachTotalChanged:" destination="88J-Ex-2Su" eventType="valueChanged" id="ibG-B4-Wej"/>
                                 </connections>
                             </segmentedControl>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="7LZ-nG-sIJ">
-                                <rect key="frame" x="19" y="150" width="337.5" height="56"/>
-                                <color key="barTintColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
-                            </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v5M-uf-Skx">
-                                <rect key="frame" x="19" y="332.5" width="337.5" height="85"/>
+                                <rect key="frame" x="19" y="363" width="337.5" height="85"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3rB-pM-tqR">
                                         <rect key="frame" x="0.0" y="0.0" width="337.5" height="20.5"/>
@@ -662,7 +658,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Cbj-Pd-IBf">
-                                <rect key="frame" x="19" y="572" width="337.5" height="30"/>
+                                <rect key="frame" x="19" y="654" width="337.5" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiG-a1-VS3">
                                         <rect key="frame" x="0.0" y="0.0" width="152.5" height="30"/>
@@ -687,31 +683,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EBd-65-f99">
-                                <rect key="frame" x="19" y="214" width="337.5" height="86.5"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-pd-0Hf">
-                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="86.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I1I-Cw-E0D">
-                                            <size key="itemSize" width="89" height="133"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsCell" id="7Xg-VL-nt3">
-                                                <rect key="frame" x="0.0" y="-23.5" width="89" height="133"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rIx-A0-COj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="133"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="customSize" width="89" height="133"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                </subviews>
+                                <rect key="frame" x="19" y="233" width="337.5" height="98"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
@@ -722,39 +694,52 @@
                             <constraint firstItem="EBd-65-f99" firstAttribute="centerX" secondItem="XT8-0b-a03" secondAttribute="centerX" id="EaV-qR-gg1"/>
                             <constraint firstItem="EBd-65-f99" firstAttribute="width" secondItem="gQ7-9p-K9w" secondAttribute="width" multiplier="0.9" id="EhB-j8-FhL"/>
                             <constraint firstItem="xzW-wi-dzD" firstAttribute="centerX" secondItem="XT8-0b-a03" secondAttribute="centerX" id="ElT-MS-Xcg"/>
-                            <constraint firstItem="7LZ-nG-sIJ" firstAttribute="top" secondItem="46V-Yt-HBG" secondAttribute="bottom" constant="32" id="Fnq-5v-daK"/>
                             <constraint firstItem="v5M-uf-Skx" firstAttribute="centerX" secondItem="XT8-0b-a03" secondAttribute="centerX" id="Jxa-Q0-oCD"/>
                             <constraint firstItem="xzW-wi-dzD" firstAttribute="top" secondItem="XT8-0b-a03" secondAttribute="top" constant="32" id="K0w-xe-tKf"/>
                             <constraint firstItem="46V-Yt-HBG" firstAttribute="centerX" secondItem="XT8-0b-a03" secondAttribute="centerX" id="KLl-c4-e5w"/>
-                            <constraint firstItem="7LZ-nG-sIJ" firstAttribute="centerX" secondItem="46V-Yt-HBG" secondAttribute="centerX" id="LK0-pH-bjC"/>
                             <constraint firstItem="XT8-0b-a03" firstAttribute="bottom" secondItem="v5M-uf-Skx" secondAttribute="bottom" priority="1" constant="252" id="OVS-dM-pa8"/>
-                            <constraint firstItem="7LZ-nG-sIJ" firstAttribute="width" secondItem="gQ7-9p-K9w" secondAttribute="width" multiplier="0.9" id="S4H-py-L9u"/>
                             <constraint firstAttribute="width" secondItem="46V-Yt-HBG" secondAttribute="width" multiplier="3.16031" id="UZT-nQ-Med"/>
                             <constraint firstItem="Cbj-Pd-IBf" firstAttribute="centerX" secondItem="XT8-0b-a03" secondAttribute="centerX" id="Uba-IW-exV"/>
                             <constraint firstItem="Cbj-Pd-IBf" firstAttribute="width" secondItem="gQ7-9p-K9w" secondAttribute="width" multiplier="0.9" id="iQZ-cC-Ocr"/>
                             <constraint firstItem="xzW-wi-dzD" firstAttribute="width" secondItem="gQ7-9p-K9w" secondAttribute="width" multiplier="0.8" id="jHs-PO-RoC"/>
-                            <constraint firstItem="EBd-65-f99" firstAttribute="top" secondItem="7LZ-nG-sIJ" secondAttribute="bottom" constant="8" id="t0U-zC-rTs"/>
                             <constraint firstItem="v5M-uf-Skx" firstAttribute="width" secondItem="gQ7-9p-K9w" secondAttribute="width" multiplier="0.9" id="vGU-aY-38q"/>
                             <constraint firstItem="EBd-65-f99" firstAttribute="height" secondItem="gQ7-9p-K9w" secondAttribute="height" multiplier="0.14" id="vwy-Cx-VR4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XT8-0b-a03"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="" id="AFY-yD-T0R"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="700"/>
                     <connections>
                         <outlet property="amountTextField" destination="Wha-8k-mSi" id="fLo-cQ-B0g"/>
                         <outlet property="descriptionTextField" destination="I6Q-kH-7l8" id="EQc-hI-13x"/>
                         <outlet property="eachTotalSwitch" destination="46V-Yt-HBG" id="zig-B3-5a2"/>
                         <outlet property="giveBtn" destination="KiG-a1-VS3" id="9ZT-6Q-ODJ"/>
                         <outlet property="labelsBottomConstraint" destination="OVS-dM-pa8" id="Rst-jw-bAv"/>
-                        <outlet property="searchBar" destination="7LZ-nG-sIJ" id="tXa-gJ-V1q"/>
                         <outlet property="takeBtn" destination="Bha-n4-q1d" id="mTn-F0-gui"/>
                         <outlet property="titleTextField" destination="hxd-ye-Kon" id="oTa-pO-xaC"/>
-                        <outlet property="usersCollectionView" destination="Ice-pd-0Hf" id="nF0-hH-wBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywr-T3-px2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="2102"/>
+            <point key="canvasLocation" x="3018" y="3952"/>
+        </scene>
+        <!--Add Trans PageVC-->
+        <scene sceneID="tes-WO-u3X">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="min" id="idZ-x0-GXP" customClass="AddTransPageVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="" id="gTM-aP-zFz"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="0.0" height="700"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="700"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHE-In-42O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="4159"/>
         </scene>
         <!--Get OweVC-->
         <scene sceneID="Fd5-BE-Ohi">
@@ -1114,6 +1099,347 @@
             </objects>
             <point key="canvasLocation" x="532" y="3115"/>
         </scene>
+        <!--AmountVC-->
+        <scene sceneID="xi3-gi-I0F">
+            <objects>
+                <viewController storyboardIdentifier="AmountVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="udP-KO-045" customClass="AmountVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qrr-GT-uRR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsj-KH-Neg">
+                                <rect key="frame" x="0.0" y="196" width="375" height="504"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zpx-Hj-4hG">
+                                        <rect key="frame" x="37.5" y="16" width="300" height="363"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xzl-Yj-bQp">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="84.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejA-20-kZw" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="15.5" width="89.5" height="54"/>
+                                                        <color key="backgroundColor" name="tabBarSelected"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEa-9J-lhX" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="105.5" y="15.5" width="89" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="verticalGradient" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtW-4r-LN1" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="210.5" y="15.5" width="89.5" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-Wz-T8K">
+                                                <rect key="frame" x="0.0" y="92.5" width="300" height="85"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTG-Wz-bRk" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="15.5" width="89.5" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1G-0P-zEm" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="105.5" y="15.5" width="89" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOC-v1-R7U" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="210.5" y="15.5" width="89.5" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="24E-5K-oGb">
+                                                <rect key="frame" x="0.0" y="185.5" width="300" height="84.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3I-Rs-DTn" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="15.5" width="89.5" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGR-Ch-RPc" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="105.5" y="15.5" width="89" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yB3-44-4nE" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="210.5" y="15.5" width="89.5" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="L1h-jj-d0d">
+                                                <rect key="frame" x="0.0" y="278" width="300" height="85"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d83-vr-eri" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="15.5" width="89.5" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="Clear">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atc-gv-8sT" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="105.5" y="15.5" width="89" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZe-hO-z7E" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                        <rect key="frame" x="210.5" y="15.5" width="89.5" height="54"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" name="background"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" name="tabBarSelected"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="rWH-q6-3gy">
+                                        <rect key="frame" x="19" y="410" width="337.5" height="54"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-ec-8sd" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="54"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                <state key="normal" title="CANCEL">
+                                                    <color key="titleColor" name="background"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" name="tabBarSelected"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" name="tabBarSelected"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtZ-HG-d3u" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="218.5" y="0.0" width="119" height="54"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                                <state key="normal" title="NEXT">
+                                                    <color key="titleColor" name="background"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" name="tabBarSelected"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" name="tabBarSelected"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="background"/>
+                                <color key="tintColor" name="highlight"/>
+                                <constraints>
+                                    <constraint firstItem="Zpx-Hj-4hG" firstAttribute="width" secondItem="lsj-KH-Neg" secondAttribute="width" multiplier="0.8" id="275-Kz-m6G"/>
+                                    <constraint firstItem="Zpx-Hj-4hG" firstAttribute="top" secondItem="lsj-KH-Neg" secondAttribute="top" constant="16" id="B45-vs-FmA"/>
+                                    <constraint firstItem="rWH-q6-3gy" firstAttribute="centerX" secondItem="lsj-KH-Neg" secondAttribute="centerX" id="DFL-Hk-AV4"/>
+                                    <constraint firstItem="Zpx-Hj-4hG" firstAttribute="height" secondItem="lsj-KH-Neg" secondAttribute="height" multiplier="0.72" id="M4a-9u-18j"/>
+                                    <constraint firstAttribute="bottom" secondItem="rWH-q6-3gy" secondAttribute="bottom" constant="40" id="QhK-m7-tEC"/>
+                                    <constraint firstItem="Zpx-Hj-4hG" firstAttribute="centerX" secondItem="lsj-KH-Neg" secondAttribute="centerX" id="azd-xX-yKm"/>
+                                    <constraint firstItem="rWH-q6-3gy" firstAttribute="width" secondItem="lsj-KH-Neg" secondAttribute="width" multiplier="0.9" id="xSi-E7-4w0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vv2-5m-Qm2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="32" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-vy-bT3">
+                                        <rect key="frame" x="87" y="8" width="201" height="118"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8d-uA-pd7">
+                                                <rect key="frame" x="0.0" y="40" width="56" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6pD-wn-H4l">
+                                                <rect key="frame" x="88" y="43.5" width="113" height="32"/>
+                                                <segments>
+                                                    <segment title="Gave" width="64"/>
+                                                    <segment title="Took"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" name="highlight"/>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="AMOUNT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYV-pw-3g9">
+                                        <rect key="frame" x="37.5" y="134" width="300" height="39"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="tabBarSelected"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fYV-pw-3g9" firstAttribute="centerX" secondItem="Vv2-5m-Qm2" secondAttribute="centerX" id="EsZ-bS-dKx"/>
+                                    <constraint firstItem="fYV-pw-3g9" firstAttribute="top" secondItem="O5a-vy-bT3" secondAttribute="bottom" constant="8" id="d14-8w-jQj"/>
+                                    <constraint firstAttribute="bottom" secondItem="fYV-pw-3g9" secondAttribute="bottom" constant="23" id="kmj-2b-uik"/>
+                                    <constraint firstItem="fYV-pw-3g9" firstAttribute="width" secondItem="Vv2-5m-Qm2" secondAttribute="width" multiplier="0.8" id="m62-pM-Mi9"/>
+                                    <constraint firstItem="O5a-vy-bT3" firstAttribute="centerX" secondItem="Vv2-5m-Qm2" secondAttribute="centerX" id="p6I-vg-hMp"/>
+                                    <constraint firstItem="O5a-vy-bT3" firstAttribute="top" secondItem="Vv2-5m-Qm2" secondAttribute="firstBaseline" constant="8" id="rRL-Jq-xMv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="foreground"/>
+                        <constraints>
+                            <constraint firstItem="lsj-KH-Neg" firstAttribute="top" secondItem="Vv2-5m-Qm2" secondAttribute="bottom" id="5IU-XY-cQR"/>
+                            <constraint firstItem="lsj-KH-Neg" firstAttribute="height" secondItem="Qrr-GT-uRR" secondAttribute="height" multiplier="0.72" id="FRo-D8-amA"/>
+                            <constraint firstItem="Vv2-5m-Qm2" firstAttribute="top" secondItem="M9i-Bc-X5s" secondAttribute="top" id="M7Q-5s-qCi"/>
+                            <constraint firstItem="lsj-KH-Neg" firstAttribute="centerX" secondItem="M9i-Bc-X5s" secondAttribute="centerX" id="T0b-Wm-Tgx"/>
+                            <constraint firstItem="Vv2-5m-Qm2" firstAttribute="centerX" secondItem="M9i-Bc-X5s" secondAttribute="centerX" id="Toh-Yl-87A"/>
+                            <constraint firstItem="lsj-KH-Neg" firstAttribute="width" secondItem="Qrr-GT-uRR" secondAttribute="width" id="ZZo-pE-BY2"/>
+                            <constraint firstItem="Vv2-5m-Qm2" firstAttribute="width" secondItem="Qrr-GT-uRR" secondAttribute="width" id="f2l-Xh-ux1"/>
+                            <constraint firstItem="M9i-Bc-X5s" firstAttribute="bottom" secondItem="lsj-KH-Neg" secondAttribute="bottom" id="zWj-ac-iyo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M9i-Bc-X5s"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="700"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bc5-Yu-JjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="4872"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="wCM-7e-oPr">
             <objects>
@@ -1139,10 +1465,533 @@
             </objects>
             <point key="canvasLocation" x="532" y="2102"/>
         </scene>
+        <!--UsersVC-->
+        <scene sceneID="iLQ-lM-d97">
+            <objects>
+                <viewController storyboardIdentifier="UsersVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eOG-bA-jN8" customClass="UsersVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ecW-GH-SwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gok-Pl-rzP">
+                                <rect key="frame" x="0.0" y="241" width="375" height="459"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M2O-WY-Krw">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="387"/>
+                                        <color key="backgroundColor" name="background"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="71" id="5ek-qV-eQQ">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="71"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ek-qV-eQQ" id="Khi-RG-nar">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" name="background"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="2qQ-zg-2dV">
+                                        <rect key="frame" x="19" y="365" width="337.5" height="54"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oug-dO-aEY" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="54"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                <state key="normal" title="CANCEL">
+                                                    <color key="titleColor" name="background"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" name="tabBarSelected"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" name="tabBarSelected"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojx-sN-Te0" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="218.5" y="0.0" width="119" height="54"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                                <state key="normal" title="NEXT">
+                                                    <color key="titleColor" name="background"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" name="tabBarSelected"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" name="tabBarSelected"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="background"/>
+                                <color key="tintColor" name="highlight"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="M2O-WY-Krw" secondAttribute="trailing" id="0xO-gz-vxt"/>
+                                    <constraint firstItem="M2O-WY-Krw" firstAttribute="leading" secondItem="gok-Pl-rzP" secondAttribute="leading" id="KLT-C7-3M7"/>
+                                    <constraint firstAttribute="bottom" secondItem="M2O-WY-Krw" secondAttribute="bottom" id="Xto-VL-JZJ"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qrN-Dj-vO1">
+                                <rect key="frame" x="81.5" y="32" width="212" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ9-Zg-rPI">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="38"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-friend" translatesAutoresizingMaskIntoConstraints="NO" id="yAU-em-DlX">
+                                        <rect key="frame" x="173" y="0.0" width="39" height="38"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-pd-0Hf">
+                                <rect key="frame" x="19" y="86" width="337.5" height="108"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I1I-Cw-E0D">
+                                    <size key="itemSize" width="89" height="133"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsCell" id="7Xg-VL-nt3">
+                                        <rect key="frame" x="0.0" y="-12.5" width="89" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rIx-A0-COj">
+                                            <rect key="frame" x="0.0" y="0.0" width="89" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="89" height="133"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9rv-6D-ndz">
+                                <rect key="frame" x="138" y="202" width="99" height="32"/>
+                                <segments>
+                                    <segment title="Each"/>
+                                    <segment title="Total"/>
+                                </segments>
+                                <color key="tintColor" name="tabBarSelected"/>
+                                <color key="selectedSegmentTintColor" name="highlight"/>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="7LZ-nG-sIJ">
+                                <rect key="frame" x="19" y="249" width="337.5" height="56"/>
+                                <color key="barTintColor" red="0.37695598600000002" green="0.37376764420000003" blue="0.5137431026" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" name="foreground"/>
+                        <constraints>
+                            <constraint firstItem="7LZ-nG-sIJ" firstAttribute="centerX" secondItem="gok-Pl-rzP" secondAttribute="centerX" id="3bc-s1-lBB"/>
+                            <constraint firstItem="9rv-6D-ndz" firstAttribute="top" secondItem="Ice-pd-0Hf" secondAttribute="bottom" constant="8" id="68M-P5-gpM"/>
+                            <constraint firstItem="gok-Pl-rzP" firstAttribute="width" secondItem="ecW-GH-SwJ" secondAttribute="width" id="6r0-cx-swt"/>
+                            <constraint firstItem="7LZ-nG-sIJ" firstAttribute="top" secondItem="gok-Pl-rzP" secondAttribute="top" constant="8" id="CF0-bx-5eY"/>
+                            <constraint firstItem="2qQ-zg-2dV" firstAttribute="width" secondItem="ecW-GH-SwJ" secondAttribute="width" multiplier="0.9" id="DQZ-Tw-iwf"/>
+                            <constraint firstItem="7LZ-nG-sIJ" firstAttribute="width" secondItem="ecW-GH-SwJ" secondAttribute="width" multiplier="0.9" id="LVv-wz-A4m"/>
+                            <constraint firstItem="qrN-Dj-vO1" firstAttribute="centerX" secondItem="gok-Pl-rzP" secondAttribute="centerX" id="NJR-Ou-cJW"/>
+                            <constraint firstItem="Ice-pd-0Hf" firstAttribute="top" secondItem="nJ9-Zg-rPI" secondAttribute="bottom" constant="16" id="Tcf-FX-lw1"/>
+                            <constraint firstItem="Ice-pd-0Hf" firstAttribute="width" secondItem="ecW-GH-SwJ" secondAttribute="width" multiplier="0.9" id="WZx-6N-vge"/>
+                            <constraint firstItem="qrN-Dj-vO1" firstAttribute="top" secondItem="2eW-ou-uM1" secondAttribute="top" constant="32" id="aFq-x0-Mq8"/>
+                            <constraint firstItem="2eW-ou-uM1" firstAttribute="bottom" secondItem="gok-Pl-rzP" secondAttribute="bottom" id="eoQ-9u-hwA"/>
+                            <constraint firstItem="gok-Pl-rzP" firstAttribute="top" secondItem="9rv-6D-ndz" secondAttribute="bottom" constant="8" id="fq0-ud-OZg"/>
+                            <constraint firstItem="M2O-WY-Krw" firstAttribute="top" secondItem="7LZ-nG-sIJ" secondAttribute="bottom" constant="8" id="nqy-uN-lcN"/>
+                            <constraint firstItem="9rv-6D-ndz" firstAttribute="centerX" secondItem="2eW-ou-uM1" secondAttribute="centerX" id="ojN-zB-1pO"/>
+                            <constraint firstItem="2eW-ou-uM1" firstAttribute="bottom" secondItem="2qQ-zg-2dV" secondAttribute="bottom" constant="40" id="rPp-4e-Xgk"/>
+                            <constraint firstItem="2qQ-zg-2dV" firstAttribute="centerX" secondItem="2eW-ou-uM1" secondAttribute="centerX" id="vEP-w3-4NR"/>
+                            <constraint firstItem="gok-Pl-rzP" firstAttribute="height" secondItem="ecW-GH-SwJ" secondAttribute="height" multiplier="0.655922" id="xag-9O-Asi"/>
+                            <constraint firstItem="qrN-Dj-vO1" firstAttribute="centerX" secondItem="2eW-ou-uM1" secondAttribute="centerX" id="xe8-vc-9tx"/>
+                            <constraint firstItem="Ice-pd-0Hf" firstAttribute="centerX" secondItem="2eW-ou-uM1" secondAttribute="centerX" id="xuK-si-VnS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2eW-ou-uM1"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="700"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qz-sQ-ipK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.8" y="4871.5142428785612"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="aun-aA-2fD">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rpN-Yy-Uh7" customClass="DetailsVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tf6-Ei-wVm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaY-2W-EVR">
+                                <rect key="frame" x="0.0" y="364" width="375" height="336"/>
+                                <color key="backgroundColor" name="background"/>
+                                <color key="tintColor" name="highlight"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="OvB-j7-cbW">
+                                <rect key="frame" x="19" y="606" width="337.5" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vv-of-Dr1" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="54"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                        <state key="normal" title="CANCEL">
+                                            <color key="titleColor" name="background"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" name="tabBarSelected"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" name="tabBarSelected"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3U-IH-8ec" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                        <rect key="frame" x="218.5" y="0.0" width="119" height="54"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <state key="normal" title="DONE">
+                                            <color key="titleColor" name="background"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" name="tabBarSelected"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" name="tabBarSelected"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-V6-bzv">
+                                <rect key="frame" x="37.5" y="80.5" width="300" height="119.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cy-hQ-qOF">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Dinner at Barney's" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6JM-nQ-NkC">
+                                        <rect key="frame" x="0.0" y="71.5" width="300" height="48"/>
+                                        <color key="backgroundColor" name="foreground"/>
+                                        <color key="tintColor" name="highlight"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="organization-title"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="jyi-eG-hRY">
+                                <rect key="frame" x="37.5" y="380" width="300" height="210"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOV-J5-fFc">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="8" keyboardDismissMode="interactive" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="b3W-AR-2XX">
+                                        <rect key="frame" x="0.0" y="71.5" width="300" height="138.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Chicken Caesar salad
+ + fries 
++ drink</string>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="webSearch" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="location"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="foreground"/>
+                        <constraints>
+                            <constraint firstItem="OvB-j7-cbW" firstAttribute="centerX" secondItem="VXU-94-pUz" secondAttribute="centerX" id="15c-Rh-TAv"/>
+                            <constraint firstItem="jyi-eG-hRY" firstAttribute="top" secondItem="eaY-2W-EVR" secondAttribute="top" constant="16" id="3ZC-d4-CSG"/>
+                            <constraint firstItem="OvB-j7-cbW" firstAttribute="top" secondItem="jyi-eG-hRY" secondAttribute="bottom" constant="16" id="7MB-Ji-FH1"/>
+                            <constraint firstItem="OvB-j7-cbW" firstAttribute="width" secondItem="tf6-Ei-wVm" secondAttribute="width" multiplier="0.9" id="8UG-EM-YcU"/>
+                            <constraint firstItem="eaY-2W-EVR" firstAttribute="centerX" secondItem="VXU-94-pUz" secondAttribute="centerX" id="9zd-dP-FSO"/>
+                            <constraint firstItem="EWj-V6-bzv" firstAttribute="centerX" secondItem="VXU-94-pUz" secondAttribute="centerX" id="TDU-dz-aY1"/>
+                            <constraint firstItem="eaY-2W-EVR" firstAttribute="width" secondItem="tf6-Ei-wVm" secondAttribute="width" id="Y3p-2n-SgO"/>
+                            <constraint firstItem="EWj-V6-bzv" firstAttribute="centerY" secondItem="VXU-94-pUz" secondAttribute="centerY" multiplier="0.4" id="a8R-to-XV0"/>
+                            <constraint firstItem="VXU-94-pUz" firstAttribute="bottom" secondItem="eaY-2W-EVR" secondAttribute="bottom" id="hC1-vX-k12"/>
+                            <constraint firstItem="jyi-eG-hRY" firstAttribute="width" secondItem="tf6-Ei-wVm" secondAttribute="width" multiplier="0.8" id="hvc-Bz-r0n"/>
+                            <constraint firstItem="VXU-94-pUz" firstAttribute="bottom" secondItem="OvB-j7-cbW" secondAttribute="bottom" constant="40" id="keZ-1u-1Ss"/>
+                            <constraint firstItem="jyi-eG-hRY" firstAttribute="centerX" secondItem="VXU-94-pUz" secondAttribute="centerX" id="nH4-u6-uMs"/>
+                            <constraint firstItem="EWj-V6-bzv" firstAttribute="width" secondItem="tf6-Ei-wVm" secondAttribute="width" multiplier="0.8" id="qWI-Hk-TQf"/>
+                            <constraint firstItem="eaY-2W-EVR" firstAttribute="height" secondItem="tf6-Ei-wVm" secondAttribute="height" multiplier="0.48" id="www-g0-vvJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VXU-94-pUz"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="700"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYW-IE-5Xk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="4872"/>
+        </scene>
+        <!--ConfirmationVC-->
+        <scene sceneID="Lg6-rs-Iat">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dwi-ew-bvn" customClass="ConfirmationVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9N-2w-9YV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dV9-oR-dTj">
+                                <rect key="frame" x="0.0" y="490" width="375" height="210"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="tXI-hQ-OrM">
+                                        <rect key="frame" x="56.5" y="53.5" width="262.5" height="116.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhZ-1p-MSH" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="47.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                <state key="normal" title="CONFIRM">
+                                                    <color key="titleColor" name="tabBarSelected"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" name="highlight"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" name="highlight"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7i-8c-Ys1" customClass="AmountBtn" customModule="IOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="71.5" width="262.5" height="45"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                <state key="normal" title="CANCEL">
+                                                    <color key="titleColor" name="tabBarSelected"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" name="highlight"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" name="highlight"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tXI-hQ-OrM" secondAttribute="height" multiplier="9:4" id="EaT-cW-Mmg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="background"/>
+                                <color key="tintColor" name="highlight"/>
+                                <constraints>
+                                    <constraint firstItem="tXI-hQ-OrM" firstAttribute="centerX" secondItem="dV9-oR-dTj" secondAttribute="centerX" id="6IO-zY-njW"/>
+                                    <constraint firstItem="tXI-hQ-OrM" firstAttribute="width" secondItem="dV9-oR-dTj" secondAttribute="width" multiplier="0.7" id="ZMa-qK-UEj"/>
+                                    <constraint firstAttribute="bottom" secondItem="tXI-hQ-OrM" secondAttribute="bottom" constant="40" id="acs-pW-sbY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWS-qt-k8K">
+                                <rect key="frame" x="-1.5" y="0.0" width="378" height="506.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-II-fnZ">
+                                        <rect key="frame" x="38" y="265.5" width="302" height="50.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="For" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00F-QL-gsT">
+                                                <rect key="frame" x="0.0" y="0.0" width="302" height="18"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner at Barney’s " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0s-Cy-7Yg">
+                                                <rect key="frame" x="0.0" y="34" width="302" height="16.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e33-nA-Xst">
+                                        <rect key="frame" x="38" y="332" width="302" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="bg8-yR-dnZ">
+                                        <rect key="frame" x="38" y="370" width="302" height="128.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="highlight"/>
+                                        <string key="text">Chicken Caesar salad
+ + fries 
++ drink</string>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdV-3A-3D0">
+                                        <rect key="frame" x="38" y="57" width="302" height="91"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tMd-bU-6D9">
+                                            <size key="itemSize" width="89" height="133"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsCell" id="noD-Ex-PTy">
+                                                <rect key="frame" x="0.0" y="-21" width="89" height="133"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mes-nZ-8Of">
+                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="133"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" name="highlight"/>
+                                                <size key="customSize" width="89" height="133"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You GAVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydC-74-KpY">
+                                        <rect key="frame" x="38" y="20" width="302" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiM-kG-mcu">
+                                        <rect key="frame" x="38" y="156" width="302" height="101.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,000,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j75-Cb-o5L">
+                                                <rect key="frame" x="68.5" y="31.5" width="165" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruc-PH-JmP">
+                                                <rect key="frame" x="241.5" y="2.5" width="48" height="96.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LBP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1p-zG-i0r">
+                                                        <rect key="frame" x="3" y="76" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EACH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhV-dM-Shm">
+                                                        <rect key="frame" x="3" y="0.5" width="47" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="G1p-zG-i0r" firstAttribute="centerX" secondItem="ruc-PH-JmP" secondAttribute="centerX" id="7i4-BT-4lc"/>
+                                                    <constraint firstItem="G1p-zG-i0r" firstAttribute="leading" secondItem="ruc-PH-JmP" secondAttribute="leading" constant="3" id="Erf-ri-jUi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UhV-dM-Shm" secondAttribute="trailing" constant="-2" id="Fdy-XC-ZoK"/>
+                                                    <constraint firstItem="G1p-zG-i0r" firstAttribute="top" secondItem="UhV-dM-Shm" secondAttribute="bottom" constant="55" id="XOt-Pm-ebN"/>
+                                                    <constraint firstItem="G1p-zG-i0r" firstAttribute="top" secondItem="ruc-PH-JmP" secondAttribute="top" constant="76" id="cNf-Ec-dig"/>
+                                                    <constraint firstItem="G1p-zG-i0r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UhV-dM-Shm" secondAttribute="leading" id="fog-dM-B3f"/>
+                                                    <constraint firstAttribute="bottom" secondItem="G1p-zG-i0r" secondAttribute="bottom" constant="-0.5" id="pAz-Av-pIB"/>
+                                                    <constraint firstAttribute="width" secondItem="ruc-PH-JmP" secondAttribute="height" multiplier="1:2" id="zm3-KP-L74"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ruc-PH-JmP" firstAttribute="height" secondItem="j75-Cb-o5L" secondAttribute="height" multiplier="2.5" id="6UH-9C-Qha"/>
+                                            <constraint firstItem="ruc-PH-JmP" firstAttribute="centerY" secondItem="j75-Cb-o5L" secondAttribute="centerY" id="CCy-GX-u2H"/>
+                                            <constraint firstItem="j75-Cb-o5L" firstAttribute="centerX" secondItem="YiM-kG-mcu" secondAttribute="centerX" id="NpK-xs-wMJ"/>
+                                            <constraint firstItem="ruc-PH-JmP" firstAttribute="leading" secondItem="j75-Cb-o5L" secondAttribute="trailing" constant="8" id="ecM-FT-oSk"/>
+                                            <constraint firstItem="j75-Cb-o5L" firstAttribute="centerY" secondItem="YiM-kG-mcu" secondAttribute="centerY" id="fca-5l-zDX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qdV-3A-3D0" firstAttribute="width" secondItem="vWS-qt-k8K" secondAttribute="width" multiplier="0.8" id="0Rg-Lt-wP4"/>
+                                    <constraint firstItem="e33-nA-Xst" firstAttribute="width" secondItem="2fh-II-fnZ" secondAttribute="width" id="3Af-AG-sPg"/>
+                                    <constraint firstItem="bg8-yR-dnZ" firstAttribute="width" secondItem="e33-nA-Xst" secondAttribute="width" id="4bQ-NU-a89"/>
+                                    <constraint firstItem="ydC-74-KpY" firstAttribute="width" secondItem="vWS-qt-k8K" secondAttribute="width" multiplier="0.8" id="4s1-e7-6nE"/>
+                                    <constraint firstItem="YiM-kG-mcu" firstAttribute="top" secondItem="qdV-3A-3D0" secondAttribute="bottom" constant="8" id="9wG-XA-pzX"/>
+                                    <constraint firstItem="ydC-74-KpY" firstAttribute="centerX" secondItem="vWS-qt-k8K" secondAttribute="centerX" id="AP4-bp-wvJ"/>
+                                    <constraint firstItem="2fh-II-fnZ" firstAttribute="height" secondItem="vWS-qt-k8K" secondAttribute="height" multiplier="0.1" id="Ihg-HX-mR0"/>
+                                    <constraint firstItem="YiM-kG-mcu" firstAttribute="width" secondItem="vWS-qt-k8K" secondAttribute="width" multiplier="0.8" id="LJR-9Y-t55"/>
+                                    <constraint firstItem="bg8-yR-dnZ" firstAttribute="top" secondItem="e33-nA-Xst" secondAttribute="bottom" constant="17.5" id="Pa7-iU-6iQ"/>
+                                    <constraint firstItem="2fh-II-fnZ" firstAttribute="top" secondItem="YiM-kG-mcu" secondAttribute="bottom" constant="8" id="QRG-dg-lcW"/>
+                                    <constraint firstItem="YiM-kG-mcu" firstAttribute="centerX" secondItem="vWS-qt-k8K" secondAttribute="centerX" id="QeM-rl-cQP"/>
+                                    <constraint firstItem="e33-nA-Xst" firstAttribute="centerX" secondItem="2fh-II-fnZ" secondAttribute="centerX" id="SnT-6k-Wae"/>
+                                    <constraint firstAttribute="bottom" secondItem="bg8-yR-dnZ" secondAttribute="bottom" constant="8" id="TSJ-3k-294"/>
+                                    <constraint firstItem="qdV-3A-3D0" firstAttribute="centerX" secondItem="vWS-qt-k8K" secondAttribute="centerX" id="VVo-If-y3q"/>
+                                    <constraint firstItem="e33-nA-Xst" firstAttribute="top" secondItem="2fh-II-fnZ" secondAttribute="bottom" constant="16" id="WlT-u3-IUL"/>
+                                    <constraint firstItem="qdV-3A-3D0" firstAttribute="top" secondItem="ydC-74-KpY" secondAttribute="bottom" constant="8" id="f9D-jv-Ywl"/>
+                                    <constraint firstItem="bg8-yR-dnZ" firstAttribute="centerX" secondItem="e33-nA-Xst" secondAttribute="centerX" id="gji-U9-3pU"/>
+                                    <constraint firstItem="qdV-3A-3D0" firstAttribute="height" secondItem="vWS-qt-k8K" secondAttribute="height" multiplier="0.18" id="hbP-5K-w45"/>
+                                    <constraint firstItem="YiM-kG-mcu" firstAttribute="height" secondItem="vWS-qt-k8K" secondAttribute="height" multiplier="0.2" id="hjG-aD-8ms"/>
+                                    <constraint firstItem="2fh-II-fnZ" firstAttribute="width" secondItem="vWS-qt-k8K" secondAttribute="width" multiplier="0.8" id="j28-vp-5VB"/>
+                                    <constraint firstItem="ydC-74-KpY" firstAttribute="top" secondItem="vWS-qt-k8K" secondAttribute="top" constant="20" id="lzJ-DM-ccp"/>
+                                    <constraint firstItem="2fh-II-fnZ" firstAttribute="centerX" secondItem="vWS-qt-k8K" secondAttribute="centerX" id="xsl-hI-TOO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="foreground"/>
+                        <constraints>
+                            <constraint firstItem="dV9-oR-dTj" firstAttribute="centerX" secondItem="RAJ-xL-wzC" secondAttribute="centerX" id="0p6-MR-cX4"/>
+                            <constraint firstItem="RAJ-xL-wzC" firstAttribute="bottom" secondItem="dV9-oR-dTj" secondAttribute="bottom" id="6s6-cS-t4B"/>
+                            <constraint firstItem="dV9-oR-dTj" firstAttribute="height" secondItem="B9N-2w-9YV" secondAttribute="height" multiplier="0.3" id="7SU-uR-ABr"/>
+                            <constraint firstItem="dV9-oR-dTj" firstAttribute="width" secondItem="B9N-2w-9YV" secondAttribute="width" id="93m-rY-oPz"/>
+                            <constraint firstItem="dV9-oR-dTj" firstAttribute="top" secondItem="vWS-qt-k8K" secondAttribute="bottom" constant="-16.5" id="Ed9-dg-c0h"/>
+                            <constraint firstItem="vWS-qt-k8K" firstAttribute="top" secondItem="RAJ-xL-wzC" secondAttribute="top" id="PcL-2L-VlS"/>
+                            <constraint firstItem="vWS-qt-k8K" firstAttribute="centerX" secondItem="RAJ-xL-wzC" secondAttribute="centerX" id="e0p-pl-HxQ"/>
+                            <constraint firstItem="vWS-qt-k8K" firstAttribute="width" secondItem="RAJ-xL-wzC" secondAttribute="width" multiplier="1.00667" id="kkA-QK-Je5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RAJ-xL-wzC"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="700"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XY3-7Z-R8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3141.5999999999999" y="4871.5142428785612"/>
+        </scene>
     </scenes>
     <resources>
         <image name="activity" width="18.5" height="22.5"/>
         <image name="activity-active-white" width="20.5" height="24.5"/>
+        <image name="add-friend" width="39" height="38"/>
         <image name="friends" width="30" height="22.5"/>
         <image name="friends-active-white" width="30" height="22.5"/>
         <image name="home" width="24.5" height="24"/>
@@ -1155,11 +2004,20 @@
         <namedColor name="background">
             <color red="0.85500001907348633" green="0.875" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="background">
+            <color red="0.85500001907348633" green="0.875" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="foreground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="highlight">
             <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="highlight">
+            <color red="0.92500001192092896" green="0.29399999976158142" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarSelected">
+            <color red="0.078000001609325409" green="0.11800000071525574" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabBarSelected">
             <color red="0.078000001609325409" green="0.11800000071525574" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

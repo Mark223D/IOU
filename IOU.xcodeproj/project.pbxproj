@@ -21,6 +21,12 @@
 		4D37B204237DE5320044CCC2 /* IOUExpandedTransCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B202237DE5320044CCC2 /* IOUExpandedTransCell.swift */; };
 		4D37B205237DE5320044CCC2 /* IOUExpandedTransCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D37B203237DE5320044CCC2 /* IOUExpandedTransCell.xib */; };
 		4D37B209237DED720044CCC2 /* AddFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37B208237DED720044CCC2 /* AddFriendsVC.swift */; };
+		4D5349292464981B00008453 /* AddTransPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5349282464981B00008453 /* AddTransPageVC.swift */; };
+		4D53492B24649C2D00008453 /* AmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53492A24649C2D00008453 /* AmountVC.swift */; };
+		4D53492D24649C3B00008453 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53492C24649C3B00008453 /* UsersVC.swift */; };
+		4D53492F24649C4C00008453 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53492E24649C4C00008453 /* DetailsVC.swift */; };
+		4D53493124649C6300008453 /* ConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53493024649C6300008453 /* ConfirmationVC.swift */; };
+		4D5349352464A16200008453 /* AmountBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5349342464A16200008453 /* AmountBtn.swift */; };
 		4D54338A2371DE3600BD7396 /* IOUHomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5433892371DE3600BD7396 /* IOUHomeCard.swift */; };
 		4D5AE1F723730878001644F5 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AE1F523730878001644F5 /* FriendsCell.swift */; };
 		4D5AE1F823730878001644F5 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5AE1F623730878001644F5 /* FriendsCell.xib */; };
@@ -111,6 +117,12 @@
 		4D37B202237DE5320044CCC2 /* IOUExpandedTransCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUExpandedTransCell.swift; sourceTree = "<group>"; };
 		4D37B203237DE5320044CCC2 /* IOUExpandedTransCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IOUExpandedTransCell.xib; sourceTree = "<group>"; };
 		4D37B208237DED720044CCC2 /* AddFriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsVC.swift; sourceTree = "<group>"; };
+		4D5349282464981B00008453 /* AddTransPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransPageVC.swift; sourceTree = "<group>"; };
+		4D53492A24649C2D00008453 /* AmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVC.swift; sourceTree = "<group>"; };
+		4D53492C24649C3B00008453 /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		4D53492E24649C4C00008453 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		4D53493024649C6300008453 /* ConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationVC.swift; sourceTree = "<group>"; };
+		4D5349342464A16200008453 /* AmountBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountBtn.swift; sourceTree = "<group>"; };
 		4D5433892371DE3600BD7396 /* IOUHomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOUHomeCard.swift; sourceTree = "<group>"; };
 		4D5AE1F523730878001644F5 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		4D5AE1F623730878001644F5 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
@@ -248,6 +260,26 @@
 			path = IOUExpandedTransCell;
 			sourceTree = "<group>";
 		};
+		4D53493224649C6B00008453 /* AddTransactions */ = {
+			isa = PBXGroup;
+			children = (
+				4D5349282464981B00008453 /* AddTransPageVC.swift */,
+				4D53492A24649C2D00008453 /* AmountVC.swift */,
+				4D53492C24649C3B00008453 /* UsersVC.swift */,
+				4D53492E24649C4C00008453 /* DetailsVC.swift */,
+				4D53493024649C6300008453 /* ConfirmationVC.swift */,
+			);
+			path = AddTransactions;
+			sourceTree = "<group>";
+		};
+		4D5349332464A13500008453 /* AddTransactions */ = {
+			isa = PBXGroup;
+			children = (
+				4D5349342464A16200008453 /* AmountBtn.swift */,
+			);
+			path = AddTransactions;
+			sourceTree = "<group>";
+		};
 		4D5AE1F42373083E001644F5 /* FriendsCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC7CEEF2392A58A00699EE3 /* General */,
+				4D5349332464A13500008453 /* AddTransactions */,
 				4DC7CEED2392A56A00699EE3 /* Friends */,
 				4DC7CEEE2392A57600699EE3 /* Cashflow */,
 				4D1E00EE243B4DF70045382F /* Settings */,
@@ -474,6 +507,7 @@
 				4D37B1FF237DE4890044CCC2 /* DetailedCashflowVC.swift */,
 				4D91C8B72389AE11007A62E0 /* AddTransactionVC.swift */,
 				4DC7CED0238D7BA700699EE3 /* PendingTransactionsVC.swift */,
+				4D53493224649C6B00008453 /* AddTransactions */,
 			);
 			path = Cashflow;
 			sourceTree = "<group>";
@@ -778,14 +812,18 @@
 				4D978A0924298951001A5C3C /* Activity.swift in Sources */,
 				4DC7CEEB239283B400699EE3 /* Application.swift in Sources */,
 				4D978A072429844F001A5C3C /* ActivityVC.swift in Sources */,
+				4D53492D24649C3B00008453 /* UsersVC.swift in Sources */,
 				4DFFD30422D20E6F00D714E6 /* RegisterVC.swift in Sources */,
 				4DC7CEE923927A8100699EE3 /* CurrencyFormatter.swift in Sources */,
 				4DFFD31122D230C200D714E6 /* IOUHeader.swift in Sources */,
 				4DC7CEC0238BC5FF00699EE3 /* FriendsCollectionViewCell.swift in Sources */,
 				4D1E00ED243A67AF0045382F /* IOUTabBar.swift in Sources */,
 				4DC7CECF238D7B5400699EE3 /* WormTabStripButton.swift in Sources */,
+				4D53492F24649C4C00008453 /* DetailsVC.swift in Sources */,
 				4D9D40EE22CF71B700AD0A0D /* AnimationEngine.swift in Sources */,
 				4DE1C6BA23735C5D00EA0153 /* GetOweVC.swift in Sources */,
+				4D5349292464981B00008453 /* AddTransPageVC.swift in Sources */,
+				4D53492B24649C2D00008453 /* AmountVC.swift in Sources */,
 				4DFFD30F22D2306200D714E6 /* View_Extensions.swift in Sources */,
 				4D91C8B62386C108007A62E0 /* CashFlow.swift in Sources */,
 				4D37B204237DE5320044CCC2 /* IOUExpandedTransCell.swift in Sources */,
@@ -796,6 +834,8 @@
 				4DFFD31522D2335000D714E6 /* ImageView_Extensions.swift in Sources */,
 				4DFFD31722D235D600D714E6 /* IOULabel.swift in Sources */,
 				4D54338A2371DE3600BD7396 /* IOUHomeCard.swift in Sources */,
+				4D5349352464A16200008453 /* AmountBtn.swift in Sources */,
+				4D53493124649C6300008453 /* ConfirmationVC.swift in Sources */,
 				4D9D40E522CF41E100AD0A0D /* IOUColors.swift in Sources */,
 				4D1C7DA72380574A006273DC /* MainVC.swift in Sources */,
 				4D79DE3323843DB600349232 /* Transaction.swift in Sources */,

@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
           application.registerUserNotificationSettings(settings)
         }
         
-        
+      window?.backgroundColor = UIColor.appColor(.background)
 
         application.registerForRemoteNotifications()
         Messaging.messaging().delegate = self

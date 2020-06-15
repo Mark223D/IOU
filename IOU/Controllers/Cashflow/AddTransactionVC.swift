@@ -316,10 +316,15 @@ extension AddTransactionVC {
         descriptionTextField.attributedPlaceholder =
             NSAttributedString(string: "Description", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGrey])
         
+      if #available(iOS 13.0, *) {
         let textField = searchBar.searchTextField
         let glassIconView = textField.leftView as! UIImageView
-        glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-        glassIconView.tintColor = .lightGrey
+               glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+               glassIconView.tintColor = .lightGrey
+      } else {
+        // Fallback on earlier versions
+      }
+       
         
         self.view.bounds = view.frame.insetBy(dx: 0.0, dy: 10.0)
 

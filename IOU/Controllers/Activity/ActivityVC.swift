@@ -245,7 +245,7 @@ extension ActivityVC: UITableViewDataSource {
       
     }
     else{
-      return tableView.frame.height/6.5 // For Transactions
+      return tableView.frame.height/5.6 // For Transactions
       
     }
     

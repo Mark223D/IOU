@@ -43,8 +43,8 @@
                             <constraint firstAttribute="width" secondItem="3Qh-Ab-Tm0" secondAttribute="height" multiplier="1:1" id="l8E-bg-R1q"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8e-GS-CPc" customClass="PillLabel" customModule="IOU" customModuleProvider="target">
-                        <rect key="frame" x="20" y="21" width="77" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8e-GS-CPc" customClass="PillLabel" customModule="IOU" customModuleProvider="target">
+                        <rect key="frame" x="17" y="21" width="83" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="4aA-cw-cVV"/>
                         </constraints>
@@ -52,9 +52,9 @@
                         <color key="textColor" name="background"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAe-1D-hLS">
-                        <rect key="frame" x="0.0" y="65" width="320" height="1"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAe-1D-hLS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="1"/>
+                        <color key="backgroundColor" name="tabBarSelected"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="6MN-jl-Agq"/>
                         </constraints>
@@ -66,17 +66,17 @@
                     <constraint firstItem="f8e-GS-CPc" firstAttribute="centerX" secondItem="3Qh-Ab-Tm0" secondAttribute="centerX" id="7Ac-1V-pEI"/>
                     <constraint firstItem="O7x-8l-m5M" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.6" id="7yJ-ZR-uOz"/>
                     <constraint firstItem="3Qh-Ab-Tm0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Abl-t1-WSI"/>
-                    <constraint firstItem="f8e-GS-CPc" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.24" id="Gl1-gV-uvf"/>
                     <constraint firstItem="O7x-8l-m5M" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PR3-Nc-lk6"/>
                     <constraint firstItem="f8e-GS-CPc" firstAttribute="centerY" secondItem="3Qh-Ab-Tm0" secondAttribute="centerY" id="ktn-CT-NIf"/>
                     <constraint firstItem="3Qh-Ab-Tm0" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.80303" id="lTR-5B-uUb"/>
+                    <constraint firstItem="f8e-GS-CPc" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.26" id="leJ-T1-GWo"/>
                     <constraint firstItem="O7x-8l-m5M" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="nZV-eX-Qpc"/>
                     <constraint firstItem="O7x-8l-m5M" firstAttribute="leading" secondItem="3Qh-Ab-Tm0" secondAttribute="trailing" constant="40" id="pls-Pi-KNj"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="AAe-1D-hLS" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" id="CvX-ZG-MWG"/>
+                <constraint firstItem="AAe-1D-hLS" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" constant="-1" id="CvX-ZG-MWG"/>
                 <constraint firstItem="AAe-1D-hLS" firstAttribute="width" secondItem="njF-e1-oar" secondAttribute="width" id="H4M-fJ-ml2"/>
                 <constraint firstItem="AAe-1D-hLS" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="bRe-Rv-Ozo"/>
             </constraints>

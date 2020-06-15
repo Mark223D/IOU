@@ -45,7 +45,8 @@ class FriendRequestCell: UITableViewCell {
       self.confirmBtn.layer.cornerRadius = self.confirmBtn.frame.height/2
       self.confirmBtn.layer.borderWidth = 1
       self.confirmBtn.layer.borderColor = UIColor.appColor(.tabBarSelected)?.cgColor
-      
+      self.confirmBtn.titleEdgeInsets = UIEdgeInsets(top: 3.0, left: 2.0, bottom: 3.0, right: 2.0)
+
       
       self.declineBtn.backgroundColor = .clear
       self.declineBtn.layer.borderWidth = 1

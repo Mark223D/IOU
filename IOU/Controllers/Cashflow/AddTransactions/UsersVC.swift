@@ -9,22 +9,27 @@
 import UIKit
 
 class UsersVC: UIViewController {
+  var transaction: Transaction?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+navigationController?.delegate = self
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if let am = self.transaction?.amount {
+      print(am)
     }
-    */
+  }
+}
 
+extension UsersVC: UINavigationControllerDelegate {
+  func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    if let transaction = self.transaction {
+         (viewController as? AmountVC)?.transaction = transaction // Here you pass the to your original view controller
+    }
+     }
 }

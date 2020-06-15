@@ -180,11 +180,16 @@ extension AddFriendsVC {
         self.definesPresentationContext = true
         search.searchBar.placeholder = "Search..."
         self.navigationItem.searchController = search
-        let textField = search.searchBar.searchTextField
-        let glassIconView = textField.leftView as! UIImageView
-        glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-        glassIconView.tintColor = UIColor.appColor(.tabBarSelected) ?? .green
-    
+    if #available(iOS 13.0, *) {
+      let textField = search.searchBar.searchTextField
+      let glassIconView = textField.leftView as! UIImageView
+          glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+          glassIconView.tintColor = UIColor.appColor(.tabBarSelected) ?? .green
+      
+    } else {
+      // Fallback on earlier versions
+    }
+        
     
     
   }

@@ -15,9 +15,7 @@ class IOUExpandedTransCell: UITableViewCell {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var backView: UIView!
     
@@ -31,8 +29,7 @@ class IOUExpandedTransCell: UITableViewCell {
         super.awakeFromNib()
         
         self.backView.layer.cornerRadius = 20
-        self.timeLabel.text = ""
-        
+
     }
     
     func setModel(_ model: Transaction, _ user: User, _ name: String)
@@ -72,7 +69,6 @@ class IOUExpandedTransCell: UITableViewCell {
             self.gaveTookLabel.text = "\(name) Gave You"
 //            self.backView.backgroundColor = .red
         }
-      self.backView.backgroundColor = UIColor.appColor(.foreground)
     }
     
 }

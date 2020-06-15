@@ -11,15 +11,16 @@ import UIKit
 
 @IBDesignable
 class HomeCard: UIView {
-//  @IBInspectable var cornerRadius:CGFloat = 1000000 {
-//        didSet{
-//            setupView()
-//        }
-//    }
+  @IBInspectable var cornerRadius:CGFloat = 180 {
+        didSet{
+          self.layer.cornerRadius = self.cornerRadius
+            setupView()
+        }
+    }
     
    
     func setupView(){
-      self.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: self.frame.height/2, borderColor: UIColor.appColor(.tabBarSelected) ?? .green, borderWidth: 3)
+      self.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMaxYCorner, ], radius: self.frame.height/2.4, borderColor: UIColor.appColor(.tabBarSelected) ?? .green, borderWidth: 3)
        }
        override func prepareForInterfaceBuilder() {
            super.prepareForInterfaceBuilder()

@@ -45,7 +45,11 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
       self.tabBarItem.selectedImage = UIImage(named: "friends-active-white")
       
     }
-    setupSearchBar()
+    if #available(iOS 13.0, *) {
+      setupSearchBar()
+    } else {
+      // Fallback on earlier versions
+    }
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -99,6 +103,7 @@ class FriendsVC: MainVC, UIScrollViewDelegate {
     self.performSegue(withIdentifier: "toAddFriends", sender: self)
   }
   
+  @available(iOS 13.0, *)
   func setupSearchBar(){
 
         search.searchBar.delegate = self

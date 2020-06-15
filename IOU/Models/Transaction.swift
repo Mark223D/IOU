@@ -25,7 +25,8 @@ class Transaction {
     
     typealias JSON = [String: Any]
     
-    init (snapshot: DataSnapshot) {
+    convenience init (snapshot: DataSnapshot) {
+      self.init()
         ref = snapshot.ref
         
         let data = snapshot.value as! Dictionary<String, Any>
@@ -40,6 +41,10 @@ class Transaction {
         self.status = data["status"] as? String
         
     }
+  init() {
+    self.status = "Created"
+    
+  }
     
     
 }

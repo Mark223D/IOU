@@ -74,7 +74,7 @@ class IOUTransCell: UITableViewCell {
         if let date = dateFormatterGet.date(from: created) {
             
             self.gaveTookLabel.text = dateFormatterPrint.string(from: date)
-          self.gaveTookLabel.padding = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+          self.gaveTookLabel.padding = UIEdgeInsets(top: 1, left: 2.4, bottom: 1, right: 2.4)
         } else {
             print("There was an error decoding the string")
         }

@@ -11,6 +11,8 @@ import UIKit
 import SwiftIcons
 
 class IOUTabBarCtrl: UITabBarController, UITabBarControllerDelegate {
+  
+  var lastIndex = 0
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)!
   }
@@ -40,7 +42,7 @@ class IOUTabBarCtrl: UITabBarController, UITabBarControllerDelegate {
   // Menu Button Touch Action
   @objc func menuButtonAction(sender: UIButton) {
     self.selectedIndex = 2   //to select the middle tab. use "1" if you have only 3 tabs.
-    animateToTab(toIndex: 2)
+    animateToAdd(toIndex: 2)
 
   }
   
@@ -49,13 +51,19 @@ class IOUTabBarCtrl: UITabBarController, UITabBarControllerDelegate {
       let toIndex = tabViewControllers.firstIndex(of: viewController) else {
           return false
       }
+    let fromIndex = self.selectedIndex
+    
     if toIndex == 2 {
-      animateToTab(toIndex: toIndex)
+//      lastIndex = fromIndex
+      animateToAdd(toIndex: toIndex)
+    }
+    else if fromIndex == 2 {
+      animateFromAdd(toIndex: lastIndex)
     }
       return true
   }
 
-  func animateToTab(toIndex: Int) {
+  func animateToAdd(toIndex: Int) {
       guard let tabViewControllers = viewControllers//,
 //          let selectedVC = selectedViewController
         else { return }
@@ -95,7 +103,53 @@ class IOUTabBarCtrl: UITabBarController, UITabBarControllerDelegate {
           self.view.isUserInteractionEnabled = true
       })
   }
+func leaveAdd() {
+  animateFromAdd(toIndex: lastIndex)
+  }
   
+  func animateFromAdd(toIndex: Int) {
+    
+    print(toIndex)
+        guard let tabViewControllers = viewControllers
+//            let selectedVC = selectedViewController
+          else { return }
+
+      guard let fromView = self.view,
+        let toView = tabViewControllers[toIndex].view
+//          let fromIndex = tabViewControllers.firstIndex(of: selectedVC),fromIndex != toIndex
+        else { return }
+
+    
+        // Add the toView to the tab bar view
+        fromView.superview?.addSubview(toView)
+
+        // Position toView off screen (to the up/down of fromView)
+        let screenHeight = UIScreen.main.bounds.size.height
+        let scrollDown = self.selectedIndex == 2
+        let offset = (scrollDown ? -screenHeight : screenHeight)
+        toView.center = CGPoint(x: fromView.center.x , y: toView.center.y - offset)
+
+        // Disable interaction during animation
+        view.isUserInteractionEnabled = false
+
+      UIView.animate(withDuration: 1.0,
+                       delay: 0.0,
+                       usingSpringWithDamping: 1,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseOut,
+                       animations: {
+                        // Slide the views by +offset
+                        fromView.center = CGPoint(x: fromView.center.x, y: fromView.center.y + offset)
+                        toView.center = CGPoint(x: toView.center.x, y: toView.center.y + offset)
+
+        }, completion: { finished in
+print(toIndex)
+            // Remove the old view from the tabbar view.
+            self.selectedIndex = toIndex
+            
+            self.view.isUserInteractionEnabled = true
+        })
+    }
 
 }
 

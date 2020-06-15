@@ -217,7 +217,7 @@ extension UserCashFlowVC: UITableViewDataSource{
       }
       else{
         
-        return self.tableView.frame.height * 0.58
+        return self.tableView.frame.height/3
         
         
       }

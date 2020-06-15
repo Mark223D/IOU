@@ -18,38 +18,57 @@
                 <rect key="frame" x="0.0" y="0.0" width="322" height="106"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8SS-bM-18I">
-                        <rect key="frame" x="89" y="8" width="221" height="89"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8SS-bM-18I">
+                        <rect key="frame" x="89" y="8" width="221" height="87"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-dh-GEl">
-                                <rect key="frame" x="0.0" y="0.0" width="221" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-dh-GEl">
+                                <rect key="frame" x="0.0" y="0.0" width="221" height="26.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-au-OpL">
-                                        <rect key="frame" x="0.0" y="0.0" width="27.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOU" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-au-OpL">
+                                        <rect key="frame" x="0.0" y="0.0" width="26" height="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" name="tabBarSelected"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAS-3o-nU1">
-                                        <rect key="frame" x="35.5" y="0.0" width="185.5" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAS-3o-nU1">
+                                        <rect key="frame" x="34" y="1" width="187" height="25.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2ea-io-NrL">
+                                <rect key="frame" x="0.0" y="30.5" width="221" height="26"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hO-KP-P9m">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="26"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <color key="textColor" name="tabBarSelected"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lo-0a-lZt">
+                                        <rect key="frame" x="82.5" y="0.0" width="138.5" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" name="tabBarSelected"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-p3-0wl">
-                                <rect key="frame" x="0.0" y="62" width="221" height="27"/>
+                                <rect key="frame" x="0.0" y="60.5" width="221" height="26.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S0-w5K">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S0-w5K">
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="13.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" name="tabBarSelected"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEq-Ss-awH">
-                                        <rect key="frame" x="76" y="0.0" width="145" height="27"/>
+                                        <rect key="frame" x="76" y="0.0" width="145" height="23"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
                                         <state key="normal" title="CONFIRM">
                                             <color key="titleColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -80,6 +99,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="LtK-DW-b6C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="1Pg-e6-N5v"/>
+                    <constraint firstItem="9Yv-wr-WrI" firstAttribute="top" secondItem="8SS-bM-18I" secondAttribute="bottom" constant="8" id="37Y-ep-sfS"/>
                     <constraint firstItem="8SS-bM-18I" firstAttribute="leading" secondItem="LtK-DW-b6C" secondAttribute="trailing" constant="8" id="BGK-xz-RM4"/>
                     <constraint firstItem="LtK-DW-b6C" firstAttribute="top" secondItem="8SS-bM-18I" secondAttribute="top" id="G9z-RI-n5E"/>
                     <constraint firstItem="9Yv-wr-WrI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Gep-7d-cWQ"/>
@@ -96,6 +116,7 @@
                 <outlet property="amountLabel" destination="TAS-3o-nU1" id="O41-kp-8Yw"/>
                 <outlet property="confirmBtn" destination="bEq-Ss-awH" id="Cbd-aG-GJK"/>
                 <outlet property="dateLabel" destination="vbN-S0-w5K" id="qu3-9O-nEI"/>
+                <outlet property="titleLabel" destination="3lo-0a-lZt" id="wVp-1N-Dx3"/>
                 <outlet property="userImage" destination="LtK-DW-b6C" id="5m3-dX-XFS"/>
                 <outlet property="userLabel" destination="Xm6-au-OpL" id="7JH-XT-wug"/>
             </connections>

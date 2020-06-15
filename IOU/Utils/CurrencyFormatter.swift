@@ -26,7 +26,7 @@ class CurrencyFormatter {
             return "Error"
         }
         
-        return "\(currencyLBP) \(formattedAmount)"
+        return "\(formattedAmount) \(currencyLBP)"
     }
     deinit {}
 }

@@ -25,9 +25,8 @@ class MainVC: UIViewController {
     
     func format(_ amount: Int) -> String?{
         let formatter = NumberFormatter()
-        formatter.groupingSeparator = ","
-        formatter.groupingSize = 3
-        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+      formatter.numberStyle = .decimal
         return formatter.string(from: NSNumber(value: amount))
     }
     

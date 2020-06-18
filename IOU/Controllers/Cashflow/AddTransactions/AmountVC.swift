@@ -89,8 +89,17 @@ class AmountVC: MainVC {
     
   }
   
+  @IBAction func amountValueChanged(_ sender: Any) {
+    if let amount = self.amountValue.text {
+      let result = amount.replacingOccurrences(of: " ", with: "")
+      if let number = Int(result){
+        self.amountValue.text =  self.format(number)
+
+      }
+
+    }
+  }
   
   
 }
-
 

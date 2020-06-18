@@ -15,7 +15,7 @@ class FriendsCell: UITableViewCell {
     @IBOutlet weak var emailLabel: UILabel!
     
     private var userModel: IOUUser?
-    private var friendModel: Friend?
+     var friendModel: Friend?
     
     override func awakeFromNib() {
         super.awakeFromNib()

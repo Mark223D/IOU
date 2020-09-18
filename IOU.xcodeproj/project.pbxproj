@@ -289,14 +289,6 @@
 			path = FriendsCell;
 			sourceTree = "<group>";
 		};
-		4D91C8BF2389B273007A62E0 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				4D9D40B722CF3CBE00AD0A0D /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
 		4D978A0524298436001A5C3C /* Activity */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,7 +328,7 @@
 				4D9D40E722CF588F00AD0A0D /* Views */,
 				4DFFD30722D2298600D714E6 /* Models */,
 				4D9D40E622CF588500AD0A0D /* Controllers */,
-				4D91C8BF2389B273007A62E0 /* Storyboards */,
+				4D9D40B722CF3CBE00AD0A0D /* Main.storyboard */,
 				4D9D40BD22CF3CC000AD0A0D /* Assets.xcassets */,
 				4D9D40B322CF3CBE00AD0A0D /* AppDelegate.swift */,
 				4DB06A3E2426C3D00015EFFE /* GoogleService-Info.plist */,

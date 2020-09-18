@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UsersVC: UIViewController {
+class UsersVC: UIViewController, UICollectionViewDelegateFlowLayout {
   var transaction: Transaction?
   
   @IBOutlet weak var eachTotal: UISegmentedControl!
@@ -35,10 +35,13 @@ class UsersVC: UIViewController {
     self.selectedUsers = [] 
     navigationController?.delegate = self
     
+    
     self.tableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "FriendsCell")
+    
     self.selectedUsersCollectionView.register(UINib(nibName: "FriendsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FriendsCell")
     self.selectedUsersCollectionView.delegate = self
     self.selectedUsersCollectionView.dataSource = self
+    
     
     self.tableView.delegate = self
     self.tableView.dataSource = self
@@ -56,10 +59,35 @@ class UsersVC: UIViewController {
     // 5
     definesPresentationContext = true
     self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
-
+    
+    
     
   }
   
+//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    if segue.destination is DetailsVC{
+//      transaction.
+//    }
+//  }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      sizeForItemAt indexPath: IndexPath) -> CGSize {
+    
+    return CGSize(width: collectionView.frame.width/CGFloat(self.selectedUsers?.count ?? 0), height: 100)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    return 1.0
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout
+    collectionViewLayout: UICollectionViewLayout,
+                      minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return 1.0
+  }
   
   
   func filterContentForSearchText(_ searchText: String) {
@@ -76,7 +104,9 @@ class UsersVC: UIViewController {
     super.viewWillAppear(animated)
     users = []
     fh.getFriends { (friends) in
-      self.users = friends
+      self.users = friends.sorted(by: { (f1, f2) -> Bool in
+        return (f1.name?.localizedCaseInsensitiveCompare(f2.name ?? "") == .orderedAscending)
+      })
       self.tableView.reloadData()
     }
     
@@ -138,17 +168,46 @@ extension UsersVC: UITableViewDataSource{
     
     if let model = cell.friendModel {
       selectedUsers?.append(model)
-      print(selectedUsers?.count)
-
+      
+      if let newUsers = uniqueUsers(users: self.selectedUsers){
+        self.selectedUsers = []
+        self.selectedUsers = newUsers
+        self.users = self.users?.filter({ (f) -> Bool in
+          f.id != model.id
+        })
+      }
+      
+      self.tableView.reloadData()
       selectedUsersCollectionView.reloadData()
     }
+  }
+  
+  func uniqueUsers(users: [Friend]?) -> [Friend]?{
+    var buffer: [Friend] = []
+    var added = Set<Friend>()
+    if let users = users{
+      for elem in users {
+        if !added.contains(elem) {
+          buffer.append(elem)
+          added.insert(elem)
+        }
+      }
+      return buffer
+
+    }
+    else
+    {
+      return nil
+    }
+    
   }
   
 }
 
 
+
+
 extension UsersVC: UICollectionViewDelegate{
-  
 }
 
 
@@ -167,6 +226,27 @@ extension UsersVC: UICollectionViewDataSource{
     return cell
   }
   
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let cell = collectionView.cellForItem(at: indexPath) as! FriendsCollectionViewCell
+    
+    if let model = cell.model {
+      users?.append(model)
+      
+      if let newUsers = uniqueUsers(users: users){
+        self.users = []
+        self.users = newUsers.sorted(by: { (f1, f2) -> Bool in
+          return (f1.name?.localizedCaseInsensitiveCompare(f2.name ?? "") == .orderedAscending)
+        })
+        self.selectedUsers = self.selectedUsers?.filter({ (f) -> Bool in
+          f.id != model.id
+          })
+      }
+      
+      self.tableView.reloadData()
+      self.selectedUsersCollectionView.reloadData()
+    }
+    
+  }
   
 }
 
@@ -175,7 +255,7 @@ extension UsersVC: UISearchResultsUpdating {
     // TODO
     if let text = searchController.searchBar.text {
       filterContentForSearchText(text)
-
+      
     }
   }
 }

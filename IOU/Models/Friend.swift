@@ -37,3 +37,14 @@ class Friend {
     }
     
 }
+
+extension Friend: Hashable{
+  
+  static func == (lhs: Friend, rhs: Friend) -> Bool {
+    return lhs.id == rhs.id
+  }
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
+  }
+  
+}
